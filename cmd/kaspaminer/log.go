@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/panics"
 	"os"
+
+	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/util/panics"
 )
 
 var (

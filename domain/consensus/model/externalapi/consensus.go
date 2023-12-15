@@ -51,7 +51,7 @@ type Consensus interface {
 	ResolveVirtual(progressReportCallback func(uint64, uint64)) error
 	BlockDAAWindowHashes(blockHash *DomainHash) ([]*DomainHash, error)
 	TrustedDataDataDAAHeader(trustedBlockHash, daaBlockHash *DomainHash, daaBlockWindowIndex uint64) (*TrustedDataDataDAAHeader, error)
-	TrustedBlockAssociatedGHOSTDAGDataBlockHashes(blockHash *DomainHash) ([]*DomainHash, error)
+	TrustedBlocnexesociatedGHOSTDAGDataBlockHashes(blockHash *DomainHash) ([]*DomainHash, error)
 	TrustedGHOSTDAGData(blockHash *DomainHash) (*BlockGHOSTDAGData, error)
 	IsChainBlock(blockHash *DomainHash) (bool, error)
 	VirtualMergeDepthRoot() (*DomainHash, error)

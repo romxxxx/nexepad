@@ -5,23 +5,23 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/go-secp256k1"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	utxopkg "github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
-	"github.com/kaspanet/kaspad/stability-tests/common/mine"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/go-secp256k1"
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
+	utxopkg "github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
+	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient"
+	"github.com/nexepanet/nexepad/stability-tests/common/mine"
+	"github.com/nexepanet/nexepad/util"
 )
 
 const (
-	payAddress                       = "kaspasim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
+	payAddress                       = "nexepasim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
 	payAddressPrivateKey             = "05d8f681e954a550395ee2297fc1a14f6e801f554c0b9d48cd7165a7ea72ff77"
 	fundingCoinbaseTransactionAmount = 1000
 	outputsPerTransaction            = 3

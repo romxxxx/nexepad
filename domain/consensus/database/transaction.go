@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/infrastructure/db/database"
 )
 
 type dbTransaction struct {

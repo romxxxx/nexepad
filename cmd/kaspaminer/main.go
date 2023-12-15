@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/util"
 
-	"github.com/kaspanet/kaspad/version"
+	"github.com/nexepanet/nexepad/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/nexepanet/nexepad/infrastructure/os/signal"
+	"github.com/nexepanet/nexepad/util/panics"
+	"github.com/nexepanet/nexepad/util/profiling"
 )
 
 func main() {

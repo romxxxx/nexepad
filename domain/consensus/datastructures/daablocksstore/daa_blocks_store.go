@@ -1,11 +1,11 @@
 package daablocksstore
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/database/binaryserialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/lrucache"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/nexepanet/nexepad/domain/consensus/database/binaryserialization"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/lrucache"
+	"github.com/nexepanet/nexepad/util/staging"
 )
 
 var daaScoreBucketName = []byte("daa-score")

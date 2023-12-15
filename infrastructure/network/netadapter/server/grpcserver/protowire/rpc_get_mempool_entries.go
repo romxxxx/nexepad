@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_GetMempoolEntriesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *nexepadMessage_GetMempoolEntriesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetMempoolEntriesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetMempoolEntriesRequest is nil")
 	}
 	return x.GetMempoolEntriesRequest.toAppMessage()
 }
 
-func (x *KaspadMessage_GetMempoolEntriesRequest) fromAppMessage(message *appmessage.GetMempoolEntriesRequestMessage) error {
+func (x *nexepadMessage_GetMempoolEntriesRequest) fromAppMessage(message *appmessage.GetMempoolEntriesRequestMessage) error {
 	x.GetMempoolEntriesRequest = &GetMempoolEntriesRequestMessage{
 		IncludeOrphanPool:     message.IncludeOrphanPool,
 		FilterTransactionPool: message.FilterTransactionPool,
@@ -30,14 +30,14 @@ func (x *GetMempoolEntriesRequestMessage) toAppMessage() (appmessage.Message, er
 	}, nil
 }
 
-func (x *KaspadMessage_GetMempoolEntriesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *nexepadMessage_GetMempoolEntriesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_GetMempoolEntriesResponse is nil")
+		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetMempoolEntriesResponse is nil")
 	}
 	return x.GetMempoolEntriesResponse.toAppMessage()
 }
 
-func (x *KaspadMessage_GetMempoolEntriesResponse) fromAppMessage(message *appmessage.GetMempoolEntriesResponseMessage) error {
+func (x *nexepadMessage_GetMempoolEntriesResponse) fromAppMessage(message *appmessage.GetMempoolEntriesResponseMessage) error {
 	var rpcErr *RPCError
 	if message.Error != nil {
 		rpcErr = &RPCError{Message: message.Error.Message}

@@ -1,19 +1,19 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flowcontext"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashset"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/app/protocol/common"
+	"github.com/nexepanet/nexepad/app/protocol/flowcontext"
+	peerpkg "github.com/nexepanet/nexepad/app/protocol/peer"
+	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
+	"github.com/nexepanet/nexepad/domain"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/hashset"
+	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

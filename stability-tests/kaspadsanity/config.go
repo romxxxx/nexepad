@@ -4,12 +4,12 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/nexepanet/nexepad/stability-tests/common"
 )
 
 const (
-	defaultLogFilename    = "kaspadsanity.log"
-	defaultErrLogFilename = "kaspadsanity_err.log"
+	defaultLogFilename    = "nexepadsanity.log"
+	defaultErrLogFilename = "nexepadsanity_err.log"
 )
 
 var (

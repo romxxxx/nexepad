@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/infrastructure/db/database/ldb"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/stability-tests/common/mine"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/infrastructure/db/database/ldb"
+	"github.com/nexepanet/nexepad/stability-tests/common"
+	"github.com/nexepanet/nexepad/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

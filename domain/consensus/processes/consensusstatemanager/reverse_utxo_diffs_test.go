@@ -3,14 +3,14 @@ package consensusstatemanager_test
 import (
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
 )
 
 func TestReverseUTXODiffs(t *testing.T) {

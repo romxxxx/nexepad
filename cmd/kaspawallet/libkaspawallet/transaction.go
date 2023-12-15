@@ -1,13 +1,13 @@
-package libkaspawallet
+package libnexepawallet
 
 import (
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet/bip32"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet/serialization"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
+	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
 )
 

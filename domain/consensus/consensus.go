@@ -4,14 +4,14 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/nexepanet/nexepad/util/mstime"
 
-	"github.com/kaspanet/kaspad/domain/consensus/database"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/staging"
+	"github.com/nexepanet/nexepad/domain/consensus/database"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
+	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/util/staging"
 	"github.com/pkg/errors"
 )
 
@@ -1066,11 +1066,11 @@ func (s *consensus) TrustedDataDataDAAHeader(trustedBlockHash, daaBlockHash *ext
 	}, nil
 }
 
-func (s *consensus) TrustedBlockAssociatedGHOSTDAGDataBlockHashes(blockHash *externalapi.DomainHash) ([]*externalapi.DomainHash, error) {
+func (s *consensus) TrustedBlocnexesociatedGHOSTDAGDataBlockHashes(blockHash *externalapi.DomainHash) ([]*externalapi.DomainHash, error) {
 	s.lock.Lock()
 	defer s.lock.Unlock()
 
-	return s.pruningManager.TrustedBlockAssociatedGHOSTDAGDataBlockHashes(model.NewStagingArea(), blockHash)
+	return s.pruningManager.TrustedBlocnexesociatedGHOSTDAGDataBlockHashes(model.NewStagingArea(), blockHash)
 }
 
 func (s *consensus) TrustedGHOSTDAGData(blockHash *externalapi.DomainHash) (*externalapi.BlockGHOSTDAGData, error) {

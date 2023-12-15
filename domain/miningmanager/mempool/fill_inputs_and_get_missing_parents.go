@@ -1,11 +1,11 @@
 package mempool
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
+	"github.com/nexepanet/nexepad/domain/miningmanager/mempool/model"
 	"github.com/pkg/errors"
 )
 

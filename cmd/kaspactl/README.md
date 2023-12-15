@@ -1,6 +1,6 @@
-# kaspactl
+# nexepactl
 
-kaspactl is an RPC client for kaspad
+nexepactl is an RPC client for nexepad
 
 ## Requirements
 
@@ -19,35 +19,35 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Run the following commands to obtain and install nexepad including all dependencies:
 
 ```bash
-$ git clone https://github.com/kaspanet/kaspad
-$ cd kaspad/cmd/kaspactl
+$ git clone https://github.com/nexepanet/nexepad
+$ cd nexepad/cmd/nexepactl
 $ go install .
 ```
 
-- Kaspactl should now be installed in `$(go env GOPATH)/bin`. If you did not already add the bin directory to your
+- nexepactl should now be installed in `$(go env GOPATH)/bin`. If you did not already add the bin directory to your
   system path during Go installation, you are encouraged to do so now.
 
 ## Usage
 
-The full kaspctl configuration options can be seen with:
+The full nexepctl configuration options can be seen with:
 
 ```bash
-$ kaspctl --help
+$ nexepctl --help
 ```
 
 But the minimum configuration needed to run it is:
 
 ```bash
-$ kaspactl <REQUEST_JSON>
+$ nexepactl <REQUEST_JSON>
 ```
 
 For example:
 
 ```
-$ kaspactl '{"getBlockDagInfoRequest":{}}'
+$ nexepactl '{"getBlockDagInfoRequest":{}}'
 ```
 
 For a list of all available requests check out the [RPC documentation](infrastructure/network/netadapter/server/grpcserver/protowire/rpc.md)

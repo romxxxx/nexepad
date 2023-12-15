@@ -1,14 +1,14 @@
-package libkaspawallet
+package libnexepawallet
 
 import (
 	"math"
 	"sort"
 	"strings"
 
-	"github.com/kaspanet/go-secp256k1"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/go-secp256k1"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet/bip32"
+	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
 )
 

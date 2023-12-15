@@ -1,6 +1,6 @@
-# kaspaminer
+# nexepaminer
 
-Kaspaminer is a CPU-based miner for kaspad
+nexepaminer is a CPU-based miner for nexepad
 
 ## Requirements
 
@@ -19,11 +19,11 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install kaspad including all dependencies:
+- Run the following commands to obtain and install nexepad including all dependencies:
 
 ```bash
-$ git clone https://github.com/kaspanet/kaspad
-$ cd kaspad/cmd/kaspaminer
+$ git clone https://github.com/nexepanet/nexepad
+$ cd nexepad/cmd/nexepaminer
 $ go install .
 ```
 
@@ -33,13 +33,13 @@ $ go install .
   
 ## Usage
 
-The full kaspaminer configuration options can be seen with:
+The full nexepaminer configuration options can be seen with:
 
 ```bash
-$ kaspaminer --help
+$ nexepaminer --help
 ```
 
 But the minimum configuration needed to run it is:
 ```bash
-$ kaspaminer --miningaddr=<YOUR_MINING_ADDRESS>
+$ nexepaminer --miningaddr=<YOUR_MINING_ADDRESS>
 ```

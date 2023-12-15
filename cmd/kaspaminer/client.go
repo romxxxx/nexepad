@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
-	"github.com/pkg/errors"
 	"time"
+
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient"
+	"github.com/pkg/errors"
 )
 
 const minerTimeout = 10 * time.Second

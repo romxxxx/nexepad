@@ -3,9 +3,9 @@ package main
 import (
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/nexepanet/nexepad/stability-tests/common"
+	"github.com/nexepanet/nexepad/util/panics"
+	"github.com/nexepanet/nexepad/util/profiling"
 	"github.com/pkg/errors"
 )
 

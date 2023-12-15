@@ -5,15 +5,15 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/kaspanet/kaspad/domain/consensusreference"
+	"github.com/nexepanet/nexepad/domain/consensusreference"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
-	"github.com/kaspanet/kaspad/domain/prefixmanager"
-	"github.com/kaspanet/kaspad/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/miningmanager"
+	"github.com/nexepanet/nexepad/domain/miningmanager/mempool"
+	"github.com/nexepanet/nexepad/domain/prefixmanager"
+	"github.com/nexepanet/nexepad/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/nexepanet/nexepad/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

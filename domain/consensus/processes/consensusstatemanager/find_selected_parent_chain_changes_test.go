@@ -3,10 +3,10 @@ package consensusstatemanager_test
 import (
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
 )
 
 func TestCalculateChainPath(t *testing.T) {
@@ -23,21 +23,21 @@ func TestCalculateChainPath(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Error adding block A: %+v", err)
 		}
-		blockASelectedParentChainChanges := blockAVirtualChangeSet.VirtualSelectedParentChainChanges
+		blocnexeelectedParentChainChanges := blockAVirtualChangeSet.VirtualSelectedParentChainChanges
 
 		// Make sure that the removed slice is empty
-		if len(blockASelectedParentChainChanges.Removed) > 0 {
+		if len(blocnexeelectedParentChainChanges.Removed) > 0 {
 			t.Fatalf("The `removed` slice is not empty after inserting block A")
 		}
 
 		// Make sure that the added slice contains only blockAHash
-		if len(blockASelectedParentChainChanges.Added) != 1 {
+		if len(blocnexeelectedParentChainChanges.Added) != 1 {
 			t.Fatalf("The `added` slice contains an unexpected amount of items after inserting block A. "+
-				"Want: %d, got: %d", 1, len(blockASelectedParentChainChanges.Added))
+				"Want: %d, got: %d", 1, len(blocnexeelectedParentChainChanges.Added))
 		}
-		if !blockASelectedParentChainChanges.Added[0].Equal(blockAHash) {
+		if !blocnexeelectedParentChainChanges.Added[0].Equal(blockAHash) {
 			t.Fatalf("The `added` slice contains an unexpected hash. Want: %s, got: %s",
-				blockAHash, blockASelectedParentChainChanges.Added[0])
+				blockAHash, blocnexeelectedParentChainChanges.Added[0])
 		}
 
 		// Add block B over the genesis

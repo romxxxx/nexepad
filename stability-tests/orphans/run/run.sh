@@ -1,23 +1,23 @@
 #!/bin/bash
-rm -rf /tmp/kaspad-temp
+rm -rf /tmp/nexepad-temp
 
-kaspad --simnet --appdir=/tmp/kaspad-temp --profile=6061 &
-KASPAD_PID=$!
+nexepad --simnet --appdir=/tmp/nexepad-temp --profile=6061 &
+nexePAD_PID=$!
 
 sleep 1
 
 orphans --simnet -alocalhost:16511 -n20 --profile=7000
 TEST_EXIT_CODE=$?
 
-kill $KASPAD_PID
+kill $nexePAD_PID
 
-wait $KASPAD_PID
-KASPAD_EXIT_CODE=$?
+wait $nexePAD_PID
+nexePAD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Kaspad exit code: $KASPAD_EXIT_CODE"
+echo "nexepad exit code: $nexePAD_EXIT_CODE"
 
-if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
+if [ $TEST_EXIT_CODE -eq 0 ] && [ $nexePAD_EXIT_CODE -eq 0 ]; then
   echo "orphans test: PASSED"
   exit 0
 fi

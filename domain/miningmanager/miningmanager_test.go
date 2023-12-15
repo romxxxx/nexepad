@@ -1,28 +1,28 @@
 package miningmanager_test
 
 import (
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensusreference"
-	"github.com/kaspanet/kaspad/domain/miningmanager/model"
-	"github.com/kaspanet/kaspad/util"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/nexepanet/nexepad/domain/consensusreference"
+	"github.com/nexepanet/nexepad/domain/miningmanager/model"
+	"github.com/nexepanet/nexepad/util"
+	"github.com/nexepanet/nexepad/version"
 	"reflect"
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/nexepanet/nexepad/domain/miningmanager/mempool"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/domain/miningmanager"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
+	"github.com/nexepanet/nexepad/domain/miningmanager"
 	"github.com/pkg/errors"
 )
 
@@ -819,7 +819,7 @@ func generateNewCoinbase(addressPrefix util.Bech32Prefix, op opType) (*externala
 			ExtraData:       nil,
 		}, nil
 	}
-	_, publicKey, err := libkaspawallet.CreateKeyPair(op == opECDSA)
+	_, publicKey, err := libnexepawallet.CreateKeyPair(op == opECDSA)
 	if err != nil {
 		return nil, err
 	}
@@ -863,7 +863,7 @@ func createTransactionWithUTXOEntry(t *testing.T, i int, daaScore uint64) *exter
 		SignatureScript:  signatureScript,
 		Sequence:         constants.MaxTxInSequenceNum,
 		UTXOEntry: utxo.NewUTXOEntry(
-			100000000, // 1 KAS
+			100000000, // 1 nexe
 			scriptPublicKey,
 			true,
 			daaScore),

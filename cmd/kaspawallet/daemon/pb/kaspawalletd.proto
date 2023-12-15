@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option go_package = "github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb";
-package kaspawalletd;
+option go_package = "github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb";
+package nexepawalletd;
 
-service kaspawalletd {
+service nexepawalletd {
   rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
   rpc GetExternalSpendableUTXOs (GetExternalSpendableUTXOsRequest) returns (GetExternalSpendableUTXOsResponse) {}
   rpc CreateUnsignedTransactions (CreateUnsignedTransactionsRequest) returns (CreateUnsignedTransactionsResponse) {}

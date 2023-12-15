@@ -2,11 +2,11 @@ package util_test
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/util/difficulty"
+	"github.com/nexepanet/nexepad/util/difficulty"
 	"math"
 	"math/big"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/util"
 )
 
 func ExampleAmount() {
@@ -20,9 +20,9 @@ func ExampleAmount() {
 	a = util.Amount(1e5)
 	fmt.Println("100,000 Sompi:", a)
 	// Output:
-	// Zero Sompi: 0 KAS
-	// 100,000,000 Sompi: 1 KAS
-	// 100,000 Sompi: 0.001 KAS
+	// Zero Sompi: 0 nexe
+	// 100,000,000 Sompi: 1 nexe
+	// 100,000 Sompi: 0.001 nexe
 }
 
 func ExampleNewAmount() {
@@ -54,26 +54,26 @@ func ExampleNewAmount() {
 	}
 	fmt.Println(amountNaN) //Output 4
 
-	// Output: 1 KAS
-	// 0.01234567 KAS
-	// 0 KAS
-	// invalid kaspa amount
+	// Output: 1 nexe
+	// 0.01234567 nexe
+	// 0 nexe
+	// invalid nexepa amount
 }
 
 func ExampleAmount_unitConversions() {
 	amount := util.Amount(44433322211100)
 
-	fmt.Println("Sompi to kKAS:", amount.Format(util.AmountKiloKAS))
-	fmt.Println("Sompi to KAS:", amount)
-	fmt.Println("Sompi to MilliKAS:", amount.Format(util.AmountMilliKAS))
-	fmt.Println("Sompi to MicroKAS:", amount.Format(util.AmountMicroKAS))
+	fmt.Println("Sompi to knexe:", amount.Format(util.AmountKilonexe))
+	fmt.Println("Sompi to nexe:", amount)
+	fmt.Println("Sompi to Millinexe:", amount.Format(util.AmountMillinexe))
+	fmt.Println("Sompi to Micronexe:", amount.Format(util.AmountMicronexe))
 	fmt.Println("Sompi to Sompi:", amount.Format(util.AmountSompi))
 
 	// Output:
-	// Sompi to kKAS: 444.333222111 kKAS
-	// Sompi to KAS: 444333.222111 KAS
-	// Sompi to MilliKAS: 444333222.111 mKAS
-	// Sompi to MicroKAS: 444333222111 μKAS
+	// Sompi to knexe: 444.333222111 knexe
+	// Sompi to nexe: 444333.222111 nexe
+	// Sompi to Millinexe: 444333222.111 mnexe
+	// Sompi to Micronexe: 444333222111 μnexe
 	// Sompi to Sompi: 44433322211100 Sompi
 }
 

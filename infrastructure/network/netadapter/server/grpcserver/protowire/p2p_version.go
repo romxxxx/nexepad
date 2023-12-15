@@ -1,15 +1,15 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
+	"github.com/nexepanet/nexepad/util/mstime"
 	"github.com/pkg/errors"
 )
 
-func (x *KaspadMessage_Version) toAppMessage() (appmessage.Message, error) {
+func (x *nexepadMessage_Version) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "KaspadMessage_Version is nil")
+		return nil, errors.Wrapf(errorNil, "nexepadMessage_Version is nil")
 	}
 	return x.Version.toAppMessage()
 }
@@ -25,7 +25,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}
 
 	subnetworkID, err := x.SubnetworkId.toDomain()
-	//  Full kaspa nodes set SubnetworkId==nil
+	//  Full nexepa nodes set SubnetworkId==nil
 	if err != nil && !errors.Is(err, errorNil) {
 		return nil, err
 	}
@@ -57,7 +57,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *KaspadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
+func (x *nexepadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
 	err := appmessage.ValidateUserAgent(msgVersion.UserAgent)
 	if err != nil {
 		return err

@@ -6,11 +6,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/keys"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/client"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/keys"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 )
 
@@ -35,7 +35,7 @@ func send(conf *sendConfig) error {
 
 	var sendAmountSompi uint64
 	if !conf.IsSendAll {
-		sendAmountSompi = uint64(conf.SendAmount * constants.SompiPerKaspa)
+		sendAmountSompi = uint64(conf.SendAmount * constants.SompiPernexepa)
 	}
 
 	createUnsignedTransactionsResponse, err :=
@@ -64,7 +64,7 @@ func send(conf *sendConfig) error {
 
 	signedTransactions := make([][]byte, len(createUnsignedTransactionsResponse.UnsignedTransactions))
 	for i, unsignedTransaction := range createUnsignedTransactionsResponse.UnsignedTransactions {
-		signedTransaction, err := libkaspawallet.Sign(conf.NetParams(), mnemonics, unsignedTransaction, keysFile.ECDSA)
+		signedTransaction, err := libnexepawallet.Sign(conf.NetParams(), mnemonics, unsignedTransaction, keysFile.ECDSA)
 		if err != nil {
 			return err
 		}

@@ -7,25 +7,25 @@ import (
 	"sync"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/nexepanet/nexepad/util/txmass"
 
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/nexepanet/nexepad/util/profiling"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/keys"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
-	"github.com/kaspanet/kaspad/infrastructure/os/signal"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/keys"
+	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient"
+	"github.com/nexepanet/nexepad/infrastructure/os/signal"
+	"github.com/nexepanet/nexepad/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"
 )
 
 type server struct {
-	pb.UnimplementedKaspawalletdServer
+	pb.UnimplementednexepawalletdServer
 
 	rpcClient *rpcclient.RPCClient
 	params    *dagconfig.Params
@@ -48,7 +48,7 @@ type server struct {
 // Currently, set to 100MB
 const MaxDaemonSendMsgSize = 100_000_000
 
-// Start starts the kaspawalletd server
+// Start starts the nexepawalletd server
 func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath string, profile string, timeout uint32) error {
 	initLog(defaultLogFile, defaultErrLogFile)
 
@@ -106,7 +106,7 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	})
 
 	grpcServer := grpc.NewServer(grpc.MaxSendMsgSize(MaxDaemonSendMsgSize))
-	pb.RegisterKaspawalletdServer(grpcServer, serverInstance)
+	pb.RegisternexepawalletdServer(grpcServer, serverInstance)
 
 	spawn("grpcServer.Serve", func() {
 		err := grpcServer.Serve(listener)

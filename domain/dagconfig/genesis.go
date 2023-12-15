@@ -5,11 +5,11 @@
 package dagconfig
 
 import (
-	"github.com/kaspanet/go-muhash"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
+	"github.com/nexepanet/go-muhash"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
 	"math/big"
 )
 
@@ -93,7 +93,7 @@ var devnetGenesisTxPayload = []byte{
 	0x00, 0x00, // Script version
 	0x01,                                                                   // Varint
 	0x00,                                                                   // OP-FALSE
-	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x64, 0x65, 0x76, 0x6e, 0x65, 0x74, // kaspa-devnet
+	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x64, 0x65, 0x76, 0x6e, 0x65, 0x74, // nexepa-devnet
 }
 
 // devnetGenesisCoinbaseTx is the coinbase transaction for the genesis blocks for
@@ -145,7 +145,7 @@ var simnetGenesisTxPayload = []byte{
 	0x00, 0x00, // Script version
 	0x01,                                                                   // Varint
 	0x00,                                                                   // OP-FALSE
-	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x73, 0x69, 0x6d, 0x6e, 0x65, 0x74, // kaspa-simnet
+	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x73, 0x69, 0x6d, 0x6e, 0x65, 0x74, // nexepa-simnet
 }
 
 // simnetGenesisCoinbaseTx is the coinbase transaction for the simnet genesis block.
@@ -199,7 +199,7 @@ var testnetGenesisTxPayload = []byte{
 	0x00, 0x00, // Script version
 	0x01,                                                                         // Varint
 	0x00,                                                                         // OP-FALSE
-	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x74, 0x65, 0x73, 0x74, 0x6e, 0x65, 0x74, // kaspa-testnet
+	0x6b, 0x61, 0x73, 0x70, 0x61, 0x2d, 0x74, 0x65, 0x73, 0x74, 0x6e, 0x65, 0x74, // nexepa-testnet
 }
 
 // testnetGenesisCoinbaseTx is the coinbase transaction for the testnet genesis block.

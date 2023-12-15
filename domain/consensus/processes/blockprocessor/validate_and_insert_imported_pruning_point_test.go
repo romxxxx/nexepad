@@ -1,21 +1,21 @@
 package blockprocessor_test
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
+	"github.com/nexepanet/nexepad/domain/dagconfig"
 	"math"
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/model/testapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
+	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
 	"github.com/pkg/errors"
 )
 
@@ -103,9 +103,9 @@ func TestValidateAndInsertImportedPruningPoint(t *testing.T) {
 					t.Fatalf("BlockDAAWindowHashes: %+v", err)
 				}
 
-				ghostdagDataBlockHashes, err := tcSyncer.TrustedBlockAssociatedGHOSTDAGDataBlockHashes(blockHash)
+				ghostdagDataBlockHashes, err := tcSyncer.TrustedBlocnexesociatedGHOSTDAGDataBlockHashes(blockHash)
 				if err != nil {
-					t.Fatalf("TrustedBlockAssociatedGHOSTDAGDataBlockHashes: %+v", err)
+					t.Fatalf("TrustedBlocnexesociatedGHOSTDAGDataBlockHashes: %+v", err)
 				}
 
 				blockWithTrustedData := &externalapi.BlockWithTrustedData{

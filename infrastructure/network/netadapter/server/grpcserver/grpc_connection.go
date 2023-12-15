@@ -5,13 +5,12 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server"
 	"google.golang.org/grpc"
 )
 
@@ -37,8 +36,8 @@ type gRPCConnection struct {
 }
 
 type grpcStream interface {
-	Send(*protowire.KaspadMessage) error
-	Recv() (*protowire.KaspadMessage, error)
+	Send(*protowire.nexepadMessage) error
+	Recv() (*protowire.nexepadMessage, error)
 }
 
 func newConnection(server *gRPCServer, address *net.TCPAddr, stream grpcStream,
@@ -127,7 +126,7 @@ func (c *gRPCConnection) Address() *net.TCPAddr {
 	return c.address
 }
 
-func (c *gRPCConnection) receive() (*protowire.KaspadMessage, error) {
+func (c *gRPCConnection) receive() (*protowire.nexepadMessage, error) {
 	// We use RLock here and in send() because they can work
 	// in parallel. closeSend(), however, must not have either
 	// receive() nor send() running while it's running.
@@ -137,7 +136,7 @@ func (c *gRPCConnection) receive() (*protowire.KaspadMessage, error) {
 	return c.stream.Recv()
 }
 
-func (c *gRPCConnection) send(message *protowire.KaspadMessage) error {
+func (c *gRPCConnection) send(message *protowire.nexepadMessage) error {
 	// We use RLock here and in receive() because they can work
 	// in parallel. closeSend(), however, must not have either
 	// receive() nor send() running while it's running.

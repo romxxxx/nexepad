@@ -1,22 +1,22 @@
 package handshake
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/app/protocol/common"
+	peerpkg "github.com/nexepanet/nexepad/app/protocol/peer"
+	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/nexepanet/nexepad/version"
 	"github.com/pkg/errors"
 )
 
 var (
 	// userAgentName is the user agent name and is used to help identify
-	// ourselves to other kaspa peers.
-	userAgentName = "kaspad"
+	// ourselves to other nexepa peers.
+	userAgentName = "nexepad"
 
 	// userAgentVersion is the user agent version and is used to help
-	// identify ourselves to other kaspa peers.
+	// identify ourselves to other nexepa peers.
 	userAgentVersion = version.Version()
 
 	// defaultServices describes the default services that are supported by

@@ -4,43 +4,41 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
-
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 var commandTypes = []reflect.Type{
-	reflect.TypeOf(protowire.KaspadMessage_AddPeerRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetConnectedPeerInfoRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetPeerAddressesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetCurrentNetworkRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetInfoRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_AddPeerRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetConnectedPeerInfoRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetPeerAddressesRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetCurrentNetworkRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetInfoRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlocksRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetHeadersRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockCountRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockDagInfoRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetSelectedTipHashRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_ResolveFinalityConflictRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_EstimateNetworkHashesPerSecondRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBlockRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBlocksRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetHeadersRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBlockCountRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBlockDagInfoRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetSelectedTipHashRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_ResolveFinalityConflictRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_EstimateNetworkHashesPerSecondRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetBlockTemplateRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_SubmitBlockRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBlockTemplateRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_SubmitBlockRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntryRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntriesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetMempoolEntriesByAddressesRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntryRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntriesRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntriesByAddressesRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_SubmitTransactionRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_SubmitTransactionRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_GetUtxosByAddressesRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetBalanceByAddressRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_GetCoinSupplyRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetUtxosByAddressesRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetBalanceByAddressRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_GetCoinSupplyRequest{}),
 
-	reflect.TypeOf(protowire.KaspadMessage_BanRequest{}),
-	reflect.TypeOf(protowire.KaspadMessage_UnbanRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_BanRequest{}),
+	reflect.TypeOf(protowire.nexepadMessage_UnbanRequest{}),
 }
 
 type commandDescription struct {

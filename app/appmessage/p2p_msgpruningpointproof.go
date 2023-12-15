@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgPruningPointProof represents a kaspa PruningPointProof message
+// MsgPruningPointProof represents a nexepa PruningPointProof message
 type MsgPruningPointProof struct {
 	baseMessage
 

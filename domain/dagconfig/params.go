@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/util/network"
+	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/nexepanet/nexepad/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -25,19 +25,19 @@ var (
 	// the overhead of creating it multiple times.
 	bigOne = big.NewInt(1)
 
-	// mainPowMax is the highest proof of work value a Kaspa block can
+	// mainPowMax is the highest proof of work value a nexepa block can
 	// have for the main network. It is the value 2^255 - 1.
 	mainPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 255), bigOne)
 
-	// testnetPowMax is the highest proof of work value a Kaspa block
+	// testnetPowMax is the highest proof of work value a nexepa block
 	// can have for the test network. It is the value 2^255 - 1.
 	testnetPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 255), bigOne)
 
-	// simnetPowMax is the highest proof of work value a Kaspa block
+	// simnetPowMax is the highest proof of work value a nexepa block
 	// can have for the simulation test network. It is the value 2^255 - 1.
 	simnetPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 255), bigOne)
 
-	// devnetPowMax is the highest proof of work value a Kaspa block
+	// devnetPowMax is the highest proof of work value a nexepa block
 	// can have for the development network. It is the value
 	// 2^255 - 1.
 	devnetPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 255), bigOne)
@@ -46,8 +46,8 @@ var (
 // KType defines the size of GHOSTDAG consensus algorithm K parameter.
 type KType uint8
 
-// Params defines a Kaspa network by its parameters. These parameters may be
-// used by Kaspa applications to differentiate networks as well as addresses
+// Params defines a nexepa network by its parameters. These parameters may be
+// used by nexepa applications to differentiate networks as well as addresses
 // and keys for one network from those intended for use on another network.
 type Params struct {
 	// K defines the K parameter for GHOSTDAG consensus algorithm.
@@ -58,7 +58,7 @@ type Params struct {
 	Name string
 
 	// Net defines the magic bytes used to identify the network.
-	Net appmessage.KaspaNet
+	Net appmessage.nexepaNet
 
 	// RPCPort defines the rpc server port
 	RPCPort string
@@ -90,7 +90,7 @@ type Params struct {
 
 	// SubsidyGenesisReward SubsidyMergeSetRewardMultiplier, and
 	// SubsidyPastRewardMultiplier are part of the block subsidy equation.
-	// Further details: https://hashdag.medium.com/kaspa-launch-plan-9a63f4d754a6
+	// Further details: https://hashdag.medium.com/nexepa-launch-plan-9a63f4d754a6
 	SubsidyGenesisReward            uint64
 	PreDeflationaryPhaseBaseSubsidy uint64
 	DeflationaryPhaseBaseSubsidy    uint64
@@ -175,7 +175,7 @@ type Params struct {
 	// CoinbasePayloadScriptPublicKeyMaxLength is the maximum allowed script public key in the coinbase's payload
 	CoinbasePayloadScriptPublicKeyMaxLength uint8
 
-	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/kaspanet/research/issues/3
+	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/nexepanet/research/issues/3
 	PruningProofM uint64
 
 	// DeflationaryPhaseDaaScore is the DAA score after which the monetary policy switches
@@ -206,32 +206,32 @@ func (p *Params) PruningDepth() uint64 {
 	return 2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2
 }
 
-// MainnetParams defines the network parameters for the main Kaspa network.
+// MainnetParams defines the network parameters for the main nexepa network.
 var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-mainnet",
+	Name:        "nexepa-mainnet",
 	Net:         appmessage.Mainnet,
 	RPCPort:     "16110",
 	DefaultPort: "16111",
 	DNSSeeds: []string{
 		// This DNS seeder is run by Wolfie
-		"mainnet-dnsseed.kas.pa",
+		"mainnet-dnsseed.nexe.pa",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-1.kaspanet.org",
+		"mainnet-dnsseed-1.nexepanet.org",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-2.kaspanet.org",
+		"mainnet-dnsseed-2.nexepanet.org",
 		// This DNS seeder is run by Constantine Bytensky
 		"dnsseed.cbytensky.org",
 		// This DNS seeder is run by Georges Künzli
-		"seeder1.kaspad.net",
+		"seeder1.nexepad.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder2.kaspad.net",
+		"seeder2.nexepad.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder3.kaspad.net",
+		"seeder3.nexepad.net",
 		// This DNS seeder is run by Georges Künzli
-		"seeder4.kaspad.net",
+		"seeder4.nexepad.net",
 		// This DNS seeder is run by Tim
-		"kaspadns.kaspacalc.net",
+		"nexepadns.nexepacalc.net",
 	},
 
 	// DAG parameters
@@ -262,7 +262,7 @@ var MainnetParams = Params{
 	AcceptUnroutable: false,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspa,
+	Prefix: util.Bech32Prefixnexepa,
 
 	// Address encoding magics
 	PrivateKeyID: 0x80, // starts with 5 (uncompressed) or K (compressed)
@@ -290,17 +290,17 @@ var MainnetParams = Params{
 	MergeDepth:    defaultMergeDepth,
 }
 
-// TestnetParams defines the network parameters for the test Kaspa network.
+// TestnetParams defines the network parameters for the test nexepa network.
 var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-testnet-10",
+	Name:        "nexepa-testnet-10",
 	Net:         appmessage.Testnet,
 	RPCPort:     "16210",
 	DefaultPort: "16211",
 	DNSSeeds: []string{
-		"testnet-10-dnsseed.kas.pa",
+		"testnet-10-dnsseed.nexe.pa",
 		// This DNS seeder is run by Tiram
-		"seeder1-testnet.kaspad.net",
+		"seeder1-testnet.nexepad.net",
 	},
 
 	// DAG parameters
@@ -331,7 +331,7 @@ var TestnetParams = Params{
 	AcceptUnroutable: false,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaTest,
+	Prefix: util.Bech32PrefixnexepaTest,
 
 	// Address encoding magics
 	PrivateKeyID: 0xef, // starts with 9 (uncompressed) or c (compressed)
@@ -356,7 +356,7 @@ var TestnetParams = Params{
 	MergeDepth:    defaultMergeDepth,
 }
 
-// SimnetParams defines the network parameters for the simulation test Kaspa
+// SimnetParams defines the network parameters for the simulation test nexepa
 // network. This network is similar to the normal test network except it is
 // intended for private use within a group of individuals doing simulation
 // testing. The functionality is intended to differ in that the only nodes
@@ -365,7 +365,7 @@ var TestnetParams = Params{
 // just turn into another public testnet.
 var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-simnet",
+	Name:        "nexepa-simnet",
 	Net:         appmessage.Simnet,
 	RPCPort:     "16510",
 	DefaultPort: "16511",
@@ -400,7 +400,7 @@ var SimnetParams = Params{
 
 	PrivateKeyID: 0x64, // starts with 4 (uncompressed) or F (compressed)
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaSim,
+	Prefix: util.Bech32PrefixnexepaSim,
 
 	// EnableNonNativeSubnetworks enables non-native/coinbase transactions
 	EnableNonNativeSubnetworks: false,
@@ -422,10 +422,10 @@ var SimnetParams = Params{
 	MergeDepth:    defaultMergeDepth,
 }
 
-// DevnetParams defines the network parameters for the development Kaspa network.
+// DevnetParams defines the network parameters for the development nexepa network.
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-devnet",
+	Name:        "nexepa-devnet",
 	Net:         appmessage.Devnet,
 	RPCPort:     "16610",
 	DefaultPort: "16611",
@@ -459,7 +459,7 @@ var DevnetParams = Params{
 	AcceptUnroutable: true,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaDev,
+	Prefix: util.Bech32PrefixnexepaDev,
 
 	// Address encoding magics
 	PrivateKeyID: 0xef, // starts with 9 (uncompressed) or c (compressed)
@@ -484,14 +484,14 @@ var DevnetParams = Params{
 	MergeDepth:    defaultMergeDepth,
 }
 
-// ErrDuplicateNet describes an error where the parameters for a Kaspa
+// ErrDuplicateNet describes an error where the parameters for a nexepa
 // network could not be set due to the network already being a standard
 // network or previously-registered into this package.
-var ErrDuplicateNet = errors.New("duplicate Kaspa network")
+var ErrDuplicateNet = errors.New("duplicate nexepa network")
 
-var registeredNets = make(map[appmessage.KaspaNet]struct{})
+var registeredNets = make(map[appmessage.nexepaNet]struct{})
 
-// Register registers the network parameters for a Kaspa network. This may
+// Register registers the network parameters for a nexepa network. This may
 // error with ErrDuplicateNet if the network is already registered (either
 // due to a previous Register call, or the network being one of the default
 // networks).

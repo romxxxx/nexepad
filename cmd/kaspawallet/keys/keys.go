@@ -6,23 +6,24 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/gofrs/flock"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/utils"
+	"github.com/gofrs/flock"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/utils"
+
+	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 
 var (
-	defaultAppDir = util.AppDir("kaspawallet", false)
+	defaultAppDir = util.AppDir("nexepawallet", false)
 )
 
 // LastVersion is the most up to date file format version

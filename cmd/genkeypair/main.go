@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/util"
+
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/nexepanet/nexepad/util"
 )
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 		panic(err)
 	}
 
-	privateKey, publicKey, err := libkaspawallet.CreateKeyPair(false)
+	privateKey, publicKey, err := libnexepawallet.CreateKeyPair(false)
 	if err != nil {
 		panic(err)
 	}

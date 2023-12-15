@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
 )
 

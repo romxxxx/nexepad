@@ -3,10 +3,10 @@ package blockprocessor
 import (
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/nexepanet/nexepad/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

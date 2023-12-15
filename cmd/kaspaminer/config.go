@@ -7,24 +7,24 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/nexepanet/nexepad/infrastructure/config"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/kaspanet/kaspad/version"
+	"github.com/nexepanet/nexepad/version"
 )
 
 const (
-	defaultLogFilename          = "kaspaminer.log"
-	defaultErrLogFilename       = "kaspaminer_err.log"
+	defaultLogFilename          = "nexepaminer.log"
+	defaultErrLogFilename       = "nexepaminer_err.log"
 	defaultTargetBlockRateRatio = 2.0
 )
 
 var (
 	// Default configuration options
-	defaultAppDir     = util.AppDir("kaspaminer", false)
+	defaultAppDir     = util.AppDir("nexepaminer", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, defaultLogFilename)
 	defaultErrLogFile = filepath.Join(defaultAppDir, defaultErrLogFilename)
 	defaultRPCServer  = "localhost"

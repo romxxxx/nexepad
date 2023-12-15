@@ -1,4 +1,4 @@
-package libkaspawallet
+package libnexepawallet
 
 const (
 	// ExternalKeychain is the key chain that is used to create receive addresses

@@ -2,7 +2,8 @@ package server
 
 import (
 	"context"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
+
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb"
 )
 
 func (s *server) Shutdown(ctx context.Context, request *pb.ShutdownRequest) (*pb.ShutdownResponse, error) {

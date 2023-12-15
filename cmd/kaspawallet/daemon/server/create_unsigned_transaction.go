@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
 	"golang.org/x/exp/slices"
 )
@@ -71,17 +71,17 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 		return nil, err
 	}
 
-	payments := []*libkaspawallet.Payment{{
+	payments := []*libnexepawallet.Payment{{
 		Address: toAddress,
 		Amount:  spendValue,
 	}}
 	if changeSompi > 0 {
-		payments = append(payments, &libkaspawallet.Payment{
+		payments = append(payments, &libnexepawallet.Payment{
 			Address: changeAddress,
 			Amount:  changeSompi,
 		})
 	}
-	unsignedTransaction, err := libkaspawallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
+	unsignedTransaction, err := libnexepawallet.CreateUnsignedTransaction(s.keysFile.ExtendedPublicKeys,
 		s.keysFile.MinimumSignatures,
 		payments, selectedUTXOs)
 	if err != nil {
@@ -96,9 +96,9 @@ func (s *server) createUnsignedTransactions(address string, amount uint64, isSen
 }
 
 func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uint64, fromAddresses []*walletAddress) (
-	selectedUTXOs []*libkaspawallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
+	selectedUTXOs []*libnexepawallet.UTXO, totalReceived uint64, changeSompi uint64, err error) {
 
-	selectedUTXOs = []*libkaspawallet.UTXO{}
+	selectedUTXOs = []*libnexepawallet.UTXO{}
 	totalValue := uint64(0)
 
 	dagInfo, err := s.rpcClient.GetBlockDAGInfo()
@@ -120,7 +120,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 			}
 		}
 
-		selectedUTXOs = append(selectedUTXOs, &libkaspawallet.UTXO{
+		selectedUTXOs = append(selectedUTXOs, &libnexepawallet.UTXO{
 			Outpoint:       utxo.Outpoint,
 			UTXOEntry:      utxo.UTXOEntry,
 			DerivationPath: s.walletAddressPath(utxo.address),
@@ -146,7 +146,7 @@ func (s *server) selectUTXOs(spendAmount uint64, isSendAll bool, feePerInput uin
 	}
 	if totalValue < totalSpend {
 		return nil, 0, 0, errors.Errorf("Insufficient funds for send: %f required, while only %f available",
-			float64(totalSpend)/constants.SompiPerKaspa, float64(totalValue)/constants.SompiPerKaspa)
+			float64(totalSpend)/constants.SompiPernexepa, float64(totalValue)/constants.SompiPernexepa)
 	}
 
 	return selectedUTXOs, totalReceived, totalValue - totalSpend, nil

@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/version"
 	"os"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/nexepanet/nexepad/version"
+
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient/grpcclient"
+	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient/grpcclient"
 )
 
 func main() {
@@ -35,13 +36,13 @@ func main() {
 	defer client.Disconnect()
 
 	if !cfg.AllowConnectionToDifferentVersions {
-		kaspadMessage, err := client.Post(&protowire.KaspadMessage{Payload: &protowire.KaspadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
+		nexepadMessage, err := client.Post(&protowire.nexepadMessage{Payload: &protowire.nexepadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
 		if err != nil {
 			printErrorAndExit(fmt.Sprintf("Cannot post GetInfo message: %s", err))
 		}
 
 		localVersion := version.Version()
-		remoteVersion := kaspadMessage.GetGetInfoResponse().ServerVersion
+		remoteVersion := nexepadMessage.GetGetInfoResponse().ServerVersion
 
 		if localVersion != remoteVersion {
 			printErrorAndExit(fmt.Sprintf("Server version mismatch, expect: %s, got: %s", localVersion, remoteVersion))
@@ -100,8 +101,8 @@ func postJSON(cfg *configFlags, client *grpcclient.GRPCClient, doneChan chan str
 }
 
 func prettifyResponse(response string) string {
-	kaspadMessage := &protowire.KaspadMessage{}
-	err := protojson.Unmarshal([]byte(response), kaspadMessage)
+	nexepadMessage := &protowire.nexepadMessage{}
+	err := protojson.Unmarshal([]byte(response), nexepadMessage)
 	if err != nil {
 		printErrorAndExit(fmt.Sprintf("error parsing the response from the RPC server: %s", err))
 	}
@@ -109,7 +110,7 @@ func prettifyResponse(response string) string {
 	marshalOptions := &protojson.MarshalOptions{}
 	marshalOptions.Indent = "    "
 	marshalOptions.EmitUnpopulated = true
-	return marshalOptions.Format(kaspadMessage)
+	return marshalOptions.Format(nexepadMessage)
 }
 
 func printErrorAndExit(message string) {

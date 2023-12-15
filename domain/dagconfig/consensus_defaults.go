@@ -1,7 +1,7 @@
 package dagconfig
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
 	"time"
 )
 
@@ -14,11 +14,11 @@ import (
 //
 // For more information about the DAA constants defaultDifficultyAdjustmentWindowSize, defaultTimestampDeviationTolerance,
 // and their relation to defaultGHOSTDAGK and defaultTargetTimePerBlock see:
-// https://research.kas.pa/t/handling-timestamp-manipulations/97
+// https://research.nexe.pa/t/handling-timestamp-manipulations/97
 //
 // For more information about defaultMergeSetSizeLimit, defaultFinalityDuration and their relation to pruning, see:
-// https://research.kas.pa/t/a-proposal-for-finality-in-ghostdag/66/17
-// https://research.kas.pa/t/some-of-the-intuition-behind-the-design-of-the-invalidation-rules-for-pruning/95
+// https://research.nexe.pa/t/a-proposal-for-finality-in-ghostdag/66/17
+// https://research.nexe.pa/t/some-of-the-intuition-behind-the-design-of-the-invalidation-rules-for-pruning/95
 //
 
 const (
@@ -47,9 +47,9 @@ const (
 	// (Higher values make pruning attacks easier by a constant, lower values make merging after a split or a spike
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
-	defaultSubsidyGenesisReward                    = 1 * constants.SompiPerKaspa
-	defaultPreDeflationaryPhaseBaseSubsidy         = 500 * constants.SompiPerKaspa
-	defaultDeflationaryPhaseBaseSubsidy            = 440 * constants.SompiPerKaspa
+	defaultSubsidyGenesisReward                    = 1 * constants.SompiPernexepa
+	defaultPreDeflationaryPhaseBaseSubsidy         = 500 * constants.SompiPernexepa
+	defaultDeflationaryPhaseBaseSubsidy            = 440 * constants.SompiPernexepa
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.

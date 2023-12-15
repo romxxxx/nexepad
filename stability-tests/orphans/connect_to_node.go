@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/standalone"
+	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {
 	cfg := activeConfig()
 
-	kaspadConfig := config.DefaultConfig()
-	kaspadConfig.NetworkFlags = cfg.NetworkFlags
+	nexepadConfig := config.DefaultConfig()
+	nexepadConfig.NetworkFlags = cfg.NetworkFlags
 
-	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(kaspadConfig)
+	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(nexepadConfig)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error creating minimalNetAdapter: %+v", err)
 		os.Exit(1)

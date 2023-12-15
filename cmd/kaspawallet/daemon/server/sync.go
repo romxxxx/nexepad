@@ -5,13 +5,13 @@ import (
 	"sort"
 	"time"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
+	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-var keyChains = []uint8{libkaspawallet.ExternalKeychain, libkaspawallet.InternalKeychain}
+var keyChains = []uint8{libnexepawallet.ExternalKeychain, libnexepawallet.InternalKeychain}
 
 type walletAddressSet map[string]*walletAddress
 
@@ -188,7 +188,7 @@ func (s *server) updateAddressesAndLastUsedIndexes(requestedAddressSet walletAdd
 
 		s.addressSet[entry.Address] = walletAddress
 
-		if walletAddress.keyChain == libkaspawallet.ExternalKeychain {
+		if walletAddress.keyChain == libnexepawallet.ExternalKeychain {
 			if walletAddress.index > lastUsedExternalIndex {
 				lastUsedExternalIndex = walletAddress.index
 			}

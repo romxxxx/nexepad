@@ -1,10 +1,10 @@
 package consensushashing
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
+	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
 )
 

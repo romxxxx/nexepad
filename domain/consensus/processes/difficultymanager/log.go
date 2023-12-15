@@ -1,7 +1,7 @@
 package difficultymanager
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/nexepanet/nexepad/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("DAA")

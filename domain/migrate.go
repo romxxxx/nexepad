@@ -1,7 +1,7 @@
 package domain
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 	"math"
 )
@@ -81,7 +81,7 @@ func syncConsensuses(syncer, syncee externalapi.Consensus) error {
 			return err
 		}
 
-		ghostdagDataBlockHashes, err := syncer.TrustedBlockAssociatedGHOSTDAGDataBlockHashes(blockHash)
+		ghostdagDataBlockHashes, err := syncer.TrustedBlocnexesociatedGHOSTDAGDataBlockHashes(blockHash)
 		if err != nil {
 			return err
 		}
