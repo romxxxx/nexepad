@@ -1,9 +1,9 @@
 # -- multistage docker build: stage #1: build stage
 FROM golang:1.19-alpine AS build
 
-RUN mkdir -p /go/src/github.com/nexepanet/nexepad
+RUN mkdir -p /go/src/github.com/romxxxx/nexepad
 
-WORKDIR /go/src/github.com/nexepanet/nexepad
+WORKDIR /go/src/github.com/romxxxx/nexepad
 
 RUN apk add --no-cache curl git openssh binutils gcc musl-dev
 
@@ -14,7 +14,7 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/nexepanet/nexepad/cmd/nexepaminer
+WORKDIR /go/src/github.com/romxxxx/nexepad/cmd/nexepaminer
 RUN GOOS=linux go build -a -installsuffix cgo -o nexepaminer .
 
 # --- multistage docker build: stage #2: runtime image
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/nexepanet/nexepad/cmd/nexepaminer/nexepaminer /app/
+COPY --from=build /go/src/github.com/romxxxx/nexepad/cmd/nexepaminer/nexepaminer /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

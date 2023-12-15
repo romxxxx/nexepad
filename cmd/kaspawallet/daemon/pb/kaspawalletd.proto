@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/nexepanet/nexepad/cmd/nexepawallet/daemon/pb";
+option go_package = "github.com/romxxxx/nexepad/cmd/nexepawallet/daemon/pb";
 package nexepawalletd;
 
 service nexepawalletd {

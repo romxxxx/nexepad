@@ -2,7 +2,7 @@ dagconfig
 ========
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/nexepanet/nexepad/dagconfig)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/romxxxx/nexepad/dagconfig)
 
 Package dagconfig defines DAG configuration parameters for the standard
 nexepad networks and provides the ability for callers to define their own custom
@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/nexepanet/nexepad/util"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/util"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 var testnet = flag.Bool("testnet", false, "operate on the testnet nexepa network")

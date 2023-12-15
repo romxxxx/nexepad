@@ -6,14 +6,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/blockheader"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/utxo"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionid"
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionid"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock

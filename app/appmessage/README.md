@@ -2,7 +2,7 @@ wire
 ====
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/nexepanet/nexepad/wire)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/romxxxx/nexepad/wire)
 =======
 
 Package wire implements the nexepa wire protocol.
@@ -32,13 +32,13 @@ to a remote node running a nexepa peer. Example syntax is:
 	// Use the most recent protocol version supported by the package and the
 	// main nexepa network.
 	pver := wire.ProtocolVersion
-	nexepanet := wire.Mainnet
+	romxxxx := wire.Mainnet
 
 	// Reads and validates the next nexepa message from conn using the
-	// protocol version pver and the nexepa network nexepanet. The returns
+	// protocol version pver and the nexepa network romxxxx. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
-	msg, rawPayload, err := wire.ReadMessage(conn, pver, nexepanet)
+	msg, rawPayload, err := wire.ReadMessage(conn, pver, romxxxx)
 	if err != nil {
 		// Log and handle the error
 	}
@@ -57,15 +57,15 @@ from a remote peer is:
 	// Use the most recent protocol version supported by the package and the
 	// main bitcoin network.
 	pver := wire.ProtocolVersion
-	nexepanet := wire.Mainnet
+	romxxxx := wire.Mainnet
 
 	// Create a new getaddr nexepa message.
 	msg := wire.NewMsgGetAddr()
 
 	// Writes a nexepa message msg to conn using the protocol version
-	// pver, and the nexepa network nexepanet. The return is a possible
+	// pver, and the nexepa network romxxxx. The return is a possible
 	// error.
-	err := wire.WriteMessage(conn, msg, pver, nexepanet)
+	err := wire.WriteMessage(conn, msg, pver, romxxxx)
 	if err != nil {
 		// Log and handle the error
 	}

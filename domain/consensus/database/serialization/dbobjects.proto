@@ -1,7 +1,7 @@
 syntax = "proto3";
 package serialization;
 
-option go_package = "github.com/nexepanet/nexepad/serialization";
+option go_package = "github.com/romxxxx/nexepad/serialization";
 
 message DbBlock {
   DbBlockHeader header = 1;

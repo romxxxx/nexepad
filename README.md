@@ -3,7 +3,7 @@ nexepad
 ====
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/nexepanet/nexepad)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/romxxxx/nexepad)
 
 nexepad is the reference full node nexepa implementation written in Go (golang).
 
@@ -31,7 +31,7 @@ $ go version
 - Run the following commands to obtain and install nexepad including all dependencies:
 
 ```bash
-$ git clone https://github.com/nexepanet/nexepad
+$ git clone https://github.com/romxxxx/nexepad
 $ cd nexepad
 $ go install . ./cmd/...
 ```
@@ -55,14 +55,14 @@ Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
 
 ## Issue Tracker
 
-The [integrated github issue tracker](https://github.com/nexepanet/nexepad/issues)
+The [integrated github issue tracker](https://github.com/romxxxx/nexepad/issues)
 is used for this project.
 
-Issue priorities may be seen at https://github.com/orgs/nexepanet/projects/4
+Issue priorities may be seen at https://github.com/orgs/romxxxx/projects/4
 
 ## Documentation
 
-The [documentation](https://github.com/nexepanet/docs) is a work-in-progress
+The [documentation](https://github.com/romxxxx/docs) is a work-in-progress
 
 ## License
 

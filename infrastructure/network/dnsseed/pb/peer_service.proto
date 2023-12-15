@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/nexepanet/nexepad/pb";
+option go_package = "github.com/romxxxx/nexepad/pb";
 
 service PeerService {
   rpc GetPeersList(GetPeersListRequest) returns (GetPeersListResponse) {}

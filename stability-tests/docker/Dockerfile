@@ -6,9 +6,9 @@ FROM ${nexePAMINER_IMAGE} as nexepaminer
 
 FROM golang:1.19-alpine
 
-RUN mkdir -p /go/src/github.com/nexepanet/nexepad
+RUN mkdir -p /go/src/github.com/romxxxx/nexepad
 
-WORKDIR /go/src/github.com/nexepanet/nexepad
+WORKDIR /go/src/github.com/romxxxx/nexepad
 
 RUN apk add bash build-base git
 
@@ -23,7 +23,7 @@ COPY --from=nexepad /app/ /app/
 COPY --from=nexepaminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
-WORKDIR /go/src/github.com/nexepanet/nexepad/stability-tests
+WORKDIR /go/src/github.com/romxxxx/nexepad/stability-tests
 
 RUN go install ./...
 

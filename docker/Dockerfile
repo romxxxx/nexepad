@@ -1,9 +1,9 @@
 # -- multistage docker build: stage #1: build stage
 FROM golang:1.19-alpine AS build
 
-RUN mkdir -p /go/src/github.com/nexepanet/nexepad
+RUN mkdir -p /go/src/github.com/romxxxx/nexepad
 
-WORKDIR /go/src/github.com/nexepanet/nexepad
+WORKDIR /go/src/github.com/romxxxx/nexepad
 
 RUN apk add --no-cache curl git openssh binutils gcc musl-dev
 
@@ -24,8 +24,8 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/nexepanet/nexepad/nexepad /app/
-COPY --from=build /go/src/github.com/nexepanet/nexepad/infrastructure/config/sample-nexepad.conf /app/
+COPY --from=build /go/src/github.com/romxxxx/nexepad/nexepad /app/
+COPY --from=build /go/src/github.com/romxxxx/nexepad/infrastructure/config/sample-nexepad.conf /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

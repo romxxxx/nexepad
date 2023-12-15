@@ -1,7 +1,7 @@
 syntax = "proto3";
 package protowire;
 
-option go_package = "github.com/nexepanet/nexepad/protowire";
+option go_package = "github.com/romxxxx/nexepad/protowire";
 
 message RequestAddressesMessage{
   bool includeAllSubnetworks = 1;

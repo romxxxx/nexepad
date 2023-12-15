@@ -22,7 +22,7 @@ $ go version
 - Run the following commands to obtain and install nexepad including all dependencies:
 
 ```bash
-$ git clone https://github.com/nexepanet/nexepad
+$ git clone https://github.com/romxxxx/nexepad
 $ cd nexepad/cmd/nexepactl
 $ go install .
 ```
