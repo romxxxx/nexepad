@@ -3,9 +3,9 @@ package serialization
 import (
 	"io"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/util/binaryserializer"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/util/binaryserializer"
 )
 
 // errNoEncodingForType signifies that there's no encoding for the given type.

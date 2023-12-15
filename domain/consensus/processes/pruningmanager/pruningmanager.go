@@ -1,17 +1,18 @@
 package pruningmanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/multiset"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/virtual"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/util/staging"
-	"github.com/pkg/errors"
 	"sort"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/multiset"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/utxo"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/virtual"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/util/staging"
 )
 
 // pruningManager resolves and manages the current pruning point

@@ -1,10 +1,10 @@
 package consensusstatemanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/util/staging"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/util/staging"
 )
 
 func (csm *consensusStateManager) ReverseUTXODiffs(tipHash *externalapi.DomainHash,

@@ -5,8 +5,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/protocol/common"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/protocol/common"
 )
 
 func sendMessages(address string, messagesChan <-chan []byte) error {

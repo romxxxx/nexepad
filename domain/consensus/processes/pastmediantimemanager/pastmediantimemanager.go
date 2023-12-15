@@ -3,11 +3,11 @@ package pastmediantimemanager
 import (
 	"sort"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/sorters"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/sorters"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // pastMedianTimeManager provides a method to resolve the

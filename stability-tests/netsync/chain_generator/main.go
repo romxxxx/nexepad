@@ -5,9 +5,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/stability-tests/common/mine"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common/mine"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 func main() {

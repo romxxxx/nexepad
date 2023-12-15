@@ -1,11 +1,11 @@
 package reachabilitymanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/database"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/reachabilitydata"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/database"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/reachabilitydata"
 )
 
 func (rt *reachabilityManager) reachabilityDataForInsertion(stagingArea *model.StagingArea,

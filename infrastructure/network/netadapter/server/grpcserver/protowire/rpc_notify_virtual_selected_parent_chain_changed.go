@@ -1,8 +1,8 @@
 package protowire
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 func (x *nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) toAppMessage() (appmessage.Message, error) {

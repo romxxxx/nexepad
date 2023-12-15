@@ -5,11 +5,12 @@
 package util_test
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
 	"math"
 	"testing"
 
-	. "github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+
+	. "github.com/romxxxx/nexepad/util"
 )
 
 func TestAmountCreation(t *testing.T) {

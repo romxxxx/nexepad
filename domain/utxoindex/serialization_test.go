@@ -2,11 +2,12 @@ package utxoindex
 
 import (
 	"encoding/binary"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/pkg/errors"
 	"io"
 	"math/rand"
 	"testing"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func Test_serializeHashes(t *testing.T) {

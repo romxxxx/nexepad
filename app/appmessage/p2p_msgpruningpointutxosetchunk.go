@@ -1,6 +1,6 @@
 package appmessage
 
-import "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+import "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
 // MsgPruningPointUTXOSetChunk represents a nexepa PruningPointUTXOSetChunk message
 type MsgPruningPointUTXOSetChunk struct {

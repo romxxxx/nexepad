@@ -4,17 +4,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/util/difficulty"
+	"github.com/romxxxx/nexepad/util/difficulty"
 
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/util/mstime"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 func TestDifficulty(t *testing.T) {

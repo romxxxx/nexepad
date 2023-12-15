@@ -7,7 +7,7 @@ package appmessage
 import (
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // TestRequstIBDBlocks tests the MsgRequestIBDBlocks API.

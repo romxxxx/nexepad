@@ -3,7 +3,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/config"
 )
 
 // Config is a descriptor which specifies the AddressManager instance configuration.

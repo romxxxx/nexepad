@@ -1,10 +1,11 @@
 package hashes
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/pkg/errors"
-	"golang.org/x/crypto/sha3"
 	"hash"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"golang.org/x/crypto/sha3"
 )
 
 // HashWriter is used to incrementally hash data without concatenating all of the data to a single buffer

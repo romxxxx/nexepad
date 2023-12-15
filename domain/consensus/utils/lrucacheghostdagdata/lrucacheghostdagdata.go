@@ -1,6 +1,6 @@
 package lrucacheghostdagdata
 
-import "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+import "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
 type lruKey struct {
 	blockHash     externalapi.DomainHash

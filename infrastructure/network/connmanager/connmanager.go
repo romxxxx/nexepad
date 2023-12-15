@@ -6,15 +6,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/dnsseed"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/dnsseed"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
 
-	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/config"
 )
 
 // connectionRequest represents a user request (either through CLI or RPC) to connect to a certain node

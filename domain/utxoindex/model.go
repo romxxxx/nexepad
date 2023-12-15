@@ -1,7 +1,7 @@
 package utxoindex
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // ScriptPublicKeyString is a script public key represented as a string

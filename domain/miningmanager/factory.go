@@ -1,12 +1,13 @@
 package miningmanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensusreference"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/nexepanet/nexepad/domain/miningmanager/mempool"
 	"sync"
 	"time"
+
+	"github.com/romxxxx/nexepad/domain/consensusreference"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/romxxxx/nexepad/domain/miningmanager/mempool"
 )
 
 // Factory instantiates new mining managers

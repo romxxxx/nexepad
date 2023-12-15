@@ -1,9 +1,10 @@
 package blockheader
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/pow"
 	"math/big"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/pow"
 )
 
 type blockHeader struct {

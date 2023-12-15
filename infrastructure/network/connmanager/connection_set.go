@@ -1,7 +1,7 @@
 package connmanager
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
 )
 
 type connectionSet map[string]*netadapter.NetConnection

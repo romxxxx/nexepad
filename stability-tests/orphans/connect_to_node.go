@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/standalone"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {

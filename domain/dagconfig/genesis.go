@@ -5,12 +5,13 @@
 package dagconfig
 
 import (
-	"github.com/nexepanet/go-muhash"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
 	"math/big"
+
+	"github.com/romxxxx/go-muhash"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/blockheader"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
 )
 
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}

@@ -1,19 +1,20 @@
 package blockvalidator_test
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
 	"reflect"
 	"runtime"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/domain/consensus/model/testapi"
+
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/blockheader"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 func TestBlockValidator_ValidateHeaderInIsolation(t *testing.T) {

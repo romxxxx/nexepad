@@ -1,7 +1,7 @@
 package blockprocessor
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("BDAG")

@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // BlockGHOSTDAGDataHashPairToDbBlockGhostdagDataHashPair converts *externalapi.BlockGHOSTDAGDataHashPair to *DbBlockGHOSTDAGDataHashPair

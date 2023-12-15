@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/util"
 )
 
 // TestAppDataDir tests the API for AppDir to ensure it gives expected

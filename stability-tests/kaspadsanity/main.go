@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/util/profiling"
 
-	"github.com/nexepanet/nexepad/util/panics"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/util/panics"
 )
 
 func main() {

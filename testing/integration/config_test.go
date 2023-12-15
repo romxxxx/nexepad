@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/infrastructure/config"
 )
 
 const (

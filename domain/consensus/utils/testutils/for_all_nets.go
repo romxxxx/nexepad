@@ -3,8 +3,8 @@ package testutils
 import (
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 // ForAllNets runs the passed testFunc with all available networks

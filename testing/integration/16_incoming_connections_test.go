@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 func Test16IncomingConnections(t *testing.T) {

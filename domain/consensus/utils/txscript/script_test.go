@@ -7,9 +7,10 @@ package txscript
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"reflect"
 	"testing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // TestParseOpcode tests for opcode parsing with bad data templates.

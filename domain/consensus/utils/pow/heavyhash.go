@@ -1,9 +1,10 @@
 package pow
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
 	"math"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
 )
 
 const eps float64 = 1e-9

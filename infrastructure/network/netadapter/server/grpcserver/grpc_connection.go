@@ -5,12 +5,12 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server"
 	"google.golang.org/grpc"
 )
 

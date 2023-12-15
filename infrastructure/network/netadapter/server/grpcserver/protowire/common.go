@@ -3,13 +3,13 @@ package protowire
 import (
 	"math"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionid"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionid"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/util/mstime"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 var errorNil = errors.New("a required field is nil")

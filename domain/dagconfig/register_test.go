@@ -3,7 +3,7 @@ package dagconfig_test
 import (
 	"testing"
 
-	. "github.com/nexepanet/nexepad/domain/dagconfig"
+	. "github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 // Define some of the required parameters for a user-registered

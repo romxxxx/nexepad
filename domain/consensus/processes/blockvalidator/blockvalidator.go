@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/nexepanet/nexepad/util/txmass"
+	"github.com/romxxxx/nexepad/util/txmass"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/util/difficulty"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

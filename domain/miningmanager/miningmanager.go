@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensusreference"
-	miningmanagermodel "github.com/nexepanet/nexepad/domain/miningmanager/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensusreference"
+	miningmanagermodel "github.com/romxxxx/nexepad/domain/miningmanager/model"
 )
 
 // MiningManager creates block templates for mining as well as maintaining

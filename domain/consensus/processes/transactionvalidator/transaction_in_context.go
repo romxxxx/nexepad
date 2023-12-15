@@ -3,14 +3,14 @@ package transactionvalidator
 import (
 	"math"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
 )
 
 // IsFinalizedTransaction determines whether or not a transaction is finalized.

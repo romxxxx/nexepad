@@ -1,6 +1,6 @@
 package winservice
 
-import "github.com/nexepanet/nexepad/infrastructure/config"
+import "github.com/romxxxx/nexepad/infrastructure/config"
 
 // ServiceDescription contains information about a service, needed to administer it
 type ServiceDescription struct {

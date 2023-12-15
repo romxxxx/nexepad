@@ -7,8 +7,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 // AddressPriority type is used to describe the hierarchy of local address

@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 var timeout = 30 * time.Second

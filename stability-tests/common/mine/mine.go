@@ -6,14 +6,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/mining"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/testapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/mining"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
 )
 
 // FromFile mines all blocks as described by `jsonFile`

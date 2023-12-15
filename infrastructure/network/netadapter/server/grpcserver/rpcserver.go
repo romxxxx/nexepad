@@ -1,9 +1,9 @@
 package grpcserver
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/nexepanet/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/romxxxx/nexepad/util/panics"
 )
 
 type rpcServer struct {

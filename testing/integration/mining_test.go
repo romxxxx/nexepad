@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/mining"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/mining"
 )
 
 func mineNextBlock(t *testing.T, harness *appHarness) *externalapi.DomainBlock {

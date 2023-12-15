@@ -1,9 +1,10 @@
 package math_test
 
 import (
-	utilMath "github.com/nexepanet/nexepad/util/math"
 	"math"
 	"testing"
+
+	utilMath "github.com/romxxxx/nexepad/util/math"
 )
 
 const (

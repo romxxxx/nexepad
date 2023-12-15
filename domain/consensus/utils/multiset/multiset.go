@@ -1,10 +1,10 @@
 package multiset
 
 import (
-	"github.com/nexepanet/go-muhash"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/go-muhash"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 type multiset struct {

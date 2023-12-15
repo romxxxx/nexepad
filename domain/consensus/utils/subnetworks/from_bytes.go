@@ -1,8 +1,8 @@
 package subnetworks
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // FromBytes creates a DomainSubnetworkID from the given byte slice

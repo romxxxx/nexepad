@@ -2,18 +2,19 @@ package pruningmanager_test
 
 import (
 	"encoding/json"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
 	"os"
 	"path/filepath"
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 type jsonBlock struct {

@@ -1,11 +1,12 @@
 package utxoindex
 
 import (
-	"github.com/nexepanet/nexepad/domain"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
 	"sync"
+
+	"github.com/romxxxx/nexepad/domain"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 // UTXOIndex maintains an index between transaction scriptPublicKeys

@@ -3,9 +3,9 @@ package ruleerrors
 import (
 	"fmt"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
 )
 
 // These constants are used to identify a specific RuleError.

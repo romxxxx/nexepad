@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 // LogWriter writes to the given log with the given log level and prefix

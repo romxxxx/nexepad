@@ -3,12 +3,12 @@ package standalone
 import (
 	"time"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // Routes holds the incoming and outgoing routes of a connection created by MinimalNetAdapter

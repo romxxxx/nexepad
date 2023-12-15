@@ -1,12 +1,12 @@
 package rpchandlers
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/rpc/rpccontext"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
-	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/rpc/rpccontext"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/util"
 )
 
 // HandleGetBalanceByAddress handles the respectively named RPC command

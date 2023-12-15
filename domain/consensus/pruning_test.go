@@ -3,9 +3,9 @@ package consensus_test
 import (
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 func TestPruningDepth(t *testing.T) {

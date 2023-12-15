@@ -18,13 +18,13 @@ import (
 
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/util"
-	"github.com/nexepanet/nexepad/util/network"
-	"github.com/nexepanet/nexepad/version"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/util"
+	"github.com/romxxxx/nexepad/util/network"
+	"github.com/romxxxx/nexepad/version"
 )
 
 const (

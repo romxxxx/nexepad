@@ -2,11 +2,12 @@ package util_test
 
 import (
 	"fmt"
-	"github.com/nexepanet/nexepad/util/difficulty"
 	"math"
 	"math/big"
 
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/util/difficulty"
+
+	"github.com/romxxxx/nexepad/util"
 )
 
 func ExampleAmount() {

@@ -8,7 +8,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 // TestIPTypes ensures the various functions which determine the type of an IP

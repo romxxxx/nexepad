@@ -1,6 +1,6 @@
 package model
 
-import "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+import "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
 // SyncManager exposes functions to support sync between nexepad nodes
 type SyncManager interface {

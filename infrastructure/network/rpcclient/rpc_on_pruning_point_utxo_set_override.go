@@ -1,9 +1,9 @@
 package rpcclient
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	routerpkg "github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	routerpkg "github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // RegisterPruningPointUTXOSetNotifications sends an RPC request respective to the function's name and returns the RPC server's response.

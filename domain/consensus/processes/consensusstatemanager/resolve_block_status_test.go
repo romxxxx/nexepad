@@ -2,19 +2,20 @@ package consensusstatemanager_test
 
 import (
 	"errors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/utxo"
 
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
 )
 
 func TestDoubleSpends(t *testing.T) {

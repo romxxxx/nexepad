@@ -1,10 +1,10 @@
 package syncmanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/database"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/database"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // createBlockLocator creates a block locator for the passed high and low hashes.

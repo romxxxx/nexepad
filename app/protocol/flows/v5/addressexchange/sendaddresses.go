@@ -3,9 +3,9 @@ package addressexchange
 import (
 	"math/rand"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // SendAddressesContext is the interface for the context needed for the SendAddresses flow.

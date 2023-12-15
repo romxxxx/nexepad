@@ -1,7 +1,7 @@
 package panics
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 var utilLog = logger.RegisterSubSystem("UTIL")

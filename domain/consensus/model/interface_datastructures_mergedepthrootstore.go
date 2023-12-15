@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MergeDepthRootStore represents a store for merge depth roots

@@ -1,29 +1,30 @@
 package miningmanager_test
 
 import (
-	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
-	"github.com/nexepanet/nexepad/domain/consensusreference"
-	"github.com/nexepanet/nexepad/domain/miningmanager/model"
-	"github.com/nexepanet/nexepad/util"
-	"github.com/nexepanet/nexepad/version"
 	"reflect"
 	"strings"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/miningmanager/mempool"
+	"github.com/romxxxx/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/romxxxx/nexepad/domain/consensusreference"
+	"github.com/romxxxx/nexepad/domain/miningmanager/model"
+	"github.com/romxxxx/nexepad/util"
+	"github.com/romxxxx/nexepad/version"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/utxo"
-	"github.com/nexepanet/nexepad/domain/miningmanager"
+	"github.com/romxxxx/nexepad/domain/miningmanager/mempool"
+
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/testapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/utxo"
+	"github.com/romxxxx/nexepad/domain/miningmanager"
 )
 
 // TestValidateAndInsertTransaction verifies that valid transactions were successfully inserted into the mempool.

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
 )
 
 func checkFlowError(t *testing.T, err error, isProtocolError bool, shouldBan bool, contains string) {

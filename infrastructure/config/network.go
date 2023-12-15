@@ -7,12 +7,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/util/difficulty"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/util/difficulty"
 )
 
 // NetworkFlags holds the network configuration, that is which network is selected.

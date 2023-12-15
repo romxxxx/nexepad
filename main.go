@@ -8,7 +8,7 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	"github.com/nexepanet/nexepad/app"
+	"github.com/romxxxx/nexepad/app"
 )
 
 func main() {

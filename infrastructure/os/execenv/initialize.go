@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/nexepanet/nexepad/infrastructure/os/limits"
+	"github.com/romxxxx/nexepad/infrastructure/os/limits"
 )
 
 // Initialize initializes the execution environment required to run nexepad

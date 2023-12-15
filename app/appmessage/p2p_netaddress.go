@@ -7,7 +7,7 @@ package appmessage
 import (
 	"net"
 
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // NetAddress defines information about a peer on the network including the time

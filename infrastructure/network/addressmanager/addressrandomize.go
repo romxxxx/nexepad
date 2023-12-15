@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 // AddressRandomize implement addressRandomizer interface

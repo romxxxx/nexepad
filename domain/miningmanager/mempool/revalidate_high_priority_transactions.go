@@ -1,9 +1,9 @@
 package mempool
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/miningmanager/mempool/model"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/miningmanager/mempool/model"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 func (mp *mempool) revalidateHighPriorityTransactions() ([]*externalapi.DomainTransaction, error) {

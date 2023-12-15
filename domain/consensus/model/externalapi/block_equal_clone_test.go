@@ -1,11 +1,12 @@
 package externalapi_test
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
 	"math/big"
 	"reflect"
 	"testing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/blockheader"
 )
 
 type blockToCompare struct {

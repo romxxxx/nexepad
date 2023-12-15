@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/nexepanet/nexepad/infrastructure/db/database/ldb"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/db/database/ldb"
 )
 
 type databasePrepareFunc func(t *testing.T, testName string) (db database.Database, name string, teardownFunc func())

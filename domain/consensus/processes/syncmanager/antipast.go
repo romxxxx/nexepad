@@ -1,9 +1,9 @@
 package syncmanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // antiPastHashesBetween returns the hashes of the blocks between the
@@ -151,7 +151,7 @@ func (sm *syncManager) missingBlockBodyHashes(stagingArea *model.StagingArea, hi
 			// In these cases - return an empty list of blocks to sync
 			return []*externalapi.DomainHash{}, nil
 		}
-		// TODO: Once block children are fixed (https://github.com/nexepanet/nexepad/issues/1499),
+		// TODO: Once block children are fixed (https://github.com/romxxxx/nexepad/issues/1499),
 		// this error should be returned rather the logged
 		log.Errorf("No header-only blocks between %s and %s",
 			lowHash, highHash)

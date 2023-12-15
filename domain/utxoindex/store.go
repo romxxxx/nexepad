@@ -3,11 +3,11 @@ package utxoindex
 import (
 	"encoding/binary"
 
-	"github.com/nexepanet/nexepad/domain/consensus/database/binaryserialization"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/database/binaryserialization"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 var utxoIndexBucket = database.MakeBucket([]byte("utxo-index"))

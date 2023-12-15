@@ -4,22 +4,22 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/nexepanet/nexepad/domain/miningmanager/mempool"
+	"github.com/romxxxx/nexepad/domain/miningmanager/mempool"
 
-	"github.com/nexepanet/nexepad/app/protocol"
-	"github.com/nexepanet/nexepad/app/rpc"
-	"github.com/nexepanet/nexepad/domain"
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/utxoindex"
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	infrastructuredatabase "github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
-	"github.com/nexepanet/nexepad/infrastructure/network/connmanager"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
-	"github.com/nexepanet/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/app/protocol"
+	"github.com/romxxxx/nexepad/app/rpc"
+	"github.com/romxxxx/nexepad/domain"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/utxoindex"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	infrastructuredatabase "github.com/romxxxx/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/connmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/id"
+	"github.com/romxxxx/nexepad/util/panics"
 )
 
 // ComponentManager is a wrapper for all the nexepad services

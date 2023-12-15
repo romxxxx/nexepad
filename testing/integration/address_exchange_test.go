@@ -1,8 +1,9 @@
 package integration
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
 	"testing"
+
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
 )
 
 func TestAddressExchange(t *testing.T) {

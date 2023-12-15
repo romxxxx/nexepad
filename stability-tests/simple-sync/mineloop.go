@@ -3,12 +3,12 @@ package main
 import (
 	"time"
 
-	"github.com/nexepanet/go-secp256k1"
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/go-secp256k1"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/util"
 )
 
 func mineLoop(syncerRPCClient, syncedRPCClient *rpc.Client) error {

@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func TestCreateDefaultConfigFile(t *testing.T) {

@@ -1,10 +1,10 @@
 package protowire
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
-	"github.com/nexepanet/nexepad/util/mstime"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/id"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 func (x *nexepadMessage_Version) toAppMessage() (appmessage.Message, error) {

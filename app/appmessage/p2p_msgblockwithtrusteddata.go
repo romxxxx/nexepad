@@ -3,7 +3,7 @@ package appmessage
 import (
 	"math/big"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MsgBlockWithTrustedData represents a nexepa BlockWithTrustedData message

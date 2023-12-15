@@ -5,8 +5,9 @@
 package bech32_test
 
 import (
-	"github.com/nexepanet/nexepad/util/bech32"
 	"testing"
+
+	"github.com/romxxxx/nexepad/util/bech32"
 )
 
 var checkEncodingStringTests = []struct {

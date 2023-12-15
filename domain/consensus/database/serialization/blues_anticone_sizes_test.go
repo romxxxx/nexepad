@@ -1,8 +1,9 @@
 package serialization
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"testing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // TestBlueAnticoneSizesSize tests that no data can be loss when converting externalapi.KType to the corresponding type in

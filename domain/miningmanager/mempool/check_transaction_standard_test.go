@@ -9,18 +9,18 @@ import (
 	"math"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensusreference"
+	"github.com/romxxxx/nexepad/domain/consensusreference"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/util"
 )
 
 func TestCalcMinRequiredTxRelayFee(t *testing.T) {

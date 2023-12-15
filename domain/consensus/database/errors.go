@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 )
 
 // ErrNotFound denotes that the requested item was not

@@ -1,11 +1,11 @@
 package consensushashing
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
 )
 
 // SigHashType represents hash type bits at the end of a signature.

@@ -1,6 +1,6 @@
 package rpcclient
 
-import "github.com/nexepanet/nexepad/app/appmessage"
+import "github.com/romxxxx/nexepad/app/appmessage"
 
 // GetMempoolEntry sends an RPC request respective to the function's name and returns the RPC server's response
 func (c *RPCClient) GetMempoolEntry(txID string, includeOrphanPool bool, filterTransactionPool bool) (*appmessage.GetMempoolEntryResponseMessage, error) {

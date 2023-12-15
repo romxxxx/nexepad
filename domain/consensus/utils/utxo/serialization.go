@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionid"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionid"
 )
 
 // SerializeUTXO returns the byte-slice representation for given UTXOEntry-outpoint pair

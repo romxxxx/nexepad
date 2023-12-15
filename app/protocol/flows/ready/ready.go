@@ -3,13 +3,13 @@ package ready
 import (
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/protocol/common"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/protocol/common"
 
-	peerpkg "github.com/nexepanet/nexepad/app/protocol/peer"
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
-	routerpkg "github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	peerpkg "github.com/romxxxx/nexepad/app/protocol/peer"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
+	routerpkg "github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // HandleReady notify the other peer that peer is ready for messages, and wait for the other peer

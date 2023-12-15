@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server"
-	"github.com/nexepanet/nexepad/util/panics"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server"
+	"github.com/romxxxx/nexepad/util/panics"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"
 )

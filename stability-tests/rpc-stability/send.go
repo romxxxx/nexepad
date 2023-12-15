@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient/grpcclient"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/infrastructure/network/rpcclient/grpcclient"
 )
 
 func sendCommands(rpcClient *grpcclient.GRPCClient, commandsChan <-chan string) error {

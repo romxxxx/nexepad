@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/stability-tests/common/mine"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/nexepanet/nexepad/util/panics"
-	"github.com/nexepanet/nexepad/util/profiling"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common/mine"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 func main() {

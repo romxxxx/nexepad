@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
 )
 
 // AddressManager returns the address manager associated to the flow context.

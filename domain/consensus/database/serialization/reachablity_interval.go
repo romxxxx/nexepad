@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
 )
 
 func reachablityIntervalToDBReachablityInterval(reachabilityInterval *model.ReachabilityInterval) *DbReachabilityInterval {

@@ -1,14 +1,14 @@
 package blockvalidator
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/util/mstime"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // ValidateHeaderInIsolation validates block headers in isolation from the current

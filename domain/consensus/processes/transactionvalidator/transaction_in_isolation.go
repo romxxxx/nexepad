@@ -1,12 +1,12 @@
 package transactionvalidator
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
 )
 
 // ValidateTransactionInIsolation validates the parts of the transaction that can be validated context-free

@@ -3,13 +3,13 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/serialization"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/util/binaryserializer"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/util/binaryserializer"
 )
 
 // txEncoding is a bitmask defining which transaction fields we

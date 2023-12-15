@@ -3,7 +3,7 @@ package model
 import (
 	"fmt"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MutableReachabilityData represents a node in the reachability tree

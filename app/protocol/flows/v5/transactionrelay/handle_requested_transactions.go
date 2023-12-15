@@ -1,8 +1,8 @@
 package transactionrelay
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 type handleRequestedTransactionsFlow struct {

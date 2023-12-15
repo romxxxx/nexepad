@@ -4,10 +4,10 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/util/mstime"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 func (x *BlockHeader) toAppMessage() (*appmessage.MsgBlockHeader, error) {

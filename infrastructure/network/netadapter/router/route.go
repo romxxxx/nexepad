@@ -4,10 +4,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 const (

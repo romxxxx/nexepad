@@ -6,8 +6,9 @@ package txscript
 
 import (
 	"crypto/rand"
-	"github.com/nexepanet/go-secp256k1"
 	"testing"
+
+	"github.com/romxxxx/go-secp256k1"
 )
 
 // genRandomSig returns a random message, a signature of the message under the

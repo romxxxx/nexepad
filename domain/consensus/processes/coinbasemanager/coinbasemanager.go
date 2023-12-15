@@ -1,15 +1,16 @@
 package coinbasemanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashset"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
-	"github.com/pkg/errors"
 	"math"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashset"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 )
 
 type coinbaseManager struct {

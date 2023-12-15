@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 const logLevel = logger.LevelWarn

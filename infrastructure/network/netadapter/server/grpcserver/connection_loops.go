@@ -8,13 +8,13 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 
-	routerpkg "github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	routerpkg "github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func (c *gRPCConnection) connectionLoops() error {

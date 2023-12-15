@@ -1,12 +1,13 @@
 package integration
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/config"
 	"runtime"
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+
+	"github.com/romxxxx/nexepad/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

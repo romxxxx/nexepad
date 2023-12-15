@@ -3,8 +3,8 @@ package common
 import (
 	"time"
 
-	peerpkg "github.com/nexepanet/nexepad/app/protocol/peer"
-	routerpkg "github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	peerpkg "github.com/romxxxx/nexepad/app/protocol/peer"
+	routerpkg "github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 
 	"github.com/pkg/errors"
 )

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+import "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
 // BlockParentBuilder exposes a method to build super-block parents for
 // a given set of direct parents

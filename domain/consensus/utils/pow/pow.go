@@ -1,14 +1,15 @@
 package pow
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
-	"github.com/nexepanet/nexepad/util/difficulty"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/serialization"
+	"github.com/romxxxx/nexepad/util/difficulty"
+
+	"math/big"
 
 	"github.com/pkg/errors"
-	"math/big"
 )
 
 // State is an intermediate data structure with pre-computed values to speed up mining.

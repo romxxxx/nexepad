@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	routerpkg "github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	routerpkg "github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/id"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server"
 )
 
 // NetConnection is a wrapper to a server connection for use by services external to NetAdapter

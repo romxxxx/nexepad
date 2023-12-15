@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/nexepanet/nexepad/cmd/nexepawallet/libnexepawallet"
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/romxxxx/nexepad/util"
 )
 
 func main() {

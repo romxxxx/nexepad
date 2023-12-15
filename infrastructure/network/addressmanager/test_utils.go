@@ -4,9 +4,9 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // AddAddressByIP adds an address where we are given an ip:port and not a

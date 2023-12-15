@@ -2,11 +2,12 @@ package utxoindex
 
 import (
 	"encoding/binary"
-	"github.com/nexepanet/nexepad/domain/consensus/database/serialization"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/pkg/errors"
-	"google.golang.org/protobuf/proto"
 	"io"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/database/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"google.golang.org/protobuf/proto"
 )
 
 func serializeOutpoint(outpoint *externalapi.DomainOutpoint) ([]byte, error) {

@@ -1,8 +1,9 @@
 package integration
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"testing"
+
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {

@@ -1,14 +1,14 @@
 package rpchandlers
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/rpc/rpccontext"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
-	"github.com/nexepanet/nexepad/util"
-	"github.com/nexepanet/nexepad/version"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/rpc/rpccontext"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/util"
+	"github.com/romxxxx/nexepad/version"
 )
 
 // HandleGetBlockTemplate handles the respectively named RPC command

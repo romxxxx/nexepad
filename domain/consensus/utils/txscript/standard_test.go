@@ -6,12 +6,13 @@ package txscript
 
 import (
 	"bytes"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"reflect"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/util"
 )
 
 // mustParseShortForm parses the passed short form script and returns the

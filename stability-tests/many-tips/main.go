@@ -2,10 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/nexepanet/go-secp256k1"
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/mining"
-	"github.com/nexepanet/nexepad/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -15,11 +11,16 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/nexepanet/nexepad/util/panics"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/go-secp256k1"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/mining"
+	"github.com/romxxxx/nexepad/util"
+
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 const rpcAddress = "localhost:9000"

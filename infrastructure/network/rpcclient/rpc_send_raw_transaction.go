@@ -1,7 +1,7 @@
 package rpcclient
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 // SubmitTransaction sends an RPC request respective to the function's name and returns the RPC server's response

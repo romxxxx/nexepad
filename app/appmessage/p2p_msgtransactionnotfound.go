@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MsgTransactionNotFound defines a nexepa TransactionNotFound message which is sent in response to

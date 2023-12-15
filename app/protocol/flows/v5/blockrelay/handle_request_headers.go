@@ -1,13 +1,13 @@
 package blockrelay
 
 import (
-	"github.com/nexepanet/nexepad/app/protocol/peer"
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/app/protocol/peer"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // This constant must be equal at both syncer and syncee. Therefore, never (!!) change this constant unless a new p2p

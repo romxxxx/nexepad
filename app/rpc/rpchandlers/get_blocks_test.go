@@ -5,18 +5,18 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/rpc/rpccontext"
-	"github.com/nexepanet/nexepad/app/rpc/rpchandlers"
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/model/testapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
-	"github.com/nexepanet/nexepad/domain/miningmanager"
-	"github.com/nexepanet/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/rpc/rpccontext"
+	"github.com/romxxxx/nexepad/app/rpc/rpchandlers"
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/testapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/miningmanager"
+	"github.com/romxxxx/nexepad/infrastructure/config"
 )
 
 type fakeDomain struct {

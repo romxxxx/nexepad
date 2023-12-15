@@ -9,9 +9,9 @@ import (
 
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	"github.com/nexepanet/nexepad/infrastructure/os/signal"
-	"github.com/nexepanet/nexepad/version"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/os/signal"
+	"github.com/romxxxx/nexepad/version"
 )
 
 // Service houses the main service handler which handles all service

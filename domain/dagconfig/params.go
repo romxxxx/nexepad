@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/util/network"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -58,7 +58,7 @@ type Params struct {
 	Name string
 
 	// Net defines the magic bytes used to identify the network.
-	Net appmessage.nexepaNet
+	Net appmessage.romxxxx
 
 	// RPCPort defines the rpc server port
 	RPCPort string
@@ -175,7 +175,7 @@ type Params struct {
 	// CoinbasePayloadScriptPublicKeyMaxLength is the maximum allowed script public key in the coinbase's payload
 	CoinbasePayloadScriptPublicKeyMaxLength uint8
 
-	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/nexepanet/research/issues/3
+	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/romxxxx/research/issues/3
 	PruningProofM uint64
 
 	// DeflationaryPhaseDaaScore is the DAA score after which the monetary policy switches
@@ -217,9 +217,9 @@ var MainnetParams = Params{
 		// This DNS seeder is run by Wolfie
 		"mainnet-dnsseed.nexe.pa",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-1.nexepanet.org",
+		"mainnet-dnsseed-1.romxxxx.org",
 		// This DNS seeder is run by Denis Mashkevich
-		"mainnet-dnsseed-2.nexepanet.org",
+		"mainnet-dnsseed-2.romxxxx.org",
 		// This DNS seeder is run by Constantine Bytensky
 		"dnsseed.cbytensky.org",
 		// This DNS seeder is run by Georges Künzli
@@ -489,7 +489,7 @@ var DevnetParams = Params{
 // network or previously-registered into this package.
 var ErrDuplicateNet = errors.New("duplicate nexepa network")
 
-var registeredNets = make(map[appmessage.nexepaNet]struct{})
+var registeredNets = make(map[appmessage.romxxxx]struct{})
 
 // Register registers the network parameters for a nexepa network. This may
 // error with ErrDuplicateNet if the network is already registered (either

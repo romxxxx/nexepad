@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/version"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/version"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/id"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // MaxUserAgentLen is the maximum allowed length for the user agent field in a

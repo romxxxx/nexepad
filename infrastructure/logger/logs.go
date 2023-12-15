@@ -39,7 +39,7 @@ import (
 	"runtime"
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // Logger is a subsystem logger for a Backend.

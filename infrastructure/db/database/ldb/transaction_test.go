@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 )
 
 func TestTransactionCloseErrors(t *testing.T) {

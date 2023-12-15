@@ -1,9 +1,9 @@
 package rpchandlers
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/rpc/rpccontext"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/rpc/rpccontext"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // HandleGetSubnetwork handles the respectively named RPC command

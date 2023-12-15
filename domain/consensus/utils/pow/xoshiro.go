@@ -2,8 +2,9 @@ package pow
 
 import (
 	"encoding/binary"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"math/bits"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 type xoShiRo256PlusPlus struct {

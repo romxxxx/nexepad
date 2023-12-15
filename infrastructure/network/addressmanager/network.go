@@ -7,7 +7,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 var (

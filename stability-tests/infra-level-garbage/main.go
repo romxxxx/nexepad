@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 const timeout = 5 * time.Second

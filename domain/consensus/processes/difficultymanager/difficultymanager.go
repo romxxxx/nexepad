@@ -4,13 +4,13 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/util/math"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/util/math"
 
-	"github.com/nexepanet/nexepad/util/difficulty"
+	"github.com/romxxxx/nexepad/util/difficulty"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // DifficultyManager provides a method to resolve the

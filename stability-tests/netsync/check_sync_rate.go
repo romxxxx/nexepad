@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
 
 	"github.com/pkg/errors"
 )

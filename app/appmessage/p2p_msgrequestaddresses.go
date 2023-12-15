@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MsgRequestAddresses implements the Message interface and represents a nexepa

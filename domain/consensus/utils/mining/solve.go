@@ -4,9 +4,9 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/pow"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/pow"
 )
 
 // SolveBlock increments the given block's nonce until it matches the difficulty requirements in its bits field

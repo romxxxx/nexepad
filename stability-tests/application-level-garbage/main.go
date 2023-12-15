@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/standalone"
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/util/panics"
-	"github.com/nexepanet/nexepad/util/profiling"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/standalone"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 func main() {

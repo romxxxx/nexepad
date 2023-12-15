@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/appmessage"
 
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // routerInitializerForTest returns new RouterInitializer which simply sets

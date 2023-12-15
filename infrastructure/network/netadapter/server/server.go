@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 )
 
 // OnConnectedHandler is a function that is to be called

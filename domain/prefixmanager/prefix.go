@@ -1,8 +1,8 @@
 package prefixmanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/prefixmanager/prefix"
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/domain/prefixmanager/prefix"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 )
 
 var activePrefixKey = database.MakeBucket(nil).Key([]byte("active-prefix"))

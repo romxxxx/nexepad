@@ -2,7 +2,8 @@ package subnetworks
 
 import (
 	"bytes"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // Less returns true iff id a is less than id b

@@ -27,8 +27,8 @@ variable (either directly, or hidden in a library call).
 		"fmt"
 		"log"
 
-		"github.com/nexepanet/nexepad/util"
-		"github.com/nexepanet/nexepad/domain/dagconfig"
+		"github.com/romxxxx/nexepad/util"
+		"github.com/romxxxx/nexepad/domain/dagconfig"
 	)
 
 	var testnet = flag.Bool("testnet", false, "operate on the testnet nexepa network")

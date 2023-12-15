@@ -1,7 +1,7 @@
 package model
 
 import (
-	consensusexternalapi "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	consensusexternalapi "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // BlockTemplateBuilder builds block templates for miners to consume

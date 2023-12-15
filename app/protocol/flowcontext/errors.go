@@ -5,9 +5,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
 
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
 )
 
 var (

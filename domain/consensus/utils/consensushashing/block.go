@@ -3,11 +3,11 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/serialization"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/hashes"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/hashes"
 )
 
 // BlockHash returns the given block's hash

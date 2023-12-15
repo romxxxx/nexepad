@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nexepanet/nexepad/infrastructure/db/database"
+	"github.com/romxxxx/nexepad/infrastructure/db/database"
 )
 
 func prepareCursorForTest(t *testing.T, db database.Database, testName string) database.Cursor {

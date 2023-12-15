@@ -1,18 +1,18 @@
 package rpc
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/protocol"
-	"github.com/nexepanet/nexepad/app/rpc/rpccontext"
-	"github.com/nexepanet/nexepad/domain"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/utxoindex"
-	"github.com/nexepanet/nexepad/infrastructure/config"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/infrastructure/network/addressmanager"
-	"github.com/nexepanet/nexepad/infrastructure/network/connmanager"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/protocol"
+	"github.com/romxxxx/nexepad/app/rpc/rpccontext"
+	"github.com/romxxxx/nexepad/domain"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/utxoindex"
+	"github.com/romxxxx/nexepad/infrastructure/config"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/infrastructure/network/addressmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/connmanager"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
 )
 
 // Manager is an RPC manager

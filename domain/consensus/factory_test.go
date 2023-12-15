@@ -4,10 +4,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/prefixmanager/prefix"
+	"github.com/romxxxx/nexepad/domain/prefixmanager/prefix"
 
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/infrastructure/db/database/ldb"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/infrastructure/db/database/ldb"
 )
 
 func TestNewConsensus(t *testing.T) {

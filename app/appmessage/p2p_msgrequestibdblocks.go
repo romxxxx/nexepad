@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // MsgRequestIBDBlocks implements the Message interface and represents a nexepa

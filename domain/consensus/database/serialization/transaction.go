@@ -3,8 +3,8 @@ package serialization
 import (
 	"math"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 // DomainTransactionToDbTransaction converts DomainTransaction to DbTransaction

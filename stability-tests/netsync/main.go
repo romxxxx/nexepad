@@ -3,10 +3,10 @@ package main
 import (
 	"sync/atomic"
 
-	"github.com/nexepanet/nexepad/stability-tests/common"
-	"github.com/nexepanet/nexepad/util/panics"
-	"github.com/nexepanet/nexepad/util/profiling"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/util/profiling"
 )
 
 func main() {

@@ -4,13 +4,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/id"
-	mathUtil "github.com/nexepanet/nexepad/util/math"
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/id"
+	mathUtil "github.com/romxxxx/nexepad/util/math"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // Peer holds data about a peer.

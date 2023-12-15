@@ -2,8 +2,8 @@ package consensusstatestore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/nexepanet/nexepad/domain/consensus/database/serialization"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/database/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func serializeOutpoint(outpoint *externalapi.DomainOutpoint) ([]byte, error) {

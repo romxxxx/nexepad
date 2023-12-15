@@ -3,8 +3,8 @@ package protowire
 import (
 	"math"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 func (x *nexepadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {

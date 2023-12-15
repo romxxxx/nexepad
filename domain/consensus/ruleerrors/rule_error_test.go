@@ -3,10 +3,11 @@ package ruleerrors
 import (
 	"errors"
 	"fmt"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func TestNewErrMissingTxOut(t *testing.T) {

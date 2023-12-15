@@ -7,10 +7,10 @@ package appmessage
 import (
 	"math/big"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/util/mstime"
 )
 
 // BaseBlockHeaderPayload is the base number of bytes a block header can be,

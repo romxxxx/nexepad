@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/stability-tests/common"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/stability-tests/common"
 )
 
 type commandFailure struct {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
 const outgoingRouteMaxMessages = appmessage.MaxInvPerMsg + DefaultMaxMessages

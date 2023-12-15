@@ -1,21 +1,22 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/processes/coinbasemanager"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/merkle"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/domain/consensusreference"
-	"github.com/nexepanet/nexepad/util/mstime"
 	"math"
 	"sort"
 
-	"github.com/nexepanet/nexepad/util/difficulty"
+	"github.com/romxxxx/nexepad/domain/consensus/processes/coinbasemanager"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/merkle"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensusreference"
+	"github.com/romxxxx/nexepad/util/mstime"
 
-	consensusexternalapi "github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/nexepanet/nexepad/domain/miningmanager/model"
+	"github.com/romxxxx/nexepad/util/difficulty"
+
 	"github.com/pkg/errors"
+	consensusexternalapi "github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/romxxxx/nexepad/domain/miningmanager/model"
 )
 
 type candidateTx struct {
@@ -155,7 +156,7 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 		if err != nil {
 			// mempool.RemoveTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/nexepanet/nexepad/issues/1553
+			// https://github.com/romxxxx/nexepad/issues/1553
 			log.Criticalf("Error from mempool.RemoveTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen

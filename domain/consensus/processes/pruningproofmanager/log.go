@@ -1,5 +1,5 @@
 package pruningproofmanager
 
-import "github.com/nexepanet/nexepad/infrastructure/logger"
+import "github.com/romxxxx/nexepad/infrastructure/logger"
 
 var log = logger.RegisterSubSystem("PPMN")

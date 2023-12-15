@@ -1,9 +1,9 @@
 package headersselectedchainstore
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/database/binaryserialization"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/database/binaryserialization"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 type headersSelectedChainStagingShard struct {

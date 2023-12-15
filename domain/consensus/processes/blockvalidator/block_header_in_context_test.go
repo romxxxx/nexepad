@@ -2,18 +2,19 @@ package blockvalidator_test
 
 import (
 	"errors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
 	"math/big"
 	"testing"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/blockheader"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
 
-	"github.com/nexepanet/nexepad/domain/consensus"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/consensushashing"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/testutils"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/blockheader"
+
+	"github.com/romxxxx/nexepad/domain/consensus"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/consensushashing"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/testutils"
 )
 
 func TestValidateMedianTime(t *testing.T) {

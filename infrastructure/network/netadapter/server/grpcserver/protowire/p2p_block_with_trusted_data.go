@@ -3,9 +3,9 @@ package protowire
 import (
 	"math/big"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func (x *nexepadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {

@@ -3,12 +3,12 @@ package rpccontext
 import (
 	"encoding/hex"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/util"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/util"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/domain/utxoindex"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/domain/utxoindex"
 )
 
 // ConvertUTXOOutpointEntryPairsToUTXOsByAddressesEntries converts

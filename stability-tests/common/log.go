@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nexepanet/nexepad/infrastructure/logger"
-	"github.com/nexepanet/nexepad/stability-tests/common/mine"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/nexepanet/nexepad/util/panics"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/stability-tests/common/mine"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
+	"github.com/romxxxx/nexepad/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

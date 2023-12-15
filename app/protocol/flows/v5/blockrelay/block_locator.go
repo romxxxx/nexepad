@@ -1,10 +1,10 @@
 package blockrelay
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/app/protocol/common"
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/app/protocol/common"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func (flow *handleRelayInvsFlow) sendGetBlockLocator(highHash *externalapi.DomainHash, limit uint32) error {

@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/nexepanet/nexepad/stability-tests/common"
+	"github.com/romxxxx/nexepad/stability-tests/common"
 )
 
 const (

@@ -7,11 +7,12 @@ package txscript_test
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/nexepanet/nexepad/domain/consensus/utils/txscript"
-	"github.com/nexepanet/nexepad/domain/dagconfig"
-	"github.com/nexepanet/nexepad/util"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+
+	"github.com/romxxxx/nexepad/domain/consensus/utils/txscript"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/util"
 )
 
 // This example demonstrates creating a script which pays to a nexepa address.

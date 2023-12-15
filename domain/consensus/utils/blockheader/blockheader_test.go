@@ -1,9 +1,10 @@
 package blockheader
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"math/big"
 	"testing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func TestDomainBlockHeader_Equal(t *testing.T) {

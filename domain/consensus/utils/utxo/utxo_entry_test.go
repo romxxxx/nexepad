@@ -1,8 +1,9 @@
 package utxo
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"testing"
+
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 func TestUTXOEntry_Equal(t *testing.T) {

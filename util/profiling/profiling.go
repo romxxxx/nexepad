@@ -2,19 +2,21 @@ package profiling
 
 import (
 	"fmt"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
 	"net"
 	"net/http"
 	"os"
 	"path/filepath"
 	"time"
 
+	"github.com/romxxxx/nexepad/infrastructure/logger"
+
 	// Required for profiling
 	_ "net/http/pprof"
 
-	"github.com/nexepanet/nexepad/util/panics"
 	"runtime"
 	"runtime/pprof"
+
+	"github.com/romxxxx/nexepad/util/panics"
 )
 
 // heapDumpFileName is the name of the heap dump file. We want every run to have its own

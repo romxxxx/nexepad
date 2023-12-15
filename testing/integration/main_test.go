@@ -1,9 +1,10 @@
 package integration
 
 import (
-	"github.com/nexepanet/nexepad/infrastructure/logger"
 	"os"
 	"testing"
+
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 func TestMain(m *testing.M) {

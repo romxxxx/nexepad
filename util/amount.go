@@ -5,10 +5,11 @@
 package util
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
-	"github.com/pkg/errors"
 	"math"
 	"strconv"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
 )
 
 // AmountUnit describes a method of converting an Amount to something

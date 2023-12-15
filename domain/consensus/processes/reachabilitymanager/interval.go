@@ -1,9 +1,10 @@
 package reachabilitymanager
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/pkg/errors"
 	"math"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
 )
 
 func newReachabilityInterval(start uint64, end uint64) *model.ReachabilityInterval {

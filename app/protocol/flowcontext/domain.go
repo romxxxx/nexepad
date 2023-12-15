@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/nexepanet/nexepad/domain"
+	"github.com/romxxxx/nexepad/domain"
 )
 
 // Domain returns the Domain object associated to the flow context.

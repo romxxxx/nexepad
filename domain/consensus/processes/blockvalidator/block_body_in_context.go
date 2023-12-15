@@ -1,13 +1,13 @@
 package blockvalidator
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/ruleerrors"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/transactionhelper"
-	"github.com/nexepanet/nexepad/domain/consensus/utils/virtual"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/ruleerrors"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/transactionhelper"
+	"github.com/romxxxx/nexepad/domain/consensus/utils/virtual"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 // ValidateBodyInContext validates block bodies in the context of the current
@@ -168,7 +168,7 @@ func (v *blockValidator) checkCoinbaseSubsidy(
 			return err
 		}
 
-		// The pruning proof ( https://github.com/nexepanet/docs/blob/main/Reference/prunality/Prunality.pdf ) concludes
+		// The pruning proof ( https://github.com/romxxxx/docs/blob/main/Reference/prunality/Prunality.pdf ) concludes
 		// that it's impossible for a block to be merged if it was created in the anticone of the pruning point that was
 		// present at the time of the block creation. So if such situation happens we can be sure that it happens during
 		// IBD and that this block has at least pruningDepth-finalityInterval confirmations.

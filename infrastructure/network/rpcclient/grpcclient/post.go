@@ -1,9 +1,9 @@
 package grpcclient
 
 import (
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"google.golang.org/protobuf/encoding/protojson"
 )
 

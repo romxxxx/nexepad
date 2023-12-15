@@ -3,10 +3,10 @@ package blockprocessor
 import (
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
-	"github.com/nexepanet/nexepad/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/nexepanet/nexepad/infrastructure/logger"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/romxxxx/nexepad/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

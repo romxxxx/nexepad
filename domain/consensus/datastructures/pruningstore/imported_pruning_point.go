@@ -2,10 +2,10 @@ package pruningstore
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/nexepanet/nexepad/domain/consensus/database/serialization"
-	"github.com/nexepanet/nexepad/domain/consensus/model"
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/domain/consensus/database/serialization"
+	"github.com/romxxxx/nexepad/domain/consensus/model"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
 var importedPruningPointUTXOsBucketName = []byte("imported-pruning-point-utxos")

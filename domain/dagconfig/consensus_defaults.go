@@ -1,8 +1,9 @@
 package dagconfig
 
 import (
-	"github.com/nexepanet/nexepad/domain/consensus/utils/constants"
 	"time"
+
+	"github.com/romxxxx/nexepad/domain/consensus/utils/constants"
 )
 
 // The documentation refers to the following constants which aren't explicated in the code:

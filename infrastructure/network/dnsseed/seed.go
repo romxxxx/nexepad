@@ -12,15 +12,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/nexepanet/nexepad/domain/consensus/model/externalapi"
+	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	pb2 "github.com/nexepanet/nexepad/infrastructure/network/dnsseed/pb"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	pb2 "github.com/romxxxx/nexepad/infrastructure/network/dnsseed/pb"
 	"google.golang.org/grpc"
 
-	"github.com/nexepanet/nexepad/util/mstime"
+	"github.com/romxxxx/nexepad/util/mstime"
 
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 const (

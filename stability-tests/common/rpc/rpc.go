@@ -3,10 +3,10 @@ package rpc
 import (
 	"time"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/infrastructure/network/rpcclient"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/infrastructure/network/rpcclient"
 
-	"github.com/nexepanet/nexepad/domain/dagconfig"
+	"github.com/romxxxx/nexepad/domain/dagconfig"
 )
 
 const defaultRPCServer = "localhost"

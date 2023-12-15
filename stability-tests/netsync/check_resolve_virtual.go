@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/nexepanet/nexepad/app/appmessage"
-	"github.com/nexepanet/nexepad/stability-tests/common/rpc"
-	"github.com/pkg/errors"
 	"time"
+
+	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	"github.com/romxxxx/nexepad/stability-tests/common/rpc"
 )
 
 func checkResolveVirtual(syncerClient, syncedClient *rpc.Client) error {

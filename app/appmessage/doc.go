@@ -96,10 +96,10 @@ function. It accepts any io.Reader, but typically this will be a net.Conn to
 a remote node running a nexepa peer. Example syntax is:
 
 	// Reads and validates the next nexepa message from conn using the
-	// protocol version pver and the nexepa network nexepaNet. The returns
+	// protocol version pver and the nexepa network romxxxx. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
-	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, nexepaNet)
+	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, romxxxx)
 	if err != nil {
 		// Log and handle the error
 	}
@@ -115,9 +115,9 @@ from a remote peer is:
 	msg := appmessage.NewMsgRequestAddresses()
 
 	// Writes a nexepa message msg to conn using the protocol version
-	// pver, and the nexepa network nexepaNet. The return is a possible
+	// pver, and the nexepa network romxxxx. The return is a possible
 	// error.
-	err := appmessage.WriteMessage(conn, msg, pver, nexepaNet)
+	err := appmessage.WriteMessage(conn, msg, pver, romxxxx)
 	if err != nil {
 		// Log and handle the error
 	}

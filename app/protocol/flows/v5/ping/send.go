@@ -3,15 +3,15 @@ package ping
 import (
 	"time"
 
-	"github.com/nexepanet/nexepad/app/protocol/common"
-	"github.com/nexepanet/nexepad/app/protocol/flowcontext"
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/app/protocol/common"
+	"github.com/romxxxx/nexepad/app/protocol/flowcontext"
 
-	"github.com/nexepanet/nexepad/app/appmessage"
-	peerpkg "github.com/nexepanet/nexepad/app/protocol/peer"
-	"github.com/nexepanet/nexepad/app/protocol/protocolerrors"
-	"github.com/nexepanet/nexepad/infrastructure/network/netadapter/router"
-	"github.com/nexepanet/nexepad/util/random"
+	"github.com/romxxxx/nexepad/app/appmessage"
+	peerpkg "github.com/romxxxx/nexepad/app/protocol/peer"
+	"github.com/romxxxx/nexepad/app/protocol/protocolerrors"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.
