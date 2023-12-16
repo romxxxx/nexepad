@@ -11,8 +11,8 @@ nexepad v0.12.12 - 2023-03-06
 * Rename last references to blockheight (#2089)
 * Add code of conduct (#2183)
 * Extend TestGetPreciseSigOps with more tests (#2188)
-* Add Dockerfile to nexepawallet (#2187)
-* Add `--send-all` to `nexepawallet send` command (#2181)
+* Add Dockerfile to nexelliawallet (#2187)
+* Add `--send-all` to `nexelliawallet send` command (#2181)
 * Bump golang.org/x/text from 0.3.5 to 0.3.8 (#2190)
 * Upgrade to go 1.19 (#2191)
 
@@ -43,7 +43,7 @@ nexepad v0.12.8 - 2022-10-23
 ===========================
 
 * Remove hard fork activation rules (#2152)
-* Add lock file to nexepawallet (#2154)
+* Add lock file to nexelliawallet (#2154)
 * Add a new testnet DNS seeder (#2156)
 * Use utxo diff algo for pruning point move and use acceptance data method only as a fall-back (#2157)
 * Make more checks if status is invalid even if the block exists (#2158)
@@ -83,7 +83,7 @@ Bug fixes:
 * Fix RPC client memory/goroutine leak (#2122)
 * Fix a subtle lock sync issue in consensus insert block  (#2121)
 * Mempool: Retrieve stable state of the mempool. Optimze get mempool entries by addresses (#2111)
-* nexepawallet.send(): Make separate context for Broadcast, to prolong timeout (#2131)
+* nexelliawallet.send(): Make separate context for Broadcast, to prolong timeout (#2131)
 
 
 
@@ -103,7 +103,7 @@ nexepad v0.12.2 - 2022-06-17
 
 * Clarify wallet message concerning a wallet daemon sync state  (#2045)
 * Change the way the miner executable reports execution errors (closes issue #1677) (#2048)
-* Fix nexepawallet help messages, clarify sweep command help string (#2067)
+* Fix nexelliawallet help messages, clarify sweep command help string (#2067)
 * Wallet parse/send/create commands improvement (#2024)
 * Use chunks for `GetBlocksAcceptanceData` calls in order to avoid blocking consensus for too long (#2075)
 * Unite multiple `GetBlockAcceptanceData` consensus calls to one (#2074)
@@ -121,7 +121,7 @@ Bug Fixes:
 nexepad v0.12.1 - 2022-05-31
 ===========================
 
-* Fix utxoindex synchronization bug which resulted in nexepawallet orphan tx errors (#2052, #2056, #2059)
+* Fix utxoindex synchronization bug which resulted in nexelliawallet orphan tx errors (#2052, #2056, #2059)
 * Add a channel mechanism for consensus events to be processed in the order they were produced (#2052, #2056, #2059)
 * Block template cache improvement (#2023)
 * Improved staging shard performance (#2034)
@@ -130,10 +130,10 @@ nexepad v0.12.1 - 2022-05-31
 * Remove HF1 activation code (#2042)
 
 nexepa wallet:
-* Various nexepawallet text fixes and log additions (#2032, #2047, #2062)
+* Various nexelliawallet text fixes and log additions (#2032, #2047, #2062)
 * Wallet address synchronization improvement (#2025)
-* Add support for `from` address in `nexepawallet send` (#1964)
-* Make nexepawallet ignore outputs that exist in the mempool (#2053)
+* Add support for `from` address in `nexelliawallet send` (#1964)
+* Make nexelliawallet ignore outputs that exist in the mempool (#2053)
 * Wrap the entire wallet send operation with a lock (#2063)
 
 RPC API:
@@ -157,9 +157,9 @@ Bug fixes:
 * Use cosigner index 0 for read only wallets (#2014)
 
 Non-breaking changes:
-* Adding a "sweep" command to `nexepawallet` (#2018)
+* Adding a "sweep" command to `nexelliawallet` (#2018)
 * Use `blue work` heuristic to skip irrelevant relay blocks
-* nexepawallet daemon: Add Send and Sign commands (#2016)
+* nexelliawallet daemon: Add Send and Sign commands (#2016)
 
 nexepad v0.11.17 - 2022-04-06
 ===========================
@@ -171,7 +171,7 @@ nexepad v0.11.16 - 2022-04-05
 
 nexepad v0.11.15 - 2022-04-05
 ===========================
-* Add support for auto-compound in `nexepawallet send` (#1951)
+* Add support for auto-compound in `nexelliawallet send` (#1951)
 * Unite reachability stores (#1963, #1993, #2001)
 * Add names to nameless routes (#1986)
 * Optimize the miner-nexepad flow and latency (#1988)
@@ -198,8 +198,8 @@ nexepad v0.11.13 - 2022-03-16
 * Add AllowConnectionToDifferentVersions flag to nexepactl (#1940)
 * Drop support for p2p v3 (#1942)
 * Various transaction processing fixes and workarounds (#1943, #1946, #1971, #1974)
-* Make nexepawallet store the utxos sorted by amount (#1947)
-* Implement a `parse` sub command in the nexepawallet (#1953)
+* Make nexelliawallet store the utxos sorted by amount (#1947)
+* Implement a `parse` sub command in the nexelliawallet (#1953)
 * Set MaxBlockLevels for non-mainnet networks to 250 (#1952)
 * Add cache to DAA block window (#1948)
 * nexepactl: string slice parser for GetUtxosByAddresses (#1955, first contribution by @icook)
@@ -242,7 +242,7 @@ Non-breaking changes:
 * Add request balance by address to nexepactl (#1885)
 * Wallet: show balance by addresses (#1904)
 * Reject outdated non-DAA blocks submitted via RPC  (#1914)
-* Add a profile option to nexepawallet daemon (#1854)
+* Add a profile option to nexelliawallet daemon (#1854)
 
 nexepad v0.11.8 - 2021-12-13
 ===========================
@@ -256,7 +256,7 @@ Non-breaking changes:
 nexepad v0.11.7 - 2021-12-11
 ===========================
 Breaking changes:
-* nexepawallet: show-address →new-address + show-addresses (#1870)
+* nexelliawallet: show-address →new-address + show-addresses (#1870)
 
 Bug fixes:
 * Fix numThreads using getAEAD instead of decryptMnemonic (#1859)
@@ -266,7 +266,7 @@ Non-breaking changes:
 * Ignore header mass in devnet and testnet (#1879)
 * Remove unused args from CalcSubsidy (#1877)
 * ExpectedHeaderPruningPoint fix (#1876)
-* Changes to libnexepawallet to support nexepaper (#1878)
+* Changes to libnexelliawallet to support nexepaper (#1878)
 * Get rid of genesis's UTXO dump (#1867)
 
 nexepad v0.11.2 - 2021-11-11
@@ -328,7 +328,7 @@ A partial list of the more-important commits is as follows:
 * Add mass limit to mempool (#1627)
 * In RPC, use RPCTransactions and RPCBlocks instead of TransactionMessages and BlockMessages (#1609)
 * Use go-secp256k1 v0.0.5 (#1640)
-* Add a show-address subcommand to nexepawallet (#1653)
+* Add a show-address subcommand to nexelliawallet (#1653)
 * Replace p2pkh with p2pk (#1650)
 * Implement importing private keys into the wallet (#1655)
 * Add dump unencrypted data sub command to the wallet (#1661)
@@ -373,6 +373,6 @@ nexepad v0.8.10 - 2021-02-25
 * Remove virtual diff parents - only selectedTip is virtualDiffParent now (#1550)
 * Fix UTXO index (#1548)
 * Prevent fast failing (#1545)
-* Increase the sleep time in nexepaminer when the node is not synced (#1544)
+* Increase the sleep time in nexelliaminer when the node is not synced (#1544)
 * Disallow header only blocks on RPC, relay and when requesting IBD full blocks (#1537)
 * Make templateManager hold a DomainBlock and isSynced bool instead of a GetBlockTemplateResponseMessage (#1538)

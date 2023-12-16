@@ -32,7 +32,7 @@ func mineLoop(syncerRPCClient, syncedRPCClient *rpc.Client) error {
 		err = mineBlock(syncerRPCClient.Address(), miningAddr)
 		if err != nil {
 			// Ignore error and instead check that the block count changed correctly.
-			// TODO: Fix the race condition in nexepaminer so it won't panic (proper shutdown handler)
+			// TODO: Fix the race condition in nexelliaminer so it won't panic (proper shutdown handler)
 			log.Warnf("mineBlock returned an err: %s", err)
 		}
 
@@ -130,7 +130,7 @@ func areTipsAreEqual(resultA, resultB *appmessage.GetBlockDAGInfoResponseMessage
 
 func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
 	nexepaMinerCmd, err := common.StartCmd("MINER",
-		"nexepaminer",
+		"nexelliaminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", syncerRPCAddress,
 		"--mine-when-not-synced",

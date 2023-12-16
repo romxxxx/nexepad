@@ -22,7 +22,7 @@ nexepad.db
 nexepad
 cmd/gencerts/gencerts
 cmd/nexepactl/nexepactl
-cmd/nexeminer/nexepaminer
+cmd/nexeminer/nexelliaminer
 *.exe
 *.exe~
 

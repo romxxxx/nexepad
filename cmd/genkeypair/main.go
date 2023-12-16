@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/romxxxx/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/romxxxx/nexepad/cmd/nexelliawallet/libnexelliawallet"
 	"github.com/romxxxx/nexepad/util"
 )
 
@@ -13,7 +13,7 @@ func main() {
 		panic(err)
 	}
 
-	privateKey, publicKey, err := libnexepawallet.CreateKeyPair(false)
+	privateKey, publicKey, err := libnexelliawallet.CreateKeyPair(false)
 	if err != nil {
 		panic(err)
 	}

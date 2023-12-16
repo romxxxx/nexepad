@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/romxxxx/nexepad/cmd/nexepawallet/libnexepawallet"
+	"github.com/romxxxx/nexepad/cmd/nexelliawallet/libnexelliawallet"
 	"github.com/romxxxx/nexepad/domain/consensusreference"
 	"github.com/romxxxx/nexepad/domain/miningmanager/model"
 	"github.com/romxxxx/nexepad/util"
@@ -820,7 +820,7 @@ func generateNewCoinbase(addressPrefix util.Bech32Prefix, op opType) (*externala
 			ExtraData:       nil,
 		}, nil
 	}
-	_, publicKey, err := libnexepawallet.CreateKeyPair(op == opECDSA)
+	_, publicKey, err := libnexelliawallet.CreateKeyPair(op == opECDSA)
 	if err != nil {
 		return nil, err
 	}

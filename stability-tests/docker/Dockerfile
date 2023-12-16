@@ -2,7 +2,7 @@ ARG nexePAD_IMAGE
 ARG nexePAMINER_IMAGE
 
 FROM ${nexePAD_IMAGE} as nexepad
-FROM ${nexePAMINER_IMAGE} as nexepaminer
+FROM ${nexePAMINER_IMAGE} as nexelliaminer
 
 FROM golang:1.19-alpine
 
@@ -20,7 +20,7 @@ RUN go mod download
 COPY . .
 
 COPY --from=nexepad /app/ /app/
-COPY --from=nexepaminer /app/ /app/
+COPY --from=nexelliaminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
 WORKDIR /go/src/github.com/romxxxx/nexepad/stability-tests
