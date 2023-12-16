@@ -5,11 +5,11 @@ nexepad
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/romxxxx/nexepad)
 
-nexepad is the reference full node nexepa implementation written in Go (golang).
+nexepad is the reference full node nexell-ia implementation written in Go (golang).
 
-## What is nexepa
+## What is Nexell-ia
 
-nexepa is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
+Nexell-ia is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
 
 ## Requirements
 
@@ -51,7 +51,7 @@ $ nexepad
 ```
 
 ## Discord
-Join our discord server using the following link: https://discord.gg/YNYnNN5Pf2
+Join our discord server using the following link: incoming
 
 ## Issue Tracker
 

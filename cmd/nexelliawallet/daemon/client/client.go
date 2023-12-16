@@ -13,7 +13,7 @@ import (
 )
 
 // Connect connects to the nexepawalletd server, and returns the client instance
-func Connect(address string) (pb.nexepawalletdClient, func(), error) {
+func Connect(address string) (pb.nexelliawalletdClient, func(), error) {
 	// Connection is local, so 1 second timeout is sufficient
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()

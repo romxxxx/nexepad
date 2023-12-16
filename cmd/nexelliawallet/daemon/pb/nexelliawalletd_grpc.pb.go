@@ -14,10 +14,10 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// nexepawalletdClient is the client API for nexepawalletd service.
+// nexelliawalletdClient is the client API for nexepawalletd service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type nexepawalletdClient interface {
+type nexelliawalletdClient interface {
 	GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error)
@@ -31,15 +31,15 @@ type nexepawalletdClient interface {
 	Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error)
 }
 
-type nexepawalletdClient struct {
+type nexelliawalletdClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewnexepawalletdClient(cc grpc.ClientConnInterface) nexepawalletdClient {
-	return &nexepawalletdClient{cc}
+func NewnexepawalletdClient(cc grpc.ClientConnInterface) nexelliawalletdClient {
+	return &nexelliawalletdClient{cc}
 }
 
-func (c *nexepawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
+func (c *nexelliawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
 	out := new(GetBalanceResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/GetBalance", in, out, opts...)
 	if err != nil {
@@ -48,7 +48,7 @@ func (c *nexepawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequ
 	return out, nil
 }
 
-func (c *nexepawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
+func (c *nexelliawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
 	out := new(GetExternalSpendableUTXOsResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/GetExternalSpendableUTXOs", in, out, opts...)
 	if err != nil {
@@ -57,7 +57,7 @@ func (c *nexepawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in 
 	return out, nil
 }
 
-func (c *nexepawalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
+func (c *nexelliawalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
 	out := new(CreateUnsignedTransactionsResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/CreateUnsignedTransactions", in, out, opts...)
 	if err != nil {
@@ -66,7 +66,7 @@ func (c *nexepawalletdClient) CreateUnsignedTransactions(ctx context.Context, in
 	return out, nil
 }
 
-func (c *nexepawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
+func (c *nexelliawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
 	out := new(ShowAddressesResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/ShowAddresses", in, out, opts...)
 	if err != nil {
@@ -75,7 +75,7 @@ func (c *nexepawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddress
 	return out, nil
 }
 
-func (c *nexepawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
+func (c *nexelliawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
 	out := new(NewAddressResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/NewAddress", in, out, opts...)
 	if err != nil {
@@ -84,7 +84,7 @@ func (c *nexepawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequ
 	return out, nil
 }
 
-func (c *nexepawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
+func (c *nexelliawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
 	out := new(ShutdownResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Shutdown", in, out, opts...)
 	if err != nil {
@@ -93,7 +93,7 @@ func (c *nexepawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest,
 	return out, nil
 }
 
-func (c *nexepawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
+func (c *nexelliawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
 	out := new(BroadcastResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Broadcast", in, out, opts...)
 	if err != nil {
@@ -102,7 +102,7 @@ func (c *nexepawalletdClient) Broadcast(ctx context.Context, in *BroadcastReques
 	return out, nil
 }
 
-func (c *nexepawalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
+func (c *nexelliawalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
 	out := new(SendResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Send", in, out, opts...)
 	if err != nil {
@@ -111,7 +111,7 @@ func (c *nexepawalletdClient) Send(ctx context.Context, in *SendRequest, opts ..
 	return out, nil
 }
 
-func (c *nexepawalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
+func (c *nexelliawalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
 	out := new(SignResponse)
 	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Sign", in, out, opts...)
 	if err != nil {
