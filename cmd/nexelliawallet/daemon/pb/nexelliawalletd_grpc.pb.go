@@ -14,7 +14,7 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// nexelliawalletdClient is the client API for nexelliawalletd service.
+// NexelliawalletdClient is the client API for Nexelliawalletd service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type NexelliawalletdClient interface {
@@ -120,10 +120,10 @@ func (c *nexelliawalletdClient) Sign(ctx context.Context, in *SignRequest, opts 
 	return out, nil
 }
 
-// nexelliawalletdServer is the server API for nexelliawalletd service.
-// All implementations must embed UnimplementednexelliawalletdServer
+// NexelliawalletdServer is the server API for Nexelliawalletd service.
+// All implementations must embed UnimplementedNexelliawalletdServer
 // for forward compatibility
-type nexelliawalletdServer interface {
+type NexelliawalletdServer interface {
 	GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error)
@@ -135,257 +135,257 @@ type nexelliawalletdServer interface {
 	Send(context.Context, *SendRequest) (*SendResponse, error)
 	// Since SignRequest contains a password - this command should only be used on a trusted or secure connection
 	Sign(context.Context, *SignRequest) (*SignResponse, error)
-	mustEmbedUnimplementednexelliawalletdServer()
+	mustEmbedUnimplementedNexelliawalletdServer()
 }
 
-// UnimplementednexelliawalletdServer must be embedded to have forward compatible implementations.
-type UnimplementednexelliawalletdServer struct {
+// UnimplementedNexelliawalletdServer must be embedded to have forward compatible implementations.
+type UnimplementedNexelliawalletdServer struct {
 }
 
-func (UnimplementednexelliawalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
+func (UnimplementedNexelliawalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBalance not implemented")
 }
-func (UnimplementednexelliawalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
+func (UnimplementedNexelliawalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetExternalSpendableUTXOs not implemented")
 }
-func (UnimplementednexelliawalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
+func (UnimplementedNexelliawalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUnsignedTransactions not implemented")
 }
-func (UnimplementednexelliawalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
+func (UnimplementedNexelliawalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ShowAddresses not implemented")
 }
-func (UnimplementednexelliawalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
+func (UnimplementedNexelliawalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NewAddress not implemented")
 }
-func (UnimplementednexelliawalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
+func (UnimplementedNexelliawalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Shutdown not implemented")
 }
-func (UnimplementednexelliawalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
+func (UnimplementedNexelliawalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Broadcast not implemented")
 }
-func (UnimplementednexelliawalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
+func (UnimplementedNexelliawalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Send not implemented")
 }
-func (UnimplementednexelliawalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
+func (UnimplementedNexelliawalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sign not implemented")
 }
-func (UnimplementednexelliawalletdServer) mustEmbedUnimplementednexelliawalletdServer() {}
+func (UnimplementedNexelliawalletdServer) mustEmbedUnimplementedNexelliawalletdServer() {}
 
-// UnsafenexelliawalletdServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to nexelliawalletdServer will
+// UnsafeNexelliawalletdServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to NexelliawalletdServer will
 // result in compilation errors.
-type UnsafenexelliawalletdServer interface {
-	mustEmbedUnimplementednexelliawalletdServer()
+type UnsafeNexelliawalletdServer interface {
+	mustEmbedUnimplementedNexelliawalletdServer()
 }
 
-func RegisternexelliawalletdServer(s grpc.ServiceRegistrar, srv nexelliawalletdServer) {
-	s.RegisterService(&nexelliawalletd_ServiceDesc, srv)
+func RegisterNexelliawalletdServer(s grpc.ServiceRegistrar, srv NexelliawalletdServer) {
+	s.RegisterService(&Nexelliawalletd_ServiceDesc, srv)
 }
 
-func _nexelliawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetBalanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).GetBalance(ctx, in)
+		return srv.(NexelliawalletdServer).GetBalance(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/GetBalance",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
+		return srv.(NexelliawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetExternalSpendableUTXOsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).GetExternalSpendableUTXOs(ctx, in)
+		return srv.(NexelliawalletdServer).GetExternalSpendableUTXOs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/GetExternalSpendableUTXOs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
+		return srv.(NexelliawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateUnsignedTransactionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).CreateUnsignedTransactions(ctx, in)
+		return srv.(NexelliawalletdServer).CreateUnsignedTransactions(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/CreateUnsignedTransactions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
+		return srv.(NexelliawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShowAddressesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).ShowAddresses(ctx, in)
+		return srv.(NexelliawalletdServer).ShowAddresses(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/ShowAddresses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
+		return srv.(NexelliawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(NewAddressRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).NewAddress(ctx, in)
+		return srv.(NexelliawalletdServer).NewAddress(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/NewAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
+		return srv.(NexelliawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShutdownRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).Shutdown(ctx, in)
+		return srv.(NexelliawalletdServer).Shutdown(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/Shutdown",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
+		return srv.(NexelliawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BroadcastRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).Broadcast(ctx, in)
+		return srv.(NexelliawalletdServer).Broadcast(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/Broadcast",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
+		return srv.(NexelliawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).Send(ctx, in)
+		return srv.(NexelliawalletdServer).Send(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/Send",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).Send(ctx, req.(*SendRequest))
+		return srv.(NexelliawalletdServer).Send(ctx, req.(*SendRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexelliawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Nexelliawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SignRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexelliawalletdServer).Sign(ctx, in)
+		return srv.(NexelliawalletdServer).Sign(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
 		FullMethod: "/nexelliawalletd.nexelliawalletd/Sign",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexelliawalletdServer).Sign(ctx, req.(*SignRequest))
+		return srv.(NexelliawalletdServer).Sign(ctx, req.(*SignRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// nexelliawalletd_ServiceDesc is the grpc.ServiceDesc for nexelliawalletd service.
+// Nexelliawalletd_ServiceDesc is the grpc.ServiceDesc for Nexelliawalletd service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var nexelliawalletd_ServiceDesc = grpc.ServiceDesc{
+var Nexelliawalletd_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "nexelliawalletd.nexelliawalletd",
-	HandlerType: (*nexelliawalletdServer)(nil),
+	HandlerType: (*NexelliawalletdServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetBalance",
-			Handler:    _nexelliawalletd_GetBalance_Handler,
+			Handler:    _Nexelliawalletd_GetBalance_Handler,
 		},
 		{
 			MethodName: "GetExternalSpendableUTXOs",
-			Handler:    _nexelliawalletd_GetExternalSpendableUTXOs_Handler,
+			Handler:    _Nexelliawalletd_GetExternalSpendableUTXOs_Handler,
 		},
 		{
 			MethodName: "CreateUnsignedTransactions",
-			Handler:    _nexelliawalletd_CreateUnsignedTransactions_Handler,
+			Handler:    _Nexelliawalletd_CreateUnsignedTransactions_Handler,
 		},
 		{
 			MethodName: "ShowAddresses",
-			Handler:    _nexelliawalletd_ShowAddresses_Handler,
+			Handler:    _Nexelliawalletd_ShowAddresses_Handler,
 		},
 		{
 			MethodName: "NewAddress",
-			Handler:    _nexelliawalletd_NewAddress_Handler,
+			Handler:    _Nexelliawalletd_NewAddress_Handler,
 		},
 		{
 			MethodName: "Shutdown",
-			Handler:    _nexelliawalletd_Shutdown_Handler,
+			Handler:    _Nexelliawalletd_Shutdown_Handler,
 		},
 		{
 			MethodName: "Broadcast",
-			Handler:    _nexelliawalletd_Broadcast_Handler,
+			Handler:    _Nexelliawalletd_Broadcast_Handler,
 		},
 		{
 			MethodName: "Send",
-			Handler:    _nexelliawalletd_Send_Handler,
+			Handler:    _Nexelliawalletd_Send_Handler,
 		},
 		{
 			MethodName: "Sign",
-			Handler:    _nexelliawalletd_Sign_Handler,
+			Handler:    _Nexelliawalletd_Sign_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
