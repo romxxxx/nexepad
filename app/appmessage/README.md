@@ -5,40 +5,40 @@ wire
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/romxxxx/nexepad/wire)
 =======
 
-Package wire implements the nexepa wire protocol.
+Package wire implements the nexellia wire protocol.
 
-## nexepa Message Overview
+## nexellia Message Overview
 
-The nexepa protocol consists of exchanging messages between peers. Each message
+The nexellia protocol consists of exchanging messages between peers. Each message
 is preceded by a header which identifies information about it such as which
-nexepa network it is a part of, its type, how big it is, and a checksum to
+nexellia network it is a part of, its type, how big it is, and a checksum to
 verify validity. All encoding and decoding of message headers is handled by this
 package.
 
-To accomplish this, there is a generic interface for nexepa messages named
+To accomplish this, there is a generic interface for nexellia messages named
 `Message` which allows messages of any type to be read, written, or passed
 around through channels, functions, etc. In addition, concrete implementations
-of most all nexepa messages are provided. All of the details of marshalling and 
-unmarshalling to and from the wire using nexepa encoding are handled so the 
+of most all nexellia messages are provided. All of the details of marshalling and 
+unmarshalling to and from the wire using nexellia encoding are handled so the 
 caller doesn't have to concern themselves with the specifics.
 
 ## Reading Messages Example
 
-In order to unmarshal nexepa messages from the wire, use the `ReadMessage`
+In order to unmarshal nexellia messages from the wire, use the `ReadMessage`
 function. It accepts any `io.Reader`, but typically this will be a `net.Conn`
-to a remote node running a nexepa peer. Example syntax is:
+to a remote node running a nexellia peer. Example syntax is:
 
 ```Go
 	// Use the most recent protocol version supported by the package and the
-	// main nexepa network.
+	// main nexellia network.
 	pver := wire.ProtocolVersion
-	romxxxx := wire.Mainnet
+	NexelliaNet := wire.Mainnet
 
-	// Reads and validates the next nexepa message from conn using the
-	// protocol version pver and the nexepa network romxxxx. The returns
+	// Reads and validates the next nexellia message from conn using the
+	// protocol version pver and the nexellia network NexelliaNet. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
-	msg, rawPayload, err := wire.ReadMessage(conn, pver, romxxxx)
+	msg, rawPayload, err := wire.ReadMessage(conn, pver, NexelliaNet)
 	if err != nil {
 		// Log and handle the error
 	}
@@ -57,15 +57,15 @@ from a remote peer is:
 	// Use the most recent protocol version supported by the package and the
 	// main bitcoin network.
 	pver := wire.ProtocolVersion
-	romxxxx := wire.Mainnet
+	NexelliaNet := wire.Mainnet
 
-	// Create a new getaddr nexepa message.
+	// Create a new getaddr nexellia message.
 	msg := wire.NewMsgGetAddr()
 
-	// Writes a nexepa message msg to conn using the protocol version
-	// pver, and the nexepa network romxxxx. The return is a possible
+	// Writes a nexellia message msg to conn using the protocol version
+	// pver, and the nexellia network NexelliaNet. The return is a possible
 	// error.
-	err := wire.WriteMessage(conn, msg, pver, romxxxx)
+	err := wire.WriteMessage(conn, msg, pver, NexelliaNet)
 	if err != nil {
 		// Log and handle the error
 	}

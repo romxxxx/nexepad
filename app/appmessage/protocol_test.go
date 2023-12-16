@@ -33,16 +33,16 @@ func TestServiceFlagStringer(t *testing.T) {
 	}
 }
 
-// TestromxxxxStringer tests the stringized output for nexepa net types.
-func TestromxxxxStringer(t *testing.T) {
+// TestNexelliaNetStringer tests the stringized output for nexepa net types.
+func TestNexelliaNetStringer(t *testing.T) {
 	tests := []struct {
-		in   romxxxx
+		in   NexelliaNet
 		want string
 	}{
 		{Mainnet, "Mainnet"},
 		{Testnet, "Testnet"},
 		{Simnet, "Simnet"},
-		{0xffffffff, "Unknown romxxxx (4294967295)"},
+		{0xffffffff, "Unknown NexelliaNet (4294967295)"},
 	}
 
 	t.Logf("Running %d tests", len(tests))

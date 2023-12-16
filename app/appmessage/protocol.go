@@ -89,8 +89,8 @@ func (f ServiceFlag) String() string {
 	return s
 }
 
-// romxxxx represents which nexepa network a message belongs to.
-type romxxxx uint32
+// NexelliaNet represents which nexellia network a message belongs to.
+type NexelliaNet uint32
 
 // Constants used to indicate the message nexepa network. They can also be
 // used to seek to the next message when a stream's state is unknown, but
@@ -98,32 +98,32 @@ type romxxxx uint32
 // better idea to simply disconnect clients that are misbehaving over TCP.
 const (
 	// Mainnet represents the main nexepa network.
-	Mainnet romxxxx = 0x3ddcf71d
+	Mainnet NexelliaNet = 0x3ddcf71d
 
 	// Testnet represents the test network.
-	Testnet romxxxx = 0xddb8af8f
+	Testnet NexelliaNet = 0xddb8af8f
 
 	// Simnet represents the simulation test network.
-	Simnet romxxxx = 0x374dcf1c
+	Simnet NexelliaNet = 0x374dcf1c
 
 	// Devnet represents the development test network.
-	Devnet romxxxx = 0x732d87e1
+	Devnet NexelliaNet = 0x732d87e1
 )
 
 // bnStrings is a map of nexepa networks back to their constant names for
 // pretty printing.
-var bnStrings = map[romxxxx]string{
+var bnStrings = map[NexelliaNet]string{
 	Mainnet: "Mainnet",
 	Testnet: "Testnet",
 	Simnet:  "Simnet",
 	Devnet:  "Devnet",
 }
 
-// String returns the romxxxx in human-readable form.
-func (n romxxxx) String() string {
+// String returns the NexelliaNet in human-readable form.
+func (n NexelliaNet) String() string {
 	if s, ok := bnStrings[n]; ok {
 		return s
 	}
 
-	return fmt.Sprintf("Unknown romxxxx (%d)", uint32(n))
+	return fmt.Sprintf("Unknown NexelliaNet (%d)", uint32(n))
 }
