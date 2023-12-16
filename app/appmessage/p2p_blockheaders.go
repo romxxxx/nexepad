@@ -1,6 +1,6 @@
 package appmessage
 
-// BlockHeadersMessage represents a nexepa BlockHeaders message
+// BlockHeadersMessage represents a nexellia BlockHeaders message
 type BlockHeadersMessage struct {
 	baseMessage
 	BlockHeaders []*MsgBlockHeader
@@ -11,7 +11,7 @@ func (msg *BlockHeadersMessage) Command() MessageCommand {
 	return CmdBlockHeaders
 }
 
-// NewBlockHeadersMessage returns a new nexepa BlockHeaders message
+// NewBlockHeadersMessage returns a new nexellia BlockHeaders message
 func NewBlockHeadersMessage(blockHeaders []*MsgBlockHeader) *BlockHeadersMessage {
 	return &BlockHeadersMessage{
 		BlockHeaders: blockHeaders,

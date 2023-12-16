@@ -1,30 +1,30 @@
 /*
-Package appmessage implements the nexepa appmessage protocol.
+Package appmessage implements the nexellia appmessage protocol.
 
 At a high level, this package provides support for marshalling and unmarshalling
-supported nexepa messages to and from the appmessage. This package does not deal
+supported nexellia messages to and from the appmessage. This package does not deal
 with the specifics of message handling such as what to do when a message is
 received. This provides the caller with a high level of flexibility.
 
-# nexepa Message Overview
+# nexellia Message Overview
 
-The nexepa protocol consists of exchanging messages between peers. Each
+The nexellia protocol consists of exchanging messages between peers. Each
 message is preceded by a header which identifies information about it such as
-which nexepa network it is a part of, its type, how big it is, and a checksum
+which nexellia network it is a part of, its type, how big it is, and a checksum
 to verify validity. All encoding and decoding of message headers is handled by
 this package.
 
-To accomplish this, there is a generic interface for nexepa messages named
+To accomplish this, there is a generic interface for nexellia messages named
 Message which allows messages of any type to be read, written, or passed around
 through channels, functions, etc. In addition, concrete implementations of most
-of the currently supported nexepa messages are provided. For these supported
+of the currently supported nexellia messages are provided. For these supported
 messages, all of the details of marshalling and unmarshalling to and from the
-appmessage using nexepa encoding are handled so the caller doesn't have to concern
+appmessage using nexellia encoding are handled so the caller doesn't have to concern
 themselves with the specifics.
 
 # Message Interaction
 
-The following provides a quick summary of how the nexepa messages are intended
+The following provides a quick summary of how the nexellia messages are intended
 to interact with one another. As stated above, these interactions are not
 directly handled by this package.
 
@@ -48,7 +48,7 @@ interactions in no particular order.
 # Common Parameters
 
 There are several common parameters that arise when using this package to read
-and write nexepa messages. The following sections provide a quick overview of
+and write nexellia messages. The following sections provide a quick overview of
 these parameters so the next sections can build on them.
 
 # Protocol Version
@@ -60,10 +60,10 @@ latest protocol version this package supports and is typically the value to use
 for all outbound connections before a potentially lower protocol version is
 negotiated.
 
-# nexepa Network
+# nexellia Network
 
-The nexepa network is a magic number which is used to identify the start of a
-message and which nexepa network the message applies to. This package provides
+The nexellia network is a magic number which is used to identify the start of a
+message and which nexellia network the message applies to. This package provides
 the following constants:
 
 	appmessage.Mainnet
@@ -73,8 +73,8 @@ the following constants:
 
 # Determining Message Type
 
-As discussed in the nexepa message overview section, this package reads
-and writes nexepa messages using a generic interface named Message. In
+As discussed in the nexellia message overview section, this package reads
+and writes nexellia messages using a generic interface named Message. In
 order to determine the actual concrete type of the message, use a type
 switch or type assertion. An example of a type switch follows:
 
@@ -91,33 +91,33 @@ switch or type assertion. An example of a type switch follows:
 
 # Reading Messages
 
-In order to unmarshall nexepa messages from the appmessage, use the ReadMessage
+In order to unmarshall nexellia messages from the appmessage, use the ReadMessage
 function. It accepts any io.Reader, but typically this will be a net.Conn to
-a remote node running a nexepa peer. Example syntax is:
+a remote node running a nexellia peer. Example syntax is:
 
-	// Reads and validates the next nexepa message from conn using the
-	// protocol version pver and the nexepa network romxxxx. The returns
+	// Reads and validates the next nexellia message from conn using the
+	// protocol version pver and the nexellia network nexellia. The returns
 	// are a appmessage.Message, a []byte which contains the unmarshalled
 	// raw payload, and a possible error.
-	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, romxxxx)
+	msg, rawPayload, err := appmessage.ReadMessage(conn, pver, nexellia)
 	if err != nil {
 		// Log and handle the error
 	}
 
 # Writing Messages
 
-In order to marshall nexepa messages to the appmessage, use the WriteMessage
+In order to marshall nexellia messages to the appmessage, use the WriteMessage
 function. It accepts any io.Writer, but typically this will be a net.Conn to
-a remote node running a nexepa peer. Example syntax to request addresses
+a remote node running a nexellia peer. Example syntax to request addresses
 from a remote peer is:
 
-	// Create a new getaddr nexepa message.
+	// Create a new getaddr nexellia message.
 	msg := appmessage.NewMsgRequestAddresses()
 
-	// Writes a nexepa message msg to conn using the protocol version
-	// pver, and the nexepa network romxxxx. The return is a possible
+	// Writes a nexellia message msg to conn using the protocol version
+	// pver, and the nexellia network. The return is a possible
 	// error.
-	err := appmessage.WriteMessage(conn, msg, pver, romxxxx)
+	err := appmessage.WriteMessage(conn, msg, pver, nexellia)
 	if err != nil {
 		// Log and handle the error
 	}

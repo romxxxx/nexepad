@@ -213,7 +213,7 @@ func TestSignTxOutput(t *testing.T) {
 				break
 			}
 
-			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixNexNexelliaTest)
+			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixNexelliaTest)
 			if err != nil {
 				t.Errorf("failed to make address for %s: %v",
 					msg, err)

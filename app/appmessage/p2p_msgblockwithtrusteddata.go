@@ -6,7 +6,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgBlockWithTrustedData represents a nexepa BlockWithTrustedData message
+// MsgBlockWithTrustedData represents a nexellia BlockWithTrustedData message
 type MsgBlockWithTrustedData struct {
 	baseMessage
 

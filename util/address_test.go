@@ -34,7 +34,7 @@ func TestAddresses(t *testing.T) {
 			encoded: "nexepa:qr35ennsep3hxfe7lnz5ee7j5jgmkjswsn35ennsep3hxfe7ln35cdv0dy335",
 			valid:   true,
 			result: util.TstAddressPubKey(
-				util.Bech32Prefixnexepa,
+				util.Bech32PrefixNexellia,
 				[util.PublicKeySize]byte{
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xc5, 0x4c, 0xe7, 0xd2, 0xa4, 0x91, 0xbb, 0x4a, 0x0e, 0x84,
@@ -47,18 +47,18 @@ func TestAddresses(t *testing.T) {
 					0xc5, 0x4c, 0xe7, 0xd2, 0xa4, 0x91, 0xbb, 0x4a, 0x0e, 0x84,
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xe3, 0x4c}
-				return util.NewAddressPublicKey(publicKey, util.Bech32Prefixnexepa)
+				return util.NewAddressPublicKey(publicKey, util.Bech32PrefixNexellia)
 			},
 			passedPrefix:   util.Bech32PrefixUnknown,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 		{
 			name:    "mainnet p2pk 2",
-			addr:    "nexepa:qq80qvqs0lfxuzmt7sz3909ze6camq9d4t35ennsep3hxfe7ln35cvfqgz3z8",
-			encoded: "nexepa:qq80qvqs0lfxuzmt7sz3909ze6camq9d4t35ennsep3hxfe7ln35cvfqgz3z8",
+			addr:    "nexellia:qq80qvqs0lfxuzmt7sz3909ze6camq9d4t35ennsep3hxfe7ln35cvfqgz3z8",
+			encoded: "nexellia:qq80qvqs0lfxuzmt7sz3909ze6camq9d4t35ennsep3hxfe7ln35cvfqgz3z8",
 			valid:   true,
 			result: util.TstAddressPubKey(
-				util.Bech32Prefixnexepa,
+				util.Bech32PrefixNexellia,
 				[util.PublicKeySize]byte{
 					0x0e, 0xf0, 0x30, 0x10, 0x7f, 0xd2, 0x6e, 0x0b, 0x6b, 0xf4,
 					0x05, 0x12, 0xbc, 0xa2, 0xce, 0xb1, 0xdd, 0x80, 0xad, 0xaa,
@@ -72,18 +72,18 @@ func TestAddresses(t *testing.T) {
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xe3, 0x4c,
 				}
-				return util.NewAddressPublicKey(publicKey, util.Bech32Prefixnexepa)
+				return util.NewAddressPublicKey(publicKey, util.Bech32PrefixNexellia)
 			},
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 		{
 			name:    "testnet p2pk",
-			addr:    "nexepatest:qputx94qseratdmjs0j395mq8u03er0x3l35ennsep3hxfe7ln35ckquw528z",
-			encoded: "nexepatest:qputx94qseratdmjs0j395mq8u03er0x3l35ennsep3hxfe7ln35ckquw528z",
+			addr:    "nexelliatest:qputx94qseratdmjs0j395mq8u03er0x3l35ennsep3hxfe7ln35ckquw528z",
+			encoded: "nexelliatest:qputx94qseratdmjs0j395mq8u03er0x3l35ennsep3hxfe7ln35ckquw528z",
 			valid:   true,
 			result: util.TstAddressPubKey(
-				util.Bech32PrefixnexepaTest,
+				util.Bech32PrefixNexelliaTest,
 				[util.PublicKeySize]byte{
 					0x78, 0xb3, 0x16, 0xa0, 0x86, 0x47, 0xd5, 0xb7, 0x72, 0x83,
 					0xe5, 0x12, 0xd3, 0x60, 0x3f, 0x1f, 0x1c, 0x8d, 0xe6, 0x8f,
@@ -97,20 +97,20 @@ func TestAddresses(t *testing.T) {
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xe3, 0x4c,
 				}
-				return util.NewAddressPublicKey(publicKey, util.Bech32PrefixnexepaTest)
+				return util.NewAddressPublicKey(publicKey, util.Bech32PrefixNexelliaTest)
 			},
-			passedPrefix:   util.Bech32PrefixnexepaTest,
-			expectedPrefix: util.Bech32PrefixnexepaTest,
+			passedPrefix:   util.Bech32PrefixNexelliaTest,
+			expectedPrefix: util.Bech32PrefixNexelliaTest,
 		},
 
 		// ECDSA P2PK tests.
 		{
 			name:    "mainnet ecdsa p2pk",
-			addr:    "nexepa:q835ennsep3hxfe7lnz5ee7j5jgmkjswsn35ennsep3hxfe7ln35e2sm7yrlr4w",
-			encoded: "nexepa:q835ennsep3hxfe7lnz5ee7j5jgmkjswsn35ennsep3hxfe7ln35e2sm7yrlr4w",
+			addr:    "nexellia:q835ennsep3hxfe7lnz5ee7j5jgmkjswsn35ennsep3hxfe7ln35e2sm7yrlr4w",
+			encoded: "nexellia:q835ennsep3hxfe7lnz5ee7j5jgmkjswsn35ennsep3hxfe7ln35e2sm7yrlr4w",
 			valid:   true,
 			result: util.TstAddressPubKeyECDSA(
-				util.Bech32Prefixnexepa,
+				util.Bech32PrefixNexellia,
 				[util.PublicKeySizeECDSA]byte{
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xc5, 0x4c, 0xe7, 0xd2, 0xa4, 0x91, 0xbb, 0x4a, 0x0e, 0x84,
@@ -123,10 +123,10 @@ func TestAddresses(t *testing.T) {
 					0xc5, 0x4c, 0xe7, 0xd2, 0xa4, 0x91, 0xbb, 0x4a, 0x0e, 0x84,
 					0xe3, 0x4c, 0xce, 0x70, 0xc8, 0x63, 0x73, 0x27, 0x3e, 0xfc,
 					0xe3, 0x4c, 0xaa}
-				return util.NewAddressPublicKeyECDSA(publicKey, util.Bech32Prefixnexepa)
+				return util.NewAddressPublicKeyECDSA(publicKey, util.Bech32PrefixNexellia)
 			},
 			passedPrefix:   util.Bech32PrefixUnknown,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 
 		// Negative P2PK tests.
@@ -139,27 +139,27 @@ func TestAddresses(t *testing.T) {
 					0x00, 0x0e, 0xf0, 0x30, 0x10, 0x7f, 0xd2, 0x6e, 0x0b, 0x6b,
 					0xf4, 0x05, 0x12, 0xbc, 0xa2, 0xce, 0xb1, 0xdd, 0x80, 0xad,
 					0xaa}
-				return util.NewAddressPublicKey(publicKey, util.Bech32Prefixnexepa)
+				return util.NewAddressPublicKey(publicKey, util.Bech32PrefixNexellia)
 			},
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 		{
 			name:           "p2pk bad checksum",
-			addr:           "nexepa:qr35ennsep3hxfe7lnz5ee7j5jgmkjswss74as46gx",
+			addr:           "nexellia:qr35ennsep3hxfe7lnz5ee7j5jgmkjswss74as46gx",
 			valid:          false,
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 
 		// Positive P2SH tests.
 		{
 			name:    "mainnet p2sh",
-			addr:    "nexepa:prq20q4qd9ulr044cauyy9wtpeupqpjv67pn2vyc6acly7xqkrjdzmh8rj9f4",
-			encoded: "nexepa:prq20q4qd9ulr044cauyy9wtpeupqpjv67pn2vyc6acly7xqkrjdzmh8rj9f4",
+			addr:    "nexellia:prq20q4qd9ulr044cauyy9wtpeupqpjv67pn2vyc6acly7xqkrjdzmh8rj9f4",
+			encoded: "nexellia:prq20q4qd9ulr044cauyy9wtpeupqpjv67pn2vyc6acly7xqkrjdzmh8rj9f4",
 			valid:   true,
 			result: util.TstAddressScriptHash(
-				util.Bech32Prefixnexepa,
+				util.Bech32PrefixNexellia,
 				[blake2b.Size256]byte{
 					0xc0, 0xa7, 0x82, 0xa0, 0x69, 0x79, 0xf1, 0xbe,
 					0xb5, 0xc7, 0x78, 0x42, 0x15, 0xcb, 0x0e, 0x78,
@@ -189,18 +189,18 @@ func TestAddresses(t *testing.T) {
 					0xdb, 0xfb, 0x1e, 0x75, 0x4e, 0x35, 0xfa, 0x1c, 0x78, 0x44,
 					0xc4, 0x1f, 0x32, 0x2a, 0x18, 0x63, 0xd4, 0x62, 0x13, 0x53,
 					0xae}
-				return util.NewAddressScriptHash(script, util.Bech32Prefixnexepa)
+				return util.NewAddressScriptHash(script, util.Bech32PrefixNexellia)
 			},
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 		{
 			name:    "mainnet p2sh 2",
-			addr:    "nexepa:pr5vxqxg0xrwl2zvxlq9rxffqx00sm44kn5vxqxg0xrwl2zvxl5vxyhvsake2",
-			encoded: "nexepa:pr5vxqxg0xrwl2zvxlq9rxffqx00sm44kn5vxqxg0xrwl2zvxl5vxyhvsake2",
+			addr:    "nexellia:pr5vxqxg0xrwl2zvxlq9rxffqx00sm44kn5vxqxg0xrwl2zvxl5vxyhvsake2",
+			encoded: "nexellia:pr5vxqxg0xrwl2zvxlq9rxffqx00sm44kn5vxqxg0xrwl2zvxl5vxyhvsake2",
 			valid:   true,
 			result: util.TstAddressScriptHash(
-				util.Bech32Prefixnexepa,
+				util.Bech32PrefixNexellia,
 				[blake2b.Size256]byte{
 					0xe8, 0xc3, 0x00, 0xc8, 0x79, 0x86, 0xef, 0xa8, 0x4c, 0x37,
 					0xc0, 0x51, 0x99, 0x29, 0x01, 0x9e, 0xf8, 0x6e, 0xb5, 0xb4,
@@ -214,18 +214,18 @@ func TestAddresses(t *testing.T) {
 					0xe8, 0xc3, 0x00, 0xc8, 0x79, 0x86, 0xef, 0xa8, 0x4c, 0x37,
 					0xe8, 0xc3,
 				}
-				return util.NewAddressScriptHashFromHash(hash, util.Bech32Prefixnexepa)
+				return util.NewAddressScriptHashFromHash(hash, util.Bech32PrefixNexellia)
 			},
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 		{
 			name:    "testnet p2sh",
-			addr:    "nexepatest:przhjdpv93xfygpqtckdc2zkzuzqeyj2pt5vxqxg0xrwl2zvxl5vx35yyy2h9",
-			encoded: "nexepatest:przhjdpv93xfygpqtckdc2zkzuzqeyj2pt5vxqxg0xrwl2zvxl5vx35yyy2h9",
+			addr:    "nexelliatest:przhjdpv93xfygpqtckdc2zkzuzqeyj2pt5vxqxg0xrwl2zvxl5vx35yyy2h9",
+			encoded: "nexelliatest:przhjdpv93xfygpqtckdc2zkzuzqeyj2pt5vxqxg0xrwl2zvxl5vx35yyy2h9",
 			valid:   true,
 			result: util.TstAddressScriptHash(
-				util.Bech32PrefixnexepaTest,
+				util.Bech32PrefixNexelliaTest,
 				[blake2b.Size256]byte{
 					0xc5, 0x79, 0x34, 0x2c, 0x2c, 0x4c, 0x92, 0x20, 0x20, 0x5e,
 					0x2c, 0xdc, 0x28, 0x56, 0x17, 0x04, 0x0c, 0x92, 0x4a, 0x0a,
@@ -239,10 +239,10 @@ func TestAddresses(t *testing.T) {
 					0xe8, 0xc3, 0x00, 0xc8, 0x79, 0x86, 0xef, 0xa8, 0x4c, 0x37,
 					0xe8, 0xc3,
 				}
-				return util.NewAddressScriptHashFromHash(hash, util.Bech32PrefixnexepaTest)
+				return util.NewAddressScriptHashFromHash(hash, util.Bech32PrefixNexelliaTest)
 			},
-			passedPrefix:   util.Bech32PrefixnexepaTest,
-			expectedPrefix: util.Bech32PrefixnexepaTest,
+			passedPrefix:   util.Bech32PrefixNexelliaTest,
+			expectedPrefix: util.Bech32PrefixNexelliaTest,
 		},
 
 		// Negative P2SH tests.
@@ -255,10 +255,10 @@ func TestAddresses(t *testing.T) {
 					0x00, 0xf8, 0x15, 0xb0, 0x36, 0xd9, 0xbb, 0xbc, 0xe5, 0xe9,
 					0xf2, 0xa0, 0x0a, 0xbd, 0x1b, 0xf3, 0xdc, 0x91, 0xe9, 0x55,
 					0x10}
-				return util.NewAddressScriptHashFromHash(hash, util.Bech32Prefixnexepa)
+				return util.NewAddressScriptHashFromHash(hash, util.Bech32PrefixNexellia)
 			},
-			passedPrefix:   util.Bech32Prefixnexepa,
-			expectedPrefix: util.Bech32Prefixnexepa,
+			passedPrefix:   util.Bech32PrefixNexellia,
+			expectedPrefix: util.Bech32PrefixNexellia,
 		},
 	}
 
@@ -389,17 +389,17 @@ func TestDecodeAddressErrorConditions(t *testing.T) {
 		},
 		{
 			"nexepasim:raskzctpv9skzctpv9skzctpv9skzctpvy37ct7zafpv9skzctpvymmnd3gh8",
-			util.Bech32PrefixnexepaSim,
+			util.Bech32PrefixNexelliaSim,
 			"unknown address type",
 		},
 		{
 			"nexepasim:raskzcg58mth0an",
-			util.Bech32PrefixnexepaSim,
+			util.Bech32PrefixNexelliaSim,
 			"unknown address type",
 		},
 		{
 			"nexepatest:qqq65mvpxcmajeq44n2n8vfn6u9f8l4zsy0xez0tzw",
-			util.Bech32Prefixnexepa,
+			util.Bech32PrefixNexellia,
 			"decoded address is of wrong network",
 		},
 	}
@@ -421,9 +421,9 @@ func TestParsePrefix(t *testing.T) {
 		expectedPrefix util.Bech32Prefix
 		expectedError  bool
 	}{
-		{"nexepa", util.Bech32Prefixnexepa, false},
-		{"nexepatest", util.Bech32PrefixnexepaTest, false},
-		{"nexepasim", util.Bech32PrefixnexepaSim, false},
+		{"nexellia", util.Bech32PrefixNexellia, false},
+		{"nexelliatest", util.Bech32PrefixNexelliaTest, false},
+		{"nexepasim", util.Bech32PrefixNexelliaSim, false},
 		{"blabla", util.Bech32PrefixUnknown, true},
 		{"unknown", util.Bech32PrefixUnknown, true},
 		{"", util.Bech32PrefixUnknown, true},
@@ -448,9 +448,9 @@ func TestPrefixToString(t *testing.T) {
 		prefix            util.Bech32Prefix
 		expectedPrefixStr string
 	}{
-		{util.Bech32Prefixnexepa, "nexepa"},
-		{util.Bech32PrefixnexepaTest, "nexepatest"},
-		{util.Bech32PrefixnexepaSim, "nexepasim"},
+		{util.Bech32PrefixNexellia, "nexellia"},
+		{util.Bech32PrefixNexelliaTest, "nexelliatest"},
+		{util.Bech32PrefixNexelliaSim, "nexelliasim"},
 		{util.Bech32PrefixUnknown, ""},
 	}
 

@@ -9,6 +9,7 @@ import (
 	"google.golang.org/protobuf/proto"
 
 	"github.com/pkg/errors"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func parseCommand(args []string, commandDescs []*commandDescription) (*protowire.NexepadMessage, error) {

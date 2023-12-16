@@ -33,7 +33,7 @@ var desiredLimits = &limits.DesiredLimits{
 var serviceDescription = &winservice.ServiceDescription{
 	Name:        "nexepadsvc",
 	DisplayName: "nexepad Service",
-	Description: "Downloads and stays synchronized with the nexepa blockDAG and " +
+	Description: "Downloads and stays synchronized with the nexellia blockDAG and " +
 		"provides DAG services to applications.",
 }
 

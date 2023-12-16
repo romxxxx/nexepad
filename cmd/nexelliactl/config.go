@@ -16,7 +16,7 @@ type configFlags struct {
 	Timeout                            uint64 `short:"t" long:"timeout" description:"Timeout for the request (in seconds)"`
 	RequestJSON                        string `short:"j" long:"json" description:"The request in JSON format"`
 	ListCommands                       bool   `short:"l" long:"list-commands" description:"List all commands and exit"`
-	AllowConnectionToDifferentVersions bool   `short:"a" long:"allow-connection-to-different-versions" description:"Allow connections to versions different than nexepactl's version'"`
+	AllowConnectionToDifferentVersions bool   `short:"a" long:"allow-connection-to-different-versions" description:"Allow connections to versions different than nexelliactl's version'"`
 	CommandAndParameters               []string
 	config.NetworkFlags
 }
@@ -27,8 +27,8 @@ func parseConfig() (*configFlags, error) {
 		Timeout:   defaultTimeout,
 	}
 	parser := flags.NewParser(cfg, flags.HelpFlag)
-	parser.Usage = "nexepactl [OPTIONS] [COMMAND] [COMMAND PARAMETERS].\n\nCommand can be supplied only if --json is not used." +
-		"\n\nUse `nexepactl --list-commands` to get a list of all commands and their parameters." +
+	parser.Usage = "nexelliactl [OPTIONS] [COMMAND] [COMMAND PARAMETERS].\n\nCommand can be supplied only if --json is not used." +
+		"\n\nUse `nexelliactl --list-commands` to get a list of all commands and their parameters." +
 		"\nFor optional parameters- use '-' without quotes to not pass the parameter.\n"
 	remainingArgs, err := parser.Parse()
 	if err != nil {

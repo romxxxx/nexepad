@@ -129,7 +129,7 @@ nexepad v0.12.1 - 2022-05-31
 * Update Dockerfile for go 1.18 (#2038)
 * Remove HF1 activation code (#2042)
 
-nexepa wallet:
+nexellia wallet:
 * Various nexelliawallet text fixes and log additions (#2032, #2047, #2062)
 * Wallet address synchronization improvement (#2025)
 * Add support for `from` address in `nexelliawallet send` (#1964)
