@@ -7,6 +7,7 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/router"
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
