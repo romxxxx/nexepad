@@ -20,147 +20,147 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type nexepadMessage struct {
+type NexepadMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//	*nexepadMessage_Addresses
-	//	*nexepadMessage_Block
-	//	*nexepadMessage_Transaction
-	//	*nexepadMessage_BlockLocator
-	//	*nexepadMessage_RequestAddresses
-	//	*nexepadMessage_RequestRelayBlocks
-	//	*nexepadMessage_RequestTransactions
-	//	*nexepadMessage_IbdBlock
-	//	*nexepadMessage_InvRelayBlock
-	//	*nexepadMessage_InvTransactions
-	//	*nexepadMessage_Ping
-	//	*nexepadMessage_Pong
-	//	*nexepadMessage_Verack
-	//	*nexepadMessage_Version
-	//	*nexepadMessage_TransactionNotFound
-	//	*nexepadMessage_Reject
-	//	*nexepadMessage_PruningPointUtxoSetChunk
-	//	*nexepadMessage_RequestIBDBlocks
-	//	*nexepadMessage_UnexpectedPruningPoint
-	//	*nexepadMessage_IbdBlockLocator
-	//	*nexepadMessage_IbdBlockLocatorHighestHash
-	//	*nexepadMessage_RequestNextPruningPointUtxoSetChunk
-	//	*nexepadMessage_DonePruningPointUtxoSetChunks
-	//	*nexepadMessage_IbdBlockLocatorHighestHashNotFound
-	//	*nexepadMessage_BlockWithTrustedData
-	//	*nexepadMessage_DoneBlocksWithTrustedData
-	//	*nexepadMessage_RequestPruningPointAndItsAnticone
-	//	*nexepadMessage_BlockHeaders
-	//	*nexepadMessage_RequestNextHeaders
-	//	*nexepadMessage_DoneHeaders
-	//	*nexepadMessage_RequestPruningPointUTXOSet
-	//	*nexepadMessage_RequestHeaders
-	//	*nexepadMessage_RequestBlockLocator
-	//	*nexepadMessage_PruningPoints
-	//	*nexepadMessage_RequestPruningPointProof
-	//	*nexepadMessage_PruningPointProof
-	//	*nexepadMessage_Ready
-	//	*nexepadMessage_BlockWithTrustedDataV4
-	//	*nexepadMessage_TrustedData
-	//	*nexepadMessage_RequestIBDChainBlockLocator
-	//	*nexepadMessage_IbdChainBlockLocator
-	//	*nexepadMessage_RequestAnticone
-	//	*nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks
-	//	*nexepadMessage_GetCurrentNetworkRequest
-	//	*nexepadMessage_GetCurrentNetworkResponse
-	//	*nexepadMessage_SubmitBlockRequest
-	//	*nexepadMessage_SubmitBlockResponse
-	//	*nexepadMessage_GetBlockTemplateRequest
-	//	*nexepadMessage_GetBlockTemplateResponse
-	//	*nexepadMessage_NotifyBlockAddedRequest
-	//	*nexepadMessage_NotifyBlockAddedResponse
-	//	*nexepadMessage_BlockAddedNotification
-	//	*nexepadMessage_GetPeerAddressesRequest
-	//	*nexepadMessage_GetPeerAddressesResponse
-	//	*nexepadMessage_GetSelectedTipHashRequest
-	//	*nexepadMessage_GetSelectedTipHashResponse
-	//	*nexepadMessage_GetMempoolEntryRequest
-	//	*nexepadMessage_GetMempoolEntryResponse
-	//	*nexepadMessage_GetConnectedPeerInfoRequest
-	//	*nexepadMessage_GetConnectedPeerInfoResponse
-	//	*nexepadMessage_AddPeerRequest
-	//	*nexepadMessage_AddPeerResponse
-	//	*nexepadMessage_SubmitTransactionRequest
-	//	*nexepadMessage_SubmitTransactionResponse
-	//	*nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest
-	//	*nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse
-	//	*nexepadMessage_VirtualSelectedParentChainChangedNotification
-	//	*nexepadMessage_GetBlockRequest
-	//	*nexepadMessage_GetBlockResponse
-	//	*nexepadMessage_GetSubnetworkRequest
-	//	*nexepadMessage_GetSubnetworkResponse
-	//	*nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest
-	//	*nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse
-	//	*nexepadMessage_GetBlocksRequest
-	//	*nexepadMessage_GetBlocksResponse
-	//	*nexepadMessage_GetBlockCountRequest
-	//	*nexepadMessage_GetBlockCountResponse
-	//	*nexepadMessage_GetBlockDagInfoRequest
-	//	*nexepadMessage_GetBlockDagInfoResponse
-	//	*nexepadMessage_ResolveFinalityConflictRequest
-	//	*nexepadMessage_ResolveFinalityConflictResponse
-	//	*nexepadMessage_NotifyFinalityConflictsRequest
-	//	*nexepadMessage_NotifyFinalityConflictsResponse
-	//	*nexepadMessage_FinalityConflictNotification
-	//	*nexepadMessage_FinalityConflictResolvedNotification
-	//	*nexepadMessage_GetMempoolEntriesRequest
-	//	*nexepadMessage_GetMempoolEntriesResponse
-	//	*nexepadMessage_ShutDownRequest
-	//	*nexepadMessage_ShutDownResponse
-	//	*nexepadMessage_GetHeadersRequest
-	//	*nexepadMessage_GetHeadersResponse
-	//	*nexepadMessage_NotifyUtxosChangedRequest
-	//	*nexepadMessage_NotifyUtxosChangedResponse
-	//	*nexepadMessage_UtxosChangedNotification
-	//	*nexepadMessage_GetUtxosByAddressesRequest
-	//	*nexepadMessage_GetUtxosByAddressesResponse
-	//	*nexepadMessage_GetVirtualSelectedParentBlueScoreRequest
-	//	*nexepadMessage_GetVirtualSelectedParentBlueScoreResponse
-	//	*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
-	//	*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
-	//	*nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification
-	//	*nexepadMessage_BanRequest
-	//	*nexepadMessage_BanResponse
-	//	*nexepadMessage_UnbanRequest
-	//	*nexepadMessage_UnbanResponse
-	//	*nexepadMessage_GetInfoRequest
-	//	*nexepadMessage_GetInfoResponse
-	//	*nexepadMessage_StopNotifyingUtxosChangedRequest
-	//	*nexepadMessage_StopNotifyingUtxosChangedResponse
-	//	*nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest
-	//	*nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse
-	//	*nexepadMessage_PruningPointUTXOSetOverrideNotification
-	//	*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
-	//	*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
-	//	*nexepadMessage_EstimateNetworkHashesPerSecondRequest
-	//	*nexepadMessage_EstimateNetworkHashesPerSecondResponse
-	//	*nexepadMessage_NotifyVirtualDaaScoreChangedRequest
-	//	*nexepadMessage_NotifyVirtualDaaScoreChangedResponse
-	//	*nexepadMessage_VirtualDaaScoreChangedNotification
-	//	*nexepadMessage_GetBalanceByAddressRequest
-	//	*nexepadMessage_GetBalanceByAddressResponse
-	//	*nexepadMessage_GetBalancesByAddressesRequest
-	//	*nexepadMessage_GetBalancesByAddressesResponse
-	//	*nexepadMessage_NotifyNewBlockTemplateRequest
-	//	*nexepadMessage_NotifyNewBlockTemplateResponse
-	//	*nexepadMessage_NewBlockTemplateNotification
-	//	*nexepadMessage_GetMempoolEntriesByAddressesRequest
-	//	*nexepadMessage_GetMempoolEntriesByAddressesResponse
-	//	*nexepadMessage_GetCoinSupplyRequest
-	//	*nexepadMessage_GetCoinSupplyResponse
-	Payload isnexepadMessage_Payload `protobuf_oneof:"payload"`
+	//	*NexepadMessage_Addresses
+	//	*NexepadMessage_Block
+	//	*NexepadMessage_Transaction
+	//	*NexepadMessage_BlockLocator
+	//	*NexepadMessage_RequestAddresses
+	//	*NexepadMessage_RequestRelayBlocks
+	//	*NexepadMessage_RequestTransactions
+	//	*NexepadMessage_IbdBlock
+	//	*NexepadMessage_InvRelayBlock
+	//	*NexepadMessage_InvTransactions
+	//	*NexepadMessage_Ping
+	//	*NexepadMessage_Pong
+	//	*NexepadMessage_Verack
+	//	*NexepadMessage_Version
+	//	*NexepadMessage_TransactionNotFound
+	//	*NexepadMessage_Reject
+	//	*NexepadMessage_PruningPointUtxoSetChunk
+	//	*NexepadMessage_RequestIBDBlocks
+	//	*NexepadMessage_UnexpectedPruningPoint
+	//	*NexepadMessage_IbdBlockLocator
+	//	*NexepadMessage_IbdBlockLocatorHighestHash
+	//	*NexepadMessage_RequestNextPruningPointUtxoSetChunk
+	//	*NexepadMessage_DonePruningPointUtxoSetChunks
+	//	*NexepadMessage_IbdBlockLocatorHighestHashNotFound
+	//	*NexepadMessage_BlockWithTrustedData
+	//	*NexepadMessage_DoneBlocksWithTrustedData
+	//	*NexepadMessage_RequestPruningPointAndItsAnticone
+	//	*NexepadMessage_BlockHeaders
+	//	*NexepadMessage_RequestNextHeaders
+	//	*NexepadMessage_DoneHeaders
+	//	*NexepadMessage_RequestPruningPointUTXOSet
+	//	*NexepadMessage_RequestHeaders
+	//	*NexepadMessage_RequestBlockLocator
+	//	*NexepadMessage_PruningPoints
+	//	*NexepadMessage_RequestPruningPointProof
+	//	*NexepadMessage_PruningPointProof
+	//	*NexepadMessage_Ready
+	//	*NexepadMessage_BlockWithTrustedDataV4
+	//	*NexepadMessage_TrustedData
+	//	*NexepadMessage_RequestIBDChainBlockLocator
+	//	*NexepadMessage_IbdChainBlockLocator
+	//	*NexepadMessage_RequestAnticone
+	//	*NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks
+	//	*NexepadMessage_GetCurrentNetworkRequest
+	//	*NexepadMessage_GetCurrentNetworkResponse
+	//	*NexepadMessage_SubmitBlockRequest
+	//	*NexepadMessage_SubmitBlockResponse
+	//	*NexepadMessage_GetBlockTemplateRequest
+	//	*NexepadMessage_GetBlockTemplateResponse
+	//	*NexepadMessage_NotifyBlockAddedRequest
+	//	*NexepadMessage_NotifyBlockAddedResponse
+	//	*NexepadMessage_BlockAddedNotification
+	//	*NexepadMessage_GetPeerAddressesRequest
+	//	*NexepadMessage_GetPeerAddressesResponse
+	//	*NexepadMessage_GetSelectedTipHashRequest
+	//	*NexepadMessage_GetSelectedTipHashResponse
+	//	*NexepadMessage_GetMempoolEntryRequest
+	//	*NexepadMessage_GetMempoolEntryResponse
+	//	*NexepadMessage_GetConnectedPeerInfoRequest
+	//	*NexepadMessage_GetConnectedPeerInfoResponse
+	//	*NexepadMessage_AddPeerRequest
+	//	*NexepadMessage_AddPeerResponse
+	//	*NexepadMessage_SubmitTransactionRequest
+	//	*NexepadMessage_SubmitTransactionResponse
+	//	*NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest
+	//	*NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse
+	//	*NexepadMessage_VirtualSelectedParentChainChangedNotification
+	//	*NexepadMessage_GetBlockRequest
+	//	*NexepadMessage_GetBlockResponse
+	//	*NexepadMessage_GetSubnetworkRequest
+	//	*NexepadMessage_GetSubnetworkResponse
+	//	*NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest
+	//	*NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse
+	//	*NexepadMessage_GetBlocksRequest
+	//	*NexepadMessage_GetBlocksResponse
+	//	*NexepadMessage_GetBlockCountRequest
+	//	*NexepadMessage_GetBlockCountResponse
+	//	*NexepadMessage_GetBlockDagInfoRequest
+	//	*NexepadMessage_GetBlockDagInfoResponse
+	//	*NexepadMessage_ResolveFinalityConflictRequest
+	//	*NexepadMessage_ResolveFinalityConflictResponse
+	//	*NexepadMessage_NotifyFinalityConflictsRequest
+	//	*NexepadMessage_NotifyFinalityConflictsResponse
+	//	*NexepadMessage_FinalityConflictNotification
+	//	*NexepadMessage_FinalityConflictResolvedNotification
+	//	*NexepadMessage_GetMempoolEntriesRequest
+	//	*NexepadMessage_GetMempoolEntriesResponse
+	//	*NexepadMessage_ShutDownRequest
+	//	*NexepadMessage_ShutDownResponse
+	//	*NexepadMessage_GetHeadersRequest
+	//	*NexepadMessage_GetHeadersResponse
+	//	*NexepadMessage_NotifyUtxosChangedRequest
+	//	*NexepadMessage_NotifyUtxosChangedResponse
+	//	*NexepadMessage_UtxosChangedNotification
+	//	*NexepadMessage_GetUtxosByAddressesRequest
+	//	*NexepadMessage_GetUtxosByAddressesResponse
+	//	*NexepadMessage_GetVirtualSelectedParentBlueScoreRequest
+	//	*NexepadMessage_GetVirtualSelectedParentBlueScoreResponse
+	//	*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
+	//	*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
+	//	*NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification
+	//	*NexepadMessage_BanRequest
+	//	*NexepadMessage_BanResponse
+	//	*NexepadMessage_UnbanRequest
+	//	*NexepadMessage_UnbanResponse
+	//	*NexepadMessage_GetInfoRequest
+	//	*NexepadMessage_GetInfoResponse
+	//	*NexepadMessage_StopNotifyingUtxosChangedRequest
+	//	*NexepadMessage_StopNotifyingUtxosChangedResponse
+	//	*NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest
+	//	*NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse
+	//	*NexepadMessage_PruningPointUTXOSetOverrideNotification
+	//	*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
+	//	*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
+	//	*NexepadMessage_EstimateNetworkHashesPerSecondRequest
+	//	*NexepadMessage_EstimateNetworkHashesPerSecondResponse
+	//	*NexepadMessage_NotifyVirtualDaaScoreChangedRequest
+	//	*NexepadMessage_NotifyVirtualDaaScoreChangedResponse
+	//	*NexepadMessage_VirtualDaaScoreChangedNotification
+	//	*NexepadMessage_GetBalanceByAddressRequest
+	//	*NexepadMessage_GetBalanceByAddressResponse
+	//	*NexepadMessage_GetBalancesByAddressesRequest
+	//	*NexepadMessage_GetBalancesByAddressesResponse
+	//	*NexepadMessage_NotifyNewBlockTemplateRequest
+	//	*NexepadMessage_NotifyNewBlockTemplateResponse
+	//	*NexepadMessage_NewBlockTemplateNotification
+	//	*NexepadMessage_GetMempoolEntriesByAddressesRequest
+	//	*NexepadMessage_GetMempoolEntriesByAddressesResponse
+	//	*NexepadMessage_GetCoinSupplyRequest
+	//	*NexepadMessage_GetCoinSupplyResponse
+	Payload isNexepadMessage_Payload `protobuf_oneof:"payload"`
 }
 
-func (x *nexepadMessage) Reset() {
-	*x = nexepadMessage{}
+func (x *NexepadMessage) Reset() {
+	*x = NexepadMessage{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_messages_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -168,13 +168,13 @@ func (x *nexepadMessage) Reset() {
 	}
 }
 
-func (x *nexepadMessage) String() string {
+func (x *NexepadMessage) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*nexepadMessage) ProtoMessage() {}
+func (*NexepadMessage) ProtoMessage() {}
 
-func (x *nexepadMessage) ProtoReflect() protoreflect.Message {
+func (x *NexepadMessage) ProtoReflect() protoreflect.Message {
 	mi := &file_messages_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,1711 +186,1711 @@ func (x *nexepadMessage) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use nexepadMessage.ProtoReflect.Descriptor instead.
-func (*nexepadMessage) Descriptor() ([]byte, []int) {
+// Deprecated: Use NexepadMessage.ProtoReflect.Descriptor instead.
+func (*NexepadMessage) Descriptor() ([]byte, []int) {
 	return file_messages_proto_rawDescGZIP(), []int{0}
 }
 
-func (m *nexepadMessage) GetPayload() isnexepadMessage_Payload {
+func (m *NexepadMessage) GetPayload() isNexepadMessage_Payload {
 	if m != nil {
 		return m.Payload
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetAddresses() *AddressesMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Addresses); ok {
+func (x *NexepadMessage) GetAddresses() *AddressesMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Addresses); ok {
 		return x.Addresses
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Block); ok {
+func (x *NexepadMessage) GetBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Block); ok {
 		return x.Block
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetTransaction() *TransactionMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Transaction); ok {
+func (x *NexepadMessage) GetTransaction() *TransactionMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Transaction); ok {
 		return x.Transaction
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlockLocator() *BlockLocatorMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BlockLocator); ok {
+func (x *NexepadMessage) GetBlockLocator() *BlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BlockLocator); ok {
 		return x.BlockLocator
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestAddresses() *RequestAddressesMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestAddresses); ok {
+func (x *NexepadMessage) GetRequestAddresses() *RequestAddressesMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestAddresses); ok {
 		return x.RequestAddresses
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestRelayBlocks); ok {
+func (x *NexepadMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestRelayBlocks); ok {
 		return x.RequestRelayBlocks
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestTransactions() *RequestTransactionsMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestTransactions); ok {
+func (x *NexepadMessage) GetRequestTransactions() *RequestTransactionsMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestTransactions); ok {
 		return x.RequestTransactions
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetIbdBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_IbdBlock); ok {
+func (x *NexepadMessage) GetIbdBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_IbdBlock); ok {
 		return x.IbdBlock
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetInvRelayBlock() *InvRelayBlockMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_InvRelayBlock); ok {
+func (x *NexepadMessage) GetInvRelayBlock() *InvRelayBlockMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_InvRelayBlock); ok {
 		return x.InvRelayBlock
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetInvTransactions() *InvTransactionsMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_InvTransactions); ok {
+func (x *NexepadMessage) GetInvTransactions() *InvTransactionsMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_InvTransactions); ok {
 		return x.InvTransactions
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPing() *PingMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Ping); ok {
+func (x *NexepadMessage) GetPing() *PingMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Ping); ok {
 		return x.Ping
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPong() *PongMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Pong); ok {
+func (x *NexepadMessage) GetPong() *PongMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Pong); ok {
 		return x.Pong
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetVerack() *VerackMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Verack); ok {
+func (x *NexepadMessage) GetVerack() *VerackMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Verack); ok {
 		return x.Verack
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetVersion() *VersionMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Version); ok {
+func (x *NexepadMessage) GetVersion() *VersionMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Version); ok {
 		return x.Version
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_TransactionNotFound); ok {
+func (x *NexepadMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_TransactionNotFound); ok {
 		return x.TransactionNotFound
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetReject() *RejectMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Reject); ok {
+func (x *NexepadMessage) GetReject() *RejectMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Reject); ok {
 		return x.Reject
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_PruningPointUtxoSetChunk); ok {
+func (x *NexepadMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_PruningPointUtxoSetChunk); ok {
 		return x.PruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestIBDBlocks); ok {
+func (x *NexepadMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestIBDBlocks); ok {
 		return x.RequestIBDBlocks
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_UnexpectedPruningPoint); ok {
+func (x *NexepadMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_UnexpectedPruningPoint); ok {
 		return x.UnexpectedPruningPoint
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_IbdBlockLocator); ok {
+func (x *NexepadMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_IbdBlockLocator); ok {
 		return x.IbdBlockLocator
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_IbdBlockLocatorHighestHash); ok {
+func (x *NexepadMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_IbdBlockLocatorHighestHash); ok {
 		return x.IbdBlockLocatorHighestHash
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestNextPruningPointUtxoSetChunk); ok {
+func (x *NexepadMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestNextPruningPointUtxoSetChunk); ok {
 		return x.RequestNextPruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_DonePruningPointUtxoSetChunks); ok {
+func (x *NexepadMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_DonePruningPointUtxoSetChunks); ok {
 		return x.DonePruningPointUtxoSetChunks
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_IbdBlockLocatorHighestHashNotFound); ok {
+func (x *NexepadMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_IbdBlockLocatorHighestHashNotFound); ok {
 		return x.IbdBlockLocatorHighestHashNotFound
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BlockWithTrustedData); ok {
+func (x *NexepadMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BlockWithTrustedData); ok {
 		return x.BlockWithTrustedData
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_DoneBlocksWithTrustedData); ok {
+func (x *NexepadMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_DoneBlocksWithTrustedData); ok {
 		return x.DoneBlocksWithTrustedData
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestPruningPointAndItsAnticone); ok {
+func (x *NexepadMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestPruningPointAndItsAnticone); ok {
 		return x.RequestPruningPointAndItsAnticone
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlockHeaders() *BlockHeadersMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BlockHeaders); ok {
+func (x *NexepadMessage) GetBlockHeaders() *BlockHeadersMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BlockHeaders); ok {
 		return x.BlockHeaders
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestNextHeaders); ok {
+func (x *NexepadMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestNextHeaders); ok {
 		return x.RequestNextHeaders
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetDoneHeaders() *DoneHeadersMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_DoneHeaders); ok {
+func (x *NexepadMessage) GetDoneHeaders() *DoneHeadersMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_DoneHeaders); ok {
 		return x.DoneHeaders
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestPruningPointUTXOSet); ok {
+func (x *NexepadMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestPruningPointUTXOSet); ok {
 		return x.RequestPruningPointUTXOSet
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestHeaders() *RequestHeadersMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestHeaders); ok {
+func (x *NexepadMessage) GetRequestHeaders() *RequestHeadersMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestHeaders); ok {
 		return x.RequestHeaders
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestBlockLocator); ok {
+func (x *NexepadMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestBlockLocator); ok {
 		return x.RequestBlockLocator
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPruningPoints() *PruningPointsMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_PruningPoints); ok {
+func (x *NexepadMessage) GetPruningPoints() *PruningPointsMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_PruningPoints); ok {
 		return x.PruningPoints
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestPruningPointProof); ok {
+func (x *NexepadMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestPruningPointProof); ok {
 		return x.RequestPruningPointProof
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPruningPointProof() *PruningPointProofMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_PruningPointProof); ok {
+func (x *NexepadMessage) GetPruningPointProof() *PruningPointProofMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_PruningPointProof); ok {
 		return x.PruningPointProof
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetReady() *ReadyMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_Ready); ok {
+func (x *NexepadMessage) GetReady() *ReadyMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_Ready); ok {
 		return x.Ready
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
-	if x, ok := x.GetPayload().(*nexepadMessage_BlockWithTrustedDataV4); ok {
+func (x *NexepadMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
+	if x, ok := x.GetPayload().(*NexepadMessage_BlockWithTrustedDataV4); ok {
 		return x.BlockWithTrustedDataV4
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetTrustedData() *TrustedDataMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_TrustedData); ok {
+func (x *NexepadMessage) GetTrustedData() *TrustedDataMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_TrustedData); ok {
 		return x.TrustedData
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestIBDChainBlockLocator); ok {
+func (x *NexepadMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestIBDChainBlockLocator); ok {
 		return x.RequestIBDChainBlockLocator
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_IbdChainBlockLocator); ok {
+func (x *NexepadMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_IbdChainBlockLocator); ok {
 		return x.IbdChainBlockLocator
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestAnticone() *RequestAnticoneMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestAnticone); ok {
+func (x *NexepadMessage) GetRequestAnticone() *RequestAnticoneMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestAnticone); ok {
 		return x.RequestAnticone
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
+func (x *NexepadMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
 		return x.RequestNextPruningPointAndItsAnticoneBlocks
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetCurrentNetworkRequest); ok {
+func (x *NexepadMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetCurrentNetworkRequest); ok {
 		return x.GetCurrentNetworkRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetCurrentNetworkResponse); ok {
+func (x *NexepadMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetCurrentNetworkResponse); ok {
 		return x.GetCurrentNetworkResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_SubmitBlockRequest); ok {
+func (x *NexepadMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_SubmitBlockRequest); ok {
 		return x.SubmitBlockRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_SubmitBlockResponse); ok {
+func (x *NexepadMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_SubmitBlockResponse); ok {
 		return x.SubmitBlockResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockTemplateRequest); ok {
+func (x *NexepadMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockTemplateRequest); ok {
 		return x.GetBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockTemplateResponse); ok {
+func (x *NexepadMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockTemplateResponse); ok {
 		return x.GetBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyBlockAddedRequest); ok {
+func (x *NexepadMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyBlockAddedRequest); ok {
 		return x.NotifyBlockAddedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyBlockAddedResponse); ok {
+func (x *NexepadMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyBlockAddedResponse); ok {
 		return x.NotifyBlockAddedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BlockAddedNotification); ok {
+func (x *NexepadMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BlockAddedNotification); ok {
 		return x.BlockAddedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetPeerAddressesRequest); ok {
+func (x *NexepadMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetPeerAddressesRequest); ok {
 		return x.GetPeerAddressesRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetPeerAddressesResponse); ok {
+func (x *NexepadMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetPeerAddressesResponse); ok {
 		return x.GetPeerAddressesResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetSelectedTipHashRequest); ok {
+func (x *NexepadMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetSelectedTipHashRequest); ok {
 		return x.GetSelectedTipHashRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetSelectedTipHashResponse); ok {
+func (x *NexepadMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetSelectedTipHashResponse); ok {
 		return x.GetSelectedTipHashResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntryRequest); ok {
+func (x *NexepadMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntryRequest); ok {
 		return x.GetMempoolEntryRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntryResponse); ok {
+func (x *NexepadMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntryResponse); ok {
 		return x.GetMempoolEntryResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetConnectedPeerInfoRequest); ok {
+func (x *NexepadMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetConnectedPeerInfoRequest); ok {
 		return x.GetConnectedPeerInfoRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetConnectedPeerInfoResponse); ok {
+func (x *NexepadMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetConnectedPeerInfoResponse); ok {
 		return x.GetConnectedPeerInfoResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetAddPeerRequest() *AddPeerRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_AddPeerRequest); ok {
+func (x *NexepadMessage) GetAddPeerRequest() *AddPeerRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_AddPeerRequest); ok {
 		return x.AddPeerRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetAddPeerResponse() *AddPeerResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_AddPeerResponse); ok {
+func (x *NexepadMessage) GetAddPeerResponse() *AddPeerResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_AddPeerResponse); ok {
 		return x.AddPeerResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_SubmitTransactionRequest); ok {
+func (x *NexepadMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_SubmitTransactionRequest); ok {
 		return x.SubmitTransactionRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_SubmitTransactionResponse); ok {
+func (x *NexepadMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_SubmitTransactionResponse); ok {
 		return x.SubmitTransactionResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
+func (x *NexepadMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentChainChangedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
+func (x *NexepadMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentChainChangedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_VirtualSelectedParentChainChangedNotification); ok {
+func (x *NexepadMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_VirtualSelectedParentChainChangedNotification); ok {
 		return x.VirtualSelectedParentChainChangedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockRequest() *GetBlockRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockRequest); ok {
+func (x *NexepadMessage) GetGetBlockRequest() *GetBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockRequest); ok {
 		return x.GetBlockRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockResponse() *GetBlockResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockResponse); ok {
+func (x *NexepadMessage) GetGetBlockResponse() *GetBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockResponse); ok {
 		return x.GetBlockResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetSubnetworkRequest); ok {
+func (x *NexepadMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetSubnetworkRequest); ok {
 		return x.GetSubnetworkRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetSubnetworkResponse); ok {
+func (x *NexepadMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetSubnetworkResponse); ok {
 		return x.GetSubnetworkResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
+func (x *NexepadMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
 		return x.GetVirtualSelectedParentChainFromBlockRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
+func (x *NexepadMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
 		return x.GetVirtualSelectedParentChainFromBlockResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlocksRequest); ok {
+func (x *NexepadMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlocksRequest); ok {
 		return x.GetBlocksRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlocksResponse); ok {
+func (x *NexepadMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlocksResponse); ok {
 		return x.GetBlocksResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockCountRequest); ok {
+func (x *NexepadMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockCountRequest); ok {
 		return x.GetBlockCountRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockCountResponse); ok {
+func (x *NexepadMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockCountResponse); ok {
 		return x.GetBlockCountResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockDagInfoRequest); ok {
+func (x *NexepadMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockDagInfoRequest); ok {
 		return x.GetBlockDagInfoRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBlockDagInfoResponse); ok {
+func (x *NexepadMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBlockDagInfoResponse); ok {
 		return x.GetBlockDagInfoResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_ResolveFinalityConflictRequest); ok {
+func (x *NexepadMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_ResolveFinalityConflictRequest); ok {
 		return x.ResolveFinalityConflictRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_ResolveFinalityConflictResponse); ok {
+func (x *NexepadMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_ResolveFinalityConflictResponse); ok {
 		return x.ResolveFinalityConflictResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyFinalityConflictsRequest); ok {
+func (x *NexepadMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyFinalityConflictsRequest); ok {
 		return x.NotifyFinalityConflictsRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyFinalityConflictsResponse); ok {
+func (x *NexepadMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyFinalityConflictsResponse); ok {
 		return x.NotifyFinalityConflictsResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_FinalityConflictNotification); ok {
+func (x *NexepadMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_FinalityConflictNotification); ok {
 		return x.FinalityConflictNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_FinalityConflictResolvedNotification); ok {
+func (x *NexepadMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_FinalityConflictResolvedNotification); ok {
 		return x.FinalityConflictResolvedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntriesRequest); ok {
+func (x *NexepadMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntriesRequest); ok {
 		return x.GetMempoolEntriesRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntriesResponse); ok {
+func (x *NexepadMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntriesResponse); ok {
 		return x.GetMempoolEntriesResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetShutDownRequest() *ShutDownRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_ShutDownRequest); ok {
+func (x *NexepadMessage) GetShutDownRequest() *ShutDownRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_ShutDownRequest); ok {
 		return x.ShutDownRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetShutDownResponse() *ShutDownResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_ShutDownResponse); ok {
+func (x *NexepadMessage) GetShutDownResponse() *ShutDownResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_ShutDownResponse); ok {
 		return x.ShutDownResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetHeadersRequest); ok {
+func (x *NexepadMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetHeadersRequest); ok {
 		return x.GetHeadersRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetHeadersResponse); ok {
+func (x *NexepadMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetHeadersResponse); ok {
 		return x.GetHeadersResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyUtxosChangedRequest); ok {
+func (x *NexepadMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyUtxosChangedRequest); ok {
 		return x.NotifyUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyUtxosChangedResponse); ok {
+func (x *NexepadMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyUtxosChangedResponse); ok {
 		return x.NotifyUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_UtxosChangedNotification); ok {
+func (x *NexepadMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_UtxosChangedNotification); ok {
 		return x.UtxosChangedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetUtxosByAddressesRequest); ok {
+func (x *NexepadMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetUtxosByAddressesRequest); ok {
 		return x.GetUtxosByAddressesRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetUtxosByAddressesResponse); ok {
+func (x *NexepadMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetUtxosByAddressesResponse); ok {
 		return x.GetUtxosByAddressesResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
+func (x *NexepadMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
 		return x.GetVirtualSelectedParentBlueScoreRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
+func (x *NexepadMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
 		return x.GetVirtualSelectedParentBlueScoreResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
+func (x *NexepadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
+func (x *NexepadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
+func (x *NexepadMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
 		return x.VirtualSelectedParentBlueScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBanRequest() *BanRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BanRequest); ok {
+func (x *NexepadMessage) GetBanRequest() *BanRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BanRequest); ok {
 		return x.BanRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetBanResponse() *BanResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_BanResponse); ok {
+func (x *NexepadMessage) GetBanResponse() *BanResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_BanResponse); ok {
 		return x.BanResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetUnbanRequest() *UnbanRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_UnbanRequest); ok {
+func (x *NexepadMessage) GetUnbanRequest() *UnbanRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_UnbanRequest); ok {
 		return x.UnbanRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetUnbanResponse() *UnbanResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_UnbanResponse); ok {
+func (x *NexepadMessage) GetUnbanResponse() *UnbanResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_UnbanResponse); ok {
 		return x.UnbanResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetInfoRequest() *GetInfoRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetInfoRequest); ok {
+func (x *NexepadMessage) GetGetInfoRequest() *GetInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetInfoRequest); ok {
 		return x.GetInfoRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetInfoResponse() *GetInfoResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetInfoResponse); ok {
+func (x *NexepadMessage) GetGetInfoResponse() *GetInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetInfoResponse); ok {
 		return x.GetInfoResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_StopNotifyingUtxosChangedRequest); ok {
+func (x *NexepadMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_StopNotifyingUtxosChangedRequest); ok {
 		return x.StopNotifyingUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_StopNotifyingUtxosChangedResponse); ok {
+func (x *NexepadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_StopNotifyingUtxosChangedResponse); ok {
 		return x.StopNotifyingUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
+func (x *NexepadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
 		return x.NotifyPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
+func (x *NexepadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
 		return x.NotifyPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_PruningPointUTXOSetOverrideNotification); ok {
+func (x *NexepadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_PruningPointUTXOSetOverrideNotification); ok {
 		return x.PruningPointUTXOSetOverrideNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
+func (x *NexepadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
+func (x *NexepadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_EstimateNetworkHashesPerSecondRequest); ok {
+func (x *NexepadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_EstimateNetworkHashesPerSecondRequest); ok {
 		return x.EstimateNetworkHashesPerSecondRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_EstimateNetworkHashesPerSecondResponse); ok {
+func (x *NexepadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
+func (x *NexepadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
+func (x *NexepadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_VirtualDaaScoreChangedNotification); ok {
+func (x *NexepadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBalanceByAddressRequest); ok {
+func (x *NexepadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBalanceByAddressResponse); ok {
+func (x *NexepadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBalancesByAddressesRequest); ok {
+func (x *NexepadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetBalancesByAddressesResponse); ok {
+func (x *NexepadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyNewBlockTemplateRequest); ok {
+func (x *NexepadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NotifyNewBlockTemplateResponse); ok {
+func (x *NexepadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_NewBlockTemplateNotification); ok {
+func (x *NexepadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntriesByAddressesRequest); ok {
+func (x *NexepadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetMempoolEntriesByAddressesResponse); ok {
+func (x *NexepadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetCoinSupplyRequest); ok {
+func (x *NexepadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
 	return nil
 }
 
-func (x *nexepadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
-	if x, ok := x.GetPayload().(*nexepadMessage_GetCoinSupplyResponse); ok {
+func (x *NexepadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
+	if x, ok := x.GetPayload().(*NexepadMessage_GetCoinSupplyResponse); ok {
 		return x.GetCoinSupplyResponse
 	}
 	return nil
 }
 
-type isnexepadMessage_Payload interface {
-	isnexepadMessage_Payload()
+type isNexepadMessage_Payload interface {
+	isNexepadMessage_Payload()
 }
 
-type nexepadMessage_Addresses struct {
+type NexepadMessage_Addresses struct {
 	Addresses *AddressesMessage `protobuf:"bytes,1,opt,name=addresses,proto3,oneof"`
 }
 
-type nexepadMessage_Block struct {
+type NexepadMessage_Block struct {
 	Block *BlockMessage `protobuf:"bytes,2,opt,name=block,proto3,oneof"`
 }
 
-type nexepadMessage_Transaction struct {
+type NexepadMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
-type nexepadMessage_BlockLocator struct {
+type NexepadMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
-type nexepadMessage_RequestAddresses struct {
+type NexepadMessage_RequestAddresses struct {
 	RequestAddresses *RequestAddressesMessage `protobuf:"bytes,6,opt,name=requestAddresses,proto3,oneof"`
 }
 
-type nexepadMessage_RequestRelayBlocks struct {
+type NexepadMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
-type nexepadMessage_RequestTransactions struct {
+type NexepadMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
-type nexepadMessage_IbdBlock struct {
+type NexepadMessage_IbdBlock struct {
 	IbdBlock *BlockMessage `protobuf:"bytes,13,opt,name=ibdBlock,proto3,oneof"`
 }
 
-type nexepadMessage_InvRelayBlock struct {
+type NexepadMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
-type nexepadMessage_InvTransactions struct {
+type NexepadMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
-type nexepadMessage_Ping struct {
+type NexepadMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
-type nexepadMessage_Pong struct {
+type NexepadMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
-type nexepadMessage_Verack struct {
+type NexepadMessage_Verack struct {
 	Verack *VerackMessage `protobuf:"bytes,19,opt,name=verack,proto3,oneof"`
 }
 
-type nexepadMessage_Version struct {
+type NexepadMessage_Version struct {
 	Version *VersionMessage `protobuf:"bytes,20,opt,name=version,proto3,oneof"`
 }
 
-type nexepadMessage_TransactionNotFound struct {
+type NexepadMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
-type nexepadMessage_Reject struct {
+type NexepadMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
-type nexepadMessage_PruningPointUtxoSetChunk struct {
+type NexepadMessage_PruningPointUtxoSetChunk struct {
 	PruningPointUtxoSetChunk *PruningPointUtxoSetChunkMessage `protobuf:"bytes,25,opt,name=pruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type nexepadMessage_RequestIBDBlocks struct {
+type NexepadMessage_RequestIBDBlocks struct {
 	RequestIBDBlocks *RequestIBDBlocksMessage `protobuf:"bytes,26,opt,name=requestIBDBlocks,proto3,oneof"`
 }
 
-type nexepadMessage_UnexpectedPruningPoint struct {
+type NexepadMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
-type nexepadMessage_IbdBlockLocator struct {
+type NexepadMessage_IbdBlockLocator struct {
 	IbdBlockLocator *IbdBlockLocatorMessage `protobuf:"bytes,30,opt,name=ibdBlockLocator,proto3,oneof"`
 }
 
-type nexepadMessage_IbdBlockLocatorHighestHash struct {
+type NexepadMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
-type nexepadMessage_RequestNextPruningPointUtxoSetChunk struct {
+type NexepadMessage_RequestNextPruningPointUtxoSetChunk struct {
 	RequestNextPruningPointUtxoSetChunk *RequestNextPruningPointUtxoSetChunkMessage `protobuf:"bytes,33,opt,name=requestNextPruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type nexepadMessage_DonePruningPointUtxoSetChunks struct {
+type NexepadMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
-type nexepadMessage_IbdBlockLocatorHighestHashNotFound struct {
+type NexepadMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
-type nexepadMessage_BlockWithTrustedData struct {
+type NexepadMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
-type nexepadMessage_DoneBlocksWithTrustedData struct {
+type NexepadMessage_DoneBlocksWithTrustedData struct {
 	DoneBlocksWithTrustedData *DoneBlocksWithTrustedDataMessage `protobuf:"bytes,37,opt,name=doneBlocksWithTrustedData,proto3,oneof"`
 }
 
-type nexepadMessage_RequestPruningPointAndItsAnticone struct {
+type NexepadMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
-type nexepadMessage_BlockHeaders struct {
+type NexepadMessage_BlockHeaders struct {
 	BlockHeaders *BlockHeadersMessage `protobuf:"bytes,41,opt,name=blockHeaders,proto3,oneof"`
 }
 
-type nexepadMessage_RequestNextHeaders struct {
+type NexepadMessage_RequestNextHeaders struct {
 	RequestNextHeaders *RequestNextHeadersMessage `protobuf:"bytes,42,opt,name=requestNextHeaders,proto3,oneof"`
 }
 
-type nexepadMessage_DoneHeaders struct {
+type NexepadMessage_DoneHeaders struct {
 	DoneHeaders *DoneHeadersMessage `protobuf:"bytes,43,opt,name=DoneHeaders,proto3,oneof"`
 }
 
-type nexepadMessage_RequestPruningPointUTXOSet struct {
+type NexepadMessage_RequestPruningPointUTXOSet struct {
 	RequestPruningPointUTXOSet *RequestPruningPointUTXOSetMessage `protobuf:"bytes,44,opt,name=requestPruningPointUTXOSet,proto3,oneof"`
 }
 
-type nexepadMessage_RequestHeaders struct {
+type NexepadMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
-type nexepadMessage_RequestBlockLocator struct {
+type NexepadMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
-type nexepadMessage_PruningPoints struct {
+type NexepadMessage_PruningPoints struct {
 	PruningPoints *PruningPointsMessage `protobuf:"bytes,47,opt,name=pruningPoints,proto3,oneof"`
 }
 
-type nexepadMessage_RequestPruningPointProof struct {
+type NexepadMessage_RequestPruningPointProof struct {
 	RequestPruningPointProof *RequestPruningPointProofMessage `protobuf:"bytes,48,opt,name=requestPruningPointProof,proto3,oneof"`
 }
 
-type nexepadMessage_PruningPointProof struct {
+type NexepadMessage_PruningPointProof struct {
 	PruningPointProof *PruningPointProofMessage `protobuf:"bytes,49,opt,name=pruningPointProof,proto3,oneof"`
 }
 
-type nexepadMessage_Ready struct {
+type NexepadMessage_Ready struct {
 	Ready *ReadyMessage `protobuf:"bytes,50,opt,name=ready,proto3,oneof"`
 }
 
-type nexepadMessage_BlockWithTrustedDataV4 struct {
+type NexepadMessage_BlockWithTrustedDataV4 struct {
 	BlockWithTrustedDataV4 *BlockWithTrustedDataV4Message `protobuf:"bytes,51,opt,name=blockWithTrustedDataV4,proto3,oneof"`
 }
 
-type nexepadMessage_TrustedData struct {
+type NexepadMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
-type nexepadMessage_RequestIBDChainBlockLocator struct {
+type NexepadMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
-type nexepadMessage_IbdChainBlockLocator struct {
+type NexepadMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
-type nexepadMessage_RequestAnticone struct {
+type NexepadMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
-type nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
+type NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
 	RequestNextPruningPointAndItsAnticoneBlocks *RequestNextPruningPointAndItsAnticoneBlocksMessage `protobuf:"bytes,56,opt,name=requestNextPruningPointAndItsAnticoneBlocks,proto3,oneof"`
 }
 
-type nexepadMessage_GetCurrentNetworkRequest struct {
+type NexepadMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetCurrentNetworkResponse struct {
+type NexepadMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
-type nexepadMessage_SubmitBlockRequest struct {
+type NexepadMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
-type nexepadMessage_SubmitBlockResponse struct {
+type NexepadMessage_SubmitBlockResponse struct {
 	SubmitBlockResponse *SubmitBlockResponseMessage `protobuf:"bytes,1004,opt,name=submitBlockResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockTemplateRequest struct {
+type NexepadMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockTemplateResponse struct {
+type NexepadMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyBlockAddedRequest struct {
+type NexepadMessage_NotifyBlockAddedRequest struct {
 	NotifyBlockAddedRequest *NotifyBlockAddedRequestMessage `protobuf:"bytes,1007,opt,name=notifyBlockAddedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyBlockAddedResponse struct {
+type NexepadMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_BlockAddedNotification struct {
+type NexepadMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetPeerAddressesRequest struct {
+type NexepadMessage_GetPeerAddressesRequest struct {
 	GetPeerAddressesRequest *GetPeerAddressesRequestMessage `protobuf:"bytes,1010,opt,name=getPeerAddressesRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetPeerAddressesResponse struct {
+type NexepadMessage_GetPeerAddressesResponse struct {
 	GetPeerAddressesResponse *GetPeerAddressesResponseMessage `protobuf:"bytes,1011,opt,name=getPeerAddressesResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetSelectedTipHashRequest struct {
+type NexepadMessage_GetSelectedTipHashRequest struct {
 	GetSelectedTipHashRequest *GetSelectedTipHashRequestMessage `protobuf:"bytes,1012,opt,name=getSelectedTipHashRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetSelectedTipHashResponse struct {
+type NexepadMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntryRequest struct {
+type NexepadMessage_GetMempoolEntryRequest struct {
 	GetMempoolEntryRequest *GetMempoolEntryRequestMessage `protobuf:"bytes,1014,opt,name=getMempoolEntryRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntryResponse struct {
+type NexepadMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetConnectedPeerInfoRequest struct {
+type NexepadMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetConnectedPeerInfoResponse struct {
+type NexepadMessage_GetConnectedPeerInfoResponse struct {
 	GetConnectedPeerInfoResponse *GetConnectedPeerInfoResponseMessage `protobuf:"bytes,1017,opt,name=getConnectedPeerInfoResponse,proto3,oneof"`
 }
 
-type nexepadMessage_AddPeerRequest struct {
+type NexepadMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
-type nexepadMessage_AddPeerResponse struct {
+type NexepadMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
-type nexepadMessage_SubmitTransactionRequest struct {
+type NexepadMessage_SubmitTransactionRequest struct {
 	SubmitTransactionRequest *SubmitTransactionRequestMessage `protobuf:"bytes,1020,opt,name=submitTransactionRequest,proto3,oneof"`
 }
 
-type nexepadMessage_SubmitTransactionResponse struct {
+type NexepadMessage_SubmitTransactionResponse struct {
 	SubmitTransactionResponse *SubmitTransactionResponseMessage `protobuf:"bytes,1021,opt,name=submitTransactionResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
+type NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
 	NotifyVirtualSelectedParentChainChangedRequest *NotifyVirtualSelectedParentChainChangedRequestMessage `protobuf:"bytes,1022,opt,name=notifyVirtualSelectedParentChainChangedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
+type NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
 	NotifyVirtualSelectedParentChainChangedResponse *NotifyVirtualSelectedParentChainChangedResponseMessage `protobuf:"bytes,1023,opt,name=notifyVirtualSelectedParentChainChangedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_VirtualSelectedParentChainChangedNotification struct {
+type NexepadMessage_VirtualSelectedParentChainChangedNotification struct {
 	VirtualSelectedParentChainChangedNotification *VirtualSelectedParentChainChangedNotificationMessage `protobuf:"bytes,1024,opt,name=virtualSelectedParentChainChangedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockRequest struct {
+type NexepadMessage_GetBlockRequest struct {
 	GetBlockRequest *GetBlockRequestMessage `protobuf:"bytes,1025,opt,name=getBlockRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockResponse struct {
+type NexepadMessage_GetBlockResponse struct {
 	GetBlockResponse *GetBlockResponseMessage `protobuf:"bytes,1026,opt,name=getBlockResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetSubnetworkRequest struct {
+type NexepadMessage_GetSubnetworkRequest struct {
 	GetSubnetworkRequest *GetSubnetworkRequestMessage `protobuf:"bytes,1027,opt,name=getSubnetworkRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetSubnetworkResponse struct {
+type NexepadMessage_GetSubnetworkResponse struct {
 	GetSubnetworkResponse *GetSubnetworkResponseMessage `protobuf:"bytes,1028,opt,name=getSubnetworkResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
+type NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
 	GetVirtualSelectedParentChainFromBlockRequest *GetVirtualSelectedParentChainFromBlockRequestMessage `protobuf:"bytes,1029,opt,name=getVirtualSelectedParentChainFromBlockRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
+type NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
 	GetVirtualSelectedParentChainFromBlockResponse *GetVirtualSelectedParentChainFromBlockResponseMessage `protobuf:"bytes,1030,opt,name=getVirtualSelectedParentChainFromBlockResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlocksRequest struct {
+type NexepadMessage_GetBlocksRequest struct {
 	GetBlocksRequest *GetBlocksRequestMessage `protobuf:"bytes,1031,opt,name=getBlocksRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlocksResponse struct {
+type NexepadMessage_GetBlocksResponse struct {
 	GetBlocksResponse *GetBlocksResponseMessage `protobuf:"bytes,1032,opt,name=getBlocksResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockCountRequest struct {
+type NexepadMessage_GetBlockCountRequest struct {
 	GetBlockCountRequest *GetBlockCountRequestMessage `protobuf:"bytes,1033,opt,name=getBlockCountRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockCountResponse struct {
+type NexepadMessage_GetBlockCountResponse struct {
 	GetBlockCountResponse *GetBlockCountResponseMessage `protobuf:"bytes,1034,opt,name=getBlockCountResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockDagInfoRequest struct {
+type NexepadMessage_GetBlockDagInfoRequest struct {
 	GetBlockDagInfoRequest *GetBlockDagInfoRequestMessage `protobuf:"bytes,1035,opt,name=getBlockDagInfoRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBlockDagInfoResponse struct {
+type NexepadMessage_GetBlockDagInfoResponse struct {
 	GetBlockDagInfoResponse *GetBlockDagInfoResponseMessage `protobuf:"bytes,1036,opt,name=getBlockDagInfoResponse,proto3,oneof"`
 }
 
-type nexepadMessage_ResolveFinalityConflictRequest struct {
+type NexepadMessage_ResolveFinalityConflictRequest struct {
 	ResolveFinalityConflictRequest *ResolveFinalityConflictRequestMessage `protobuf:"bytes,1037,opt,name=resolveFinalityConflictRequest,proto3,oneof"`
 }
 
-type nexepadMessage_ResolveFinalityConflictResponse struct {
+type NexepadMessage_ResolveFinalityConflictResponse struct {
 	ResolveFinalityConflictResponse *ResolveFinalityConflictResponseMessage `protobuf:"bytes,1038,opt,name=resolveFinalityConflictResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyFinalityConflictsRequest struct {
+type NexepadMessage_NotifyFinalityConflictsRequest struct {
 	NotifyFinalityConflictsRequest *NotifyFinalityConflictsRequestMessage `protobuf:"bytes,1039,opt,name=notifyFinalityConflictsRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyFinalityConflictsResponse struct {
+type NexepadMessage_NotifyFinalityConflictsResponse struct {
 	NotifyFinalityConflictsResponse *NotifyFinalityConflictsResponseMessage `protobuf:"bytes,1040,opt,name=notifyFinalityConflictsResponse,proto3,oneof"`
 }
 
-type nexepadMessage_FinalityConflictNotification struct {
+type NexepadMessage_FinalityConflictNotification struct {
 	FinalityConflictNotification *FinalityConflictNotificationMessage `protobuf:"bytes,1041,opt,name=finalityConflictNotification,proto3,oneof"`
 }
 
-type nexepadMessage_FinalityConflictResolvedNotification struct {
+type NexepadMessage_FinalityConflictResolvedNotification struct {
 	FinalityConflictResolvedNotification *FinalityConflictResolvedNotificationMessage `protobuf:"bytes,1042,opt,name=finalityConflictResolvedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntriesRequest struct {
+type NexepadMessage_GetMempoolEntriesRequest struct {
 	GetMempoolEntriesRequest *GetMempoolEntriesRequestMessage `protobuf:"bytes,1043,opt,name=getMempoolEntriesRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntriesResponse struct {
+type NexepadMessage_GetMempoolEntriesResponse struct {
 	GetMempoolEntriesResponse *GetMempoolEntriesResponseMessage `protobuf:"bytes,1044,opt,name=getMempoolEntriesResponse,proto3,oneof"`
 }
 
-type nexepadMessage_ShutDownRequest struct {
+type NexepadMessage_ShutDownRequest struct {
 	ShutDownRequest *ShutDownRequestMessage `protobuf:"bytes,1045,opt,name=shutDownRequest,proto3,oneof"`
 }
 
-type nexepadMessage_ShutDownResponse struct {
+type NexepadMessage_ShutDownResponse struct {
 	ShutDownResponse *ShutDownResponseMessage `protobuf:"bytes,1046,opt,name=shutDownResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetHeadersRequest struct {
+type NexepadMessage_GetHeadersRequest struct {
 	GetHeadersRequest *GetHeadersRequestMessage `protobuf:"bytes,1047,opt,name=getHeadersRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetHeadersResponse struct {
+type NexepadMessage_GetHeadersResponse struct {
 	GetHeadersResponse *GetHeadersResponseMessage `protobuf:"bytes,1048,opt,name=getHeadersResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyUtxosChangedRequest struct {
+type NexepadMessage_NotifyUtxosChangedRequest struct {
 	NotifyUtxosChangedRequest *NotifyUtxosChangedRequestMessage `protobuf:"bytes,1049,opt,name=notifyUtxosChangedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyUtxosChangedResponse struct {
+type NexepadMessage_NotifyUtxosChangedResponse struct {
 	NotifyUtxosChangedResponse *NotifyUtxosChangedResponseMessage `protobuf:"bytes,1050,opt,name=notifyUtxosChangedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_UtxosChangedNotification struct {
+type NexepadMessage_UtxosChangedNotification struct {
 	UtxosChangedNotification *UtxosChangedNotificationMessage `protobuf:"bytes,1051,opt,name=utxosChangedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetUtxosByAddressesRequest struct {
+type NexepadMessage_GetUtxosByAddressesRequest struct {
 	GetUtxosByAddressesRequest *GetUtxosByAddressesRequestMessage `protobuf:"bytes,1052,opt,name=getUtxosByAddressesRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetUtxosByAddressesResponse struct {
+type NexepadMessage_GetUtxosByAddressesResponse struct {
 	GetUtxosByAddressesResponse *GetUtxosByAddressesResponseMessage `protobuf:"bytes,1053,opt,name=getUtxosByAddressesResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
+type NexepadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
 	GetVirtualSelectedParentBlueScoreRequest *GetVirtualSelectedParentBlueScoreRequestMessage `protobuf:"bytes,1054,opt,name=getVirtualSelectedParentBlueScoreRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
+type NexepadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
 	GetVirtualSelectedParentBlueScoreResponse *GetVirtualSelectedParentBlueScoreResponseMessage `protobuf:"bytes,1055,opt,name=getVirtualSelectedParentBlueScoreResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
+type NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
 	NotifyVirtualSelectedParentBlueScoreChangedRequest *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage `protobuf:"bytes,1056,opt,name=notifyVirtualSelectedParentBlueScoreChangedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
+type NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
 	NotifyVirtualSelectedParentBlueScoreChangedResponse *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage `protobuf:"bytes,1057,opt,name=notifyVirtualSelectedParentBlueScoreChangedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
+type NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
 	VirtualSelectedParentBlueScoreChangedNotification *VirtualSelectedParentBlueScoreChangedNotificationMessage `protobuf:"bytes,1058,opt,name=virtualSelectedParentBlueScoreChangedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_BanRequest struct {
+type NexepadMessage_BanRequest struct {
 	BanRequest *BanRequestMessage `protobuf:"bytes,1059,opt,name=banRequest,proto3,oneof"`
 }
 
-type nexepadMessage_BanResponse struct {
+type NexepadMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
-type nexepadMessage_UnbanRequest struct {
+type NexepadMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
-type nexepadMessage_UnbanResponse struct {
+type NexepadMessage_UnbanResponse struct {
 	UnbanResponse *UnbanResponseMessage `protobuf:"bytes,1062,opt,name=unbanResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetInfoRequest struct {
+type NexepadMessage_GetInfoRequest struct {
 	GetInfoRequest *GetInfoRequestMessage `protobuf:"bytes,1063,opt,name=getInfoRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetInfoResponse struct {
+type NexepadMessage_GetInfoResponse struct {
 	GetInfoResponse *GetInfoResponseMessage `protobuf:"bytes,1064,opt,name=getInfoResponse,proto3,oneof"`
 }
 
-type nexepadMessage_StopNotifyingUtxosChangedRequest struct {
+type NexepadMessage_StopNotifyingUtxosChangedRequest struct {
 	StopNotifyingUtxosChangedRequest *StopNotifyingUtxosChangedRequestMessage `protobuf:"bytes,1065,opt,name=stopNotifyingUtxosChangedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_StopNotifyingUtxosChangedResponse struct {
+type NexepadMessage_StopNotifyingUtxosChangedResponse struct {
 	StopNotifyingUtxosChangedResponse *StopNotifyingUtxosChangedResponseMessage `protobuf:"bytes,1066,opt,name=stopNotifyingUtxosChangedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
+type NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
 	NotifyPruningPointUTXOSetOverrideRequest *NotifyPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1067,opt,name=notifyPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
+type NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
 	NotifyPruningPointUTXOSetOverrideResponse *NotifyPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1068,opt,name=notifyPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type nexepadMessage_PruningPointUTXOSetOverrideNotification struct {
+type NexepadMessage_PruningPointUTXOSetOverrideNotification struct {
 	PruningPointUTXOSetOverrideNotification *PruningPointUTXOSetOverrideNotificationMessage `protobuf:"bytes,1069,opt,name=pruningPointUTXOSetOverrideNotification,proto3,oneof"`
 }
 
-type nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
+type NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
 	StopNotifyingPruningPointUTXOSetOverrideRequest *StopNotifyingPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1070,opt,name=stopNotifyingPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
+type NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
 	StopNotifyingPruningPointUTXOSetOverrideResponse *StopNotifyingPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1071,opt,name=stopNotifyingPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type nexepadMessage_EstimateNetworkHashesPerSecondRequest struct {
+type NexepadMessage_EstimateNetworkHashesPerSecondRequest struct {
 	EstimateNetworkHashesPerSecondRequest *EstimateNetworkHashesPerSecondRequestMessage `protobuf:"bytes,1072,opt,name=estimateNetworkHashesPerSecondRequest,proto3,oneof"`
 }
 
-type nexepadMessage_EstimateNetworkHashesPerSecondResponse struct {
+type NexepadMessage_EstimateNetworkHashesPerSecondResponse struct {
 	EstimateNetworkHashesPerSecondResponse *EstimateNetworkHashesPerSecondResponseMessage `protobuf:"bytes,1073,opt,name=estimateNetworkHashesPerSecondResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualDaaScoreChangedRequest struct {
+type NexepadMessage_NotifyVirtualDaaScoreChangedRequest struct {
 	NotifyVirtualDaaScoreChangedRequest *NotifyVirtualDaaScoreChangedRequestMessage `protobuf:"bytes,1074,opt,name=notifyVirtualDaaScoreChangedRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyVirtualDaaScoreChangedResponse struct {
+type NexepadMessage_NotifyVirtualDaaScoreChangedResponse struct {
 	NotifyVirtualDaaScoreChangedResponse *NotifyVirtualDaaScoreChangedResponseMessage `protobuf:"bytes,1075,opt,name=notifyVirtualDaaScoreChangedResponse,proto3,oneof"`
 }
 
-type nexepadMessage_VirtualDaaScoreChangedNotification struct {
+type NexepadMessage_VirtualDaaScoreChangedNotification struct {
 	VirtualDaaScoreChangedNotification *VirtualDaaScoreChangedNotificationMessage `protobuf:"bytes,1076,opt,name=virtualDaaScoreChangedNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetBalanceByAddressRequest struct {
+type NexepadMessage_GetBalanceByAddressRequest struct {
 	GetBalanceByAddressRequest *GetBalanceByAddressRequestMessage `protobuf:"bytes,1077,opt,name=getBalanceByAddressRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBalanceByAddressResponse struct {
+type NexepadMessage_GetBalanceByAddressResponse struct {
 	GetBalanceByAddressResponse *GetBalanceByAddressResponseMessage `protobuf:"bytes,1078,opt,name=getBalanceByAddressResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetBalancesByAddressesRequest struct {
+type NexepadMessage_GetBalancesByAddressesRequest struct {
 	GetBalancesByAddressesRequest *GetBalancesByAddressesRequestMessage `protobuf:"bytes,1079,opt,name=getBalancesByAddressesRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetBalancesByAddressesResponse struct {
+type NexepadMessage_GetBalancesByAddressesResponse struct {
 	GetBalancesByAddressesResponse *GetBalancesByAddressesResponseMessage `protobuf:"bytes,1080,opt,name=getBalancesByAddressesResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyNewBlockTemplateRequest struct {
+type NexepadMessage_NotifyNewBlockTemplateRequest struct {
 	NotifyNewBlockTemplateRequest *NotifyNewBlockTemplateRequestMessage `protobuf:"bytes,1081,opt,name=notifyNewBlockTemplateRequest,proto3,oneof"`
 }
 
-type nexepadMessage_NotifyNewBlockTemplateResponse struct {
+type NexepadMessage_NotifyNewBlockTemplateResponse struct {
 	NotifyNewBlockTemplateResponse *NotifyNewBlockTemplateResponseMessage `protobuf:"bytes,1082,opt,name=notifyNewBlockTemplateResponse,proto3,oneof"`
 }
 
-type nexepadMessage_NewBlockTemplateNotification struct {
+type NexepadMessage_NewBlockTemplateNotification struct {
 	NewBlockTemplateNotification *NewBlockTemplateNotificationMessage `protobuf:"bytes,1083,opt,name=newBlockTemplateNotification,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntriesByAddressesRequest struct {
+type NexepadMessage_GetMempoolEntriesByAddressesRequest struct {
 	GetMempoolEntriesByAddressesRequest *GetMempoolEntriesByAddressesRequestMessage `protobuf:"bytes,1084,opt,name=getMempoolEntriesByAddressesRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetMempoolEntriesByAddressesResponse struct {
+type NexepadMessage_GetMempoolEntriesByAddressesResponse struct {
 	GetMempoolEntriesByAddressesResponse *GetMempoolEntriesByAddressesResponseMessage `protobuf:"bytes,1085,opt,name=getMempoolEntriesByAddressesResponse,proto3,oneof"`
 }
 
-type nexepadMessage_GetCoinSupplyRequest struct {
+type NexepadMessage_GetCoinSupplyRequest struct {
 	GetCoinSupplyRequest *GetCoinSupplyRequestMessage `protobuf:"bytes,1086,opt,name=getCoinSupplyRequest,proto3,oneof"`
 }
 
-type nexepadMessage_GetCoinSupplyResponse struct {
+type NexepadMessage_GetCoinSupplyResponse struct {
 	GetCoinSupplyResponse *GetCoinSupplyResponseMessage `protobuf:"bytes,1087,opt,name=getCoinSupplyResponse,proto3,oneof"`
 }
 
-func (*nexepadMessage_Addresses) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Addresses) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Block) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Block) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Transaction) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Transaction) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BlockLocator) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BlockLocator) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestAddresses) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestAddresses) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestRelayBlocks) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestRelayBlocks) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestTransactions) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestTransactions) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_IbdBlock) isnexepadMessage_Payload() {}
+func (*NexepadMessage_IbdBlock) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_InvRelayBlock) isnexepadMessage_Payload() {}
+func (*NexepadMessage_InvRelayBlock) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_InvTransactions) isnexepadMessage_Payload() {}
+func (*NexepadMessage_InvTransactions) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Ping) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Ping) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Pong) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Pong) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Verack) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Verack) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Version) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Version) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_TransactionNotFound) isnexepadMessage_Payload() {}
+func (*NexepadMessage_TransactionNotFound) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Reject) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Reject) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_PruningPointUtxoSetChunk) isnexepadMessage_Payload() {}
+func (*NexepadMessage_PruningPointUtxoSetChunk) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestIBDBlocks) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestIBDBlocks) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_UnexpectedPruningPoint) isnexepadMessage_Payload() {}
+func (*NexepadMessage_UnexpectedPruningPoint) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_IbdBlockLocator) isnexepadMessage_Payload() {}
+func (*NexepadMessage_IbdBlockLocator) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_IbdBlockLocatorHighestHash) isnexepadMessage_Payload() {}
+func (*NexepadMessage_IbdBlockLocatorHighestHash) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestNextPruningPointUtxoSetChunk) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestNextPruningPointUtxoSetChunk) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_DonePruningPointUtxoSetChunks) isnexepadMessage_Payload() {}
+func (*NexepadMessage_DonePruningPointUtxoSetChunks) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_IbdBlockLocatorHighestHashNotFound) isnexepadMessage_Payload() {}
+func (*NexepadMessage_IbdBlockLocatorHighestHashNotFound) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BlockWithTrustedData) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BlockWithTrustedData) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_DoneBlocksWithTrustedData) isnexepadMessage_Payload() {}
+func (*NexepadMessage_DoneBlocksWithTrustedData) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestPruningPointAndItsAnticone) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestPruningPointAndItsAnticone) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BlockHeaders) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BlockHeaders) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestNextHeaders) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestNextHeaders) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_DoneHeaders) isnexepadMessage_Payload() {}
+func (*NexepadMessage_DoneHeaders) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestPruningPointUTXOSet) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestPruningPointUTXOSet) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestHeaders) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestHeaders) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestBlockLocator) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestBlockLocator) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_PruningPoints) isnexepadMessage_Payload() {}
+func (*NexepadMessage_PruningPoints) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestPruningPointProof) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestPruningPointProof) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_PruningPointProof) isnexepadMessage_Payload() {}
+func (*NexepadMessage_PruningPointProof) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_Ready) isnexepadMessage_Payload() {}
+func (*NexepadMessage_Ready) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BlockWithTrustedDataV4) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BlockWithTrustedDataV4) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_TrustedData) isnexepadMessage_Payload() {}
+func (*NexepadMessage_TrustedData) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestIBDChainBlockLocator) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestIBDChainBlockLocator) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_IbdChainBlockLocator) isnexepadMessage_Payload() {}
+func (*NexepadMessage_IbdChainBlockLocator) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestAnticone) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestAnticone) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isnexepadMessage_Payload() {}
+func (*NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetCurrentNetworkRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetCurrentNetworkRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetCurrentNetworkResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetCurrentNetworkResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_SubmitBlockRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_SubmitBlockRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_SubmitBlockResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_SubmitBlockResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockTemplateRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockTemplateRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockTemplateResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockTemplateResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyBlockAddedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyBlockAddedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyBlockAddedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyBlockAddedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BlockAddedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BlockAddedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetPeerAddressesRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetPeerAddressesRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetPeerAddressesResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetPeerAddressesResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetSelectedTipHashRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetSelectedTipHashRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetSelectedTipHashResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetSelectedTipHashResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntryRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntryRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntryResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntryResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetConnectedPeerInfoRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetConnectedPeerInfoRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetConnectedPeerInfoResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetConnectedPeerInfoResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_AddPeerRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_AddPeerRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_AddPeerResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_AddPeerResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_SubmitTransactionRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_SubmitTransactionRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_SubmitTransactionResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_SubmitTransactionResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_VirtualSelectedParentChainChangedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_VirtualSelectedParentChainChangedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetSubnetworkRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetSubnetworkRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetSubnetworkResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetSubnetworkResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlocksRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlocksRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlocksResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlocksResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockCountRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockCountRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockCountResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockCountResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockDagInfoRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockDagInfoRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBlockDagInfoResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBlockDagInfoResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_ResolveFinalityConflictRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_ResolveFinalityConflictRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_ResolveFinalityConflictResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_ResolveFinalityConflictResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyFinalityConflictsRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyFinalityConflictsRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyFinalityConflictsResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyFinalityConflictsResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_FinalityConflictNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_FinalityConflictNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_FinalityConflictResolvedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_FinalityConflictResolvedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntriesRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntriesRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntriesResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntriesResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_ShutDownRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_ShutDownRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_ShutDownResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_ShutDownResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetHeadersRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetHeadersRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetHeadersResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetHeadersResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyUtxosChangedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyUtxosChangedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyUtxosChangedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyUtxosChangedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_UtxosChangedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_UtxosChangedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetUtxosByAddressesRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetUtxosByAddressesRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetUtxosByAddressesResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetUtxosByAddressesResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetVirtualSelectedParentBlueScoreRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetVirtualSelectedParentBlueScoreRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetVirtualSelectedParentBlueScoreResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetVirtualSelectedParentBlueScoreResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BanRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BanRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_BanResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_BanResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_UnbanRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_UnbanRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_UnbanResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_UnbanResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetInfoRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetInfoRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetInfoResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetInfoResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_StopNotifyingUtxosChangedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_StopNotifyingUtxosChangedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_StopNotifyingUtxosChangedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_StopNotifyingUtxosChangedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_PruningPointUTXOSetOverrideNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_PruningPointUTXOSetOverrideNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_EstimateNetworkHashesPerSecondRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_EstimateNetworkHashesPerSecondRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_EstimateNetworkHashesPerSecondResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_EstimateNetworkHashesPerSecondResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualDaaScoreChangedRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualDaaScoreChangedRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyVirtualDaaScoreChangedResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyVirtualDaaScoreChangedResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_VirtualDaaScoreChangedNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_VirtualDaaScoreChangedNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBalanceByAddressRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBalanceByAddressRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBalanceByAddressResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBalanceByAddressResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBalancesByAddressesRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBalancesByAddressesRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetBalancesByAddressesResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetBalancesByAddressesResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyNewBlockTemplateRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyNewBlockTemplateRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NotifyNewBlockTemplateResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NotifyNewBlockTemplateResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_NewBlockTemplateNotification) isnexepadMessage_Payload() {}
+func (*NexepadMessage_NewBlockTemplateNotification) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntriesByAddressesRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntriesByAddressesRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetMempoolEntriesByAddressesResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetMempoolEntriesByAddressesResponse) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetCoinSupplyRequest) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetCoinSupplyRequest) isNexepadMessage_Payload() {}
 
-func (*nexepadMessage_GetCoinSupplyResponse) isnexepadMessage_Payload() {}
+func (*NexepadMessage_GetCoinSupplyResponse) isNexepadMessage_Payload() {}
 
 var File_messages_proto protoreflect.FileDescriptor
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*nexepadMessage)(nil),                                              // 0: protowire.nexepadMessage
+	(*NexepadMessage)(nil),                                              // 0: protowire.NexepadMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
@@ -2936,140 +2936,140 @@ var file_messages_proto_goTypes = []interface{}{
 	(*GetCoinSupplyResponseMessage)(nil),                               // 129: protowire.GetCoinSupplyResponseMessage
 }
 var file_messages_proto_depIdxs = []int32{
-	1,   // 0: protowire.nexepadMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.nexepadMessage.block:type_name -> protowire.BlockMessage
-	3,   // 2: protowire.nexepadMessage.transaction:type_name -> protowire.TransactionMessage
-	4,   // 3: protowire.nexepadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
-	5,   // 4: protowire.nexepadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
-	6,   // 5: protowire.nexepadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
-	7,   // 6: protowire.nexepadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
-	2,   // 7: protowire.nexepadMessage.ibdBlock:type_name -> protowire.BlockMessage
-	8,   // 8: protowire.nexepadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
-	9,   // 9: protowire.nexepadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
-	10,  // 10: protowire.nexepadMessage.ping:type_name -> protowire.PingMessage
-	11,  // 11: protowire.nexepadMessage.pong:type_name -> protowire.PongMessage
-	12,  // 12: protowire.nexepadMessage.verack:type_name -> protowire.VerackMessage
-	13,  // 13: protowire.nexepadMessage.version:type_name -> protowire.VersionMessage
-	14,  // 14: protowire.nexepadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
-	15,  // 15: protowire.nexepadMessage.reject:type_name -> protowire.RejectMessage
-	16,  // 16: protowire.nexepadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
-	17,  // 17: protowire.nexepadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
-	18,  // 18: protowire.nexepadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
-	19,  // 19: protowire.nexepadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
-	20,  // 20: protowire.nexepadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
-	21,  // 21: protowire.nexepadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
-	22,  // 22: protowire.nexepadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
-	23,  // 23: protowire.nexepadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
-	24,  // 24: protowire.nexepadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
-	25,  // 25: protowire.nexepadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
-	26,  // 26: protowire.nexepadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
-	27,  // 27: protowire.nexepadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
-	28,  // 28: protowire.nexepadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
-	29,  // 29: protowire.nexepadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
-	30,  // 30: protowire.nexepadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
-	31,  // 31: protowire.nexepadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
-	32,  // 32: protowire.nexepadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
-	33,  // 33: protowire.nexepadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
-	34,  // 34: protowire.nexepadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
-	35,  // 35: protowire.nexepadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
-	36,  // 36: protowire.nexepadMessage.ready:type_name -> protowire.ReadyMessage
-	37,  // 37: protowire.nexepadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
-	38,  // 38: protowire.nexepadMessage.trustedData:type_name -> protowire.TrustedDataMessage
-	39,  // 39: protowire.nexepadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
-	40,  // 40: protowire.nexepadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
-	41,  // 41: protowire.nexepadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
-	42,  // 42: protowire.nexepadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
-	43,  // 43: protowire.nexepadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
-	44,  // 44: protowire.nexepadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
-	45,  // 45: protowire.nexepadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
-	46,  // 46: protowire.nexepadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
-	47,  // 47: protowire.nexepadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
-	48,  // 48: protowire.nexepadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
-	49,  // 49: protowire.nexepadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
-	50,  // 50: protowire.nexepadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
-	51,  // 51: protowire.nexepadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
-	52,  // 52: protowire.nexepadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
-	53,  // 53: protowire.nexepadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
-	54,  // 54: protowire.nexepadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
-	55,  // 55: protowire.nexepadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
-	56,  // 56: protowire.nexepadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
-	57,  // 57: protowire.nexepadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
-	58,  // 58: protowire.nexepadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
-	59,  // 59: protowire.nexepadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
-	60,  // 60: protowire.nexepadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
-	61,  // 61: protowire.nexepadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
-	62,  // 62: protowire.nexepadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
-	63,  // 63: protowire.nexepadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
-	64,  // 64: protowire.nexepadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
-	65,  // 65: protowire.nexepadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
-	66,  // 66: protowire.nexepadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
-	67,  // 67: protowire.nexepadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
-	68,  // 68: protowire.nexepadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
-	69,  // 69: protowire.nexepadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
-	70,  // 70: protowire.nexepadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
-	71,  // 71: protowire.nexepadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
-	72,  // 72: protowire.nexepadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
-	73,  // 73: protowire.nexepadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
-	74,  // 74: protowire.nexepadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
-	75,  // 75: protowire.nexepadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
-	76,  // 76: protowire.nexepadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
-	77,  // 77: protowire.nexepadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
-	78,  // 78: protowire.nexepadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
-	79,  // 79: protowire.nexepadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
-	80,  // 80: protowire.nexepadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
-	81,  // 81: protowire.nexepadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
-	82,  // 82: protowire.nexepadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
-	83,  // 83: protowire.nexepadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
-	84,  // 84: protowire.nexepadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
-	85,  // 85: protowire.nexepadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
-	86,  // 86: protowire.nexepadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
-	87,  // 87: protowire.nexepadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
-	88,  // 88: protowire.nexepadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
-	89,  // 89: protowire.nexepadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
-	90,  // 90: protowire.nexepadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
-	91,  // 91: protowire.nexepadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
-	92,  // 92: protowire.nexepadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
-	93,  // 93: protowire.nexepadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
-	94,  // 94: protowire.nexepadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
-	95,  // 95: protowire.nexepadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
-	96,  // 96: protowire.nexepadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
-	97,  // 97: protowire.nexepadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
-	98,  // 98: protowire.nexepadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
-	99,  // 99: protowire.nexepadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
-	100, // 100: protowire.nexepadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
-	101, // 101: protowire.nexepadMessage.banRequest:type_name -> protowire.BanRequestMessage
-	102, // 102: protowire.nexepadMessage.banResponse:type_name -> protowire.BanResponseMessage
-	103, // 103: protowire.nexepadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
-	104, // 104: protowire.nexepadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
-	105, // 105: protowire.nexepadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
-	106, // 106: protowire.nexepadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
-	107, // 107: protowire.nexepadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
-	108, // 108: protowire.nexepadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
-	109, // 109: protowire.nexepadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
-	110, // 110: protowire.nexepadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
-	111, // 111: protowire.nexepadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
-	112, // 112: protowire.nexepadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
-	113, // 113: protowire.nexepadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
-	114, // 114: protowire.nexepadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
-	115, // 115: protowire.nexepadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
-	116, // 116: protowire.nexepadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
-	117, // 117: protowire.nexepadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
-	118, // 118: protowire.nexepadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
-	119, // 119: protowire.nexepadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
-	120, // 120: protowire.nexepadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
-	121, // 121: protowire.nexepadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
-	122, // 122: protowire.nexepadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
-	123, // 123: protowire.nexepadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
-	124, // 124: protowire.nexepadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
-	125, // 125: protowire.nexepadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
-	126, // 126: protowire.nexepadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
-	127, // 127: protowire.nexepadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
-	128, // 128: protowire.nexepadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
-	129, // 129: protowire.nexepadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
-	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.nexepadMessage
-	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.nexepadMessage
-	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.nexepadMessage
-	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.nexepadMessage
+	1,   // 0: protowire.NexepadMessage.addresses:type_name -> protowire.AddressesMessage
+	2,   // 1: protowire.NexepadMessage.block:type_name -> protowire.BlockMessage
+	3,   // 2: protowire.NexepadMessage.transaction:type_name -> protowire.TransactionMessage
+	4,   // 3: protowire.NexepadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
+	5,   // 4: protowire.NexepadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
+	6,   // 5: protowire.NexepadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
+	7,   // 6: protowire.NexepadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
+	2,   // 7: protowire.NexepadMessage.ibdBlock:type_name -> protowire.BlockMessage
+	8,   // 8: protowire.NexepadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
+	9,   // 9: protowire.NexepadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
+	10,  // 10: protowire.NexepadMessage.ping:type_name -> protowire.PingMessage
+	11,  // 11: protowire.NexepadMessage.pong:type_name -> protowire.PongMessage
+	12,  // 12: protowire.NexepadMessage.verack:type_name -> protowire.VerackMessage
+	13,  // 13: protowire.NexepadMessage.version:type_name -> protowire.VersionMessage
+	14,  // 14: protowire.NexepadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
+	15,  // 15: protowire.NexepadMessage.reject:type_name -> protowire.RejectMessage
+	16,  // 16: protowire.NexepadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
+	17,  // 17: protowire.NexepadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
+	18,  // 18: protowire.NexepadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
+	19,  // 19: protowire.NexepadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
+	20,  // 20: protowire.NexepadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
+	21,  // 21: protowire.NexepadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
+	22,  // 22: protowire.NexepadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
+	23,  // 23: protowire.NexepadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
+	24,  // 24: protowire.NexepadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
+	25,  // 25: protowire.NexepadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
+	26,  // 26: protowire.NexepadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
+	27,  // 27: protowire.NexepadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
+	28,  // 28: protowire.NexepadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
+	29,  // 29: protowire.NexepadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
+	30,  // 30: protowire.NexepadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
+	31,  // 31: protowire.NexepadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
+	32,  // 32: protowire.NexepadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
+	33,  // 33: protowire.NexepadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
+	34,  // 34: protowire.NexepadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
+	35,  // 35: protowire.NexepadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
+	36,  // 36: protowire.NexepadMessage.ready:type_name -> protowire.ReadyMessage
+	37,  // 37: protowire.NexepadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
+	38,  // 38: protowire.NexepadMessage.trustedData:type_name -> protowire.TrustedDataMessage
+	39,  // 39: protowire.NexepadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
+	40,  // 40: protowire.NexepadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
+	41,  // 41: protowire.NexepadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
+	42,  // 42: protowire.NexepadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
+	43,  // 43: protowire.NexepadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
+	44,  // 44: protowire.NexepadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
+	45,  // 45: protowire.NexepadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
+	46,  // 46: protowire.NexepadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
+	47,  // 47: protowire.NexepadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
+	48,  // 48: protowire.NexepadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
+	49,  // 49: protowire.NexepadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
+	50,  // 50: protowire.NexepadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
+	51,  // 51: protowire.NexepadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
+	52,  // 52: protowire.NexepadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
+	53,  // 53: protowire.NexepadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
+	54,  // 54: protowire.NexepadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
+	55,  // 55: protowire.NexepadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
+	56,  // 56: protowire.NexepadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
+	57,  // 57: protowire.NexepadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
+	58,  // 58: protowire.NexepadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
+	59,  // 59: protowire.NexepadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
+	60,  // 60: protowire.NexepadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
+	61,  // 61: protowire.NexepadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
+	62,  // 62: protowire.NexepadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
+	63,  // 63: protowire.NexepadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
+	64,  // 64: protowire.NexepadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
+	65,  // 65: protowire.NexepadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
+	66,  // 66: protowire.NexepadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
+	67,  // 67: protowire.NexepadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
+	68,  // 68: protowire.NexepadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
+	69,  // 69: protowire.NexepadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
+	70,  // 70: protowire.NexepadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
+	71,  // 71: protowire.NexepadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
+	72,  // 72: protowire.NexepadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
+	73,  // 73: protowire.NexepadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
+	74,  // 74: protowire.NexepadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
+	75,  // 75: protowire.NexepadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
+	76,  // 76: protowire.NexepadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
+	77,  // 77: protowire.NexepadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
+	78,  // 78: protowire.NexepadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
+	79,  // 79: protowire.NexepadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
+	80,  // 80: protowire.NexepadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
+	81,  // 81: protowire.NexepadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
+	82,  // 82: protowire.NexepadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
+	83,  // 83: protowire.NexepadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
+	84,  // 84: protowire.NexepadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
+	85,  // 85: protowire.NexepadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
+	86,  // 86: protowire.NexepadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
+	87,  // 87: protowire.NexepadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
+	88,  // 88: protowire.NexepadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
+	89,  // 89: protowire.NexepadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
+	90,  // 90: protowire.NexepadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
+	91,  // 91: protowire.NexepadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
+	92,  // 92: protowire.NexepadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
+	93,  // 93: protowire.NexepadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
+	94,  // 94: protowire.NexepadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
+	95,  // 95: protowire.NexepadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
+	96,  // 96: protowire.NexepadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
+	97,  // 97: protowire.NexepadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
+	98,  // 98: protowire.NexepadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
+	99,  // 99: protowire.NexepadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
+	100, // 100: protowire.NexepadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
+	101, // 101: protowire.NexepadMessage.banRequest:type_name -> protowire.BanRequestMessage
+	102, // 102: protowire.NexepadMessage.banResponse:type_name -> protowire.BanResponseMessage
+	103, // 103: protowire.NexepadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
+	104, // 104: protowire.NexepadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
+	105, // 105: protowire.NexepadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
+	106, // 106: protowire.NexepadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
+	107, // 107: protowire.NexepadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
+	108, // 108: protowire.NexepadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
+	109, // 109: protowire.NexepadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
+	110, // 110: protowire.NexepadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
+	111, // 111: protowire.NexepadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
+	112, // 112: protowire.NexepadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
+	113, // 113: protowire.NexepadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
+	114, // 114: protowire.NexepadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
+	115, // 115: protowire.NexepadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
+	116, // 116: protowire.NexepadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
+	117, // 117: protowire.NexepadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
+	118, // 118: protowire.NexepadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
+	119, // 119: protowire.NexepadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
+	120, // 120: protowire.NexepadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
+	121, // 121: protowire.NexepadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
+	122, // 122: protowire.NexepadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
+	123, // 123: protowire.NexepadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
+	124, // 124: protowire.NexepadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
+	125, // 125: protowire.NexepadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
+	126, // 126: protowire.NexepadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
+	127, // 127: protowire.NexepadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
+	128, // 128: protowire.NexepadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
+	129, // 129: protowire.NexepadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
+	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.NexepadMessage
+	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.NexepadMessage
+	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.NexepadMessage
+	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.NexepadMessage
 	132, // [132:134] is the sub-list for method output_type
 	130, // [130:132] is the sub-list for method input_type
 	130, // [130:130] is the sub-list for extension type_name
@@ -3086,7 +3086,7 @@ func file_messages_proto_init() {
 	file_rpc_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*nexepadMessage); i {
+			switch v := v.(*NexepadMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,136 +3099,136 @@ func file_messages_proto_init() {
 		}
 	}
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*nexepadMessage_Addresses)(nil),
-		(*nexepadMessage_Block)(nil),
-		(*nexepadMessage_Transaction)(nil),
-		(*nexepadMessage_BlockLocator)(nil),
-		(*nexepadMessage_RequestAddresses)(nil),
-		(*nexepadMessage_RequestRelayBlocks)(nil),
-		(*nexepadMessage_RequestTransactions)(nil),
-		(*nexepadMessage_IbdBlock)(nil),
-		(*nexepadMessage_InvRelayBlock)(nil),
-		(*nexepadMessage_InvTransactions)(nil),
-		(*nexepadMessage_Ping)(nil),
-		(*nexepadMessage_Pong)(nil),
-		(*nexepadMessage_Verack)(nil),
-		(*nexepadMessage_Version)(nil),
-		(*nexepadMessage_TransactionNotFound)(nil),
-		(*nexepadMessage_Reject)(nil),
-		(*nexepadMessage_PruningPointUtxoSetChunk)(nil),
-		(*nexepadMessage_RequestIBDBlocks)(nil),
-		(*nexepadMessage_UnexpectedPruningPoint)(nil),
-		(*nexepadMessage_IbdBlockLocator)(nil),
-		(*nexepadMessage_IbdBlockLocatorHighestHash)(nil),
-		(*nexepadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
-		(*nexepadMessage_DonePruningPointUtxoSetChunks)(nil),
-		(*nexepadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
-		(*nexepadMessage_BlockWithTrustedData)(nil),
-		(*nexepadMessage_DoneBlocksWithTrustedData)(nil),
-		(*nexepadMessage_RequestPruningPointAndItsAnticone)(nil),
-		(*nexepadMessage_BlockHeaders)(nil),
-		(*nexepadMessage_RequestNextHeaders)(nil),
-		(*nexepadMessage_DoneHeaders)(nil),
-		(*nexepadMessage_RequestPruningPointUTXOSet)(nil),
-		(*nexepadMessage_RequestHeaders)(nil),
-		(*nexepadMessage_RequestBlockLocator)(nil),
-		(*nexepadMessage_PruningPoints)(nil),
-		(*nexepadMessage_RequestPruningPointProof)(nil),
-		(*nexepadMessage_PruningPointProof)(nil),
-		(*nexepadMessage_Ready)(nil),
-		(*nexepadMessage_BlockWithTrustedDataV4)(nil),
-		(*nexepadMessage_TrustedData)(nil),
-		(*nexepadMessage_RequestIBDChainBlockLocator)(nil),
-		(*nexepadMessage_IbdChainBlockLocator)(nil),
-		(*nexepadMessage_RequestAnticone)(nil),
-		(*nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
-		(*nexepadMessage_GetCurrentNetworkRequest)(nil),
-		(*nexepadMessage_GetCurrentNetworkResponse)(nil),
-		(*nexepadMessage_SubmitBlockRequest)(nil),
-		(*nexepadMessage_SubmitBlockResponse)(nil),
-		(*nexepadMessage_GetBlockTemplateRequest)(nil),
-		(*nexepadMessage_GetBlockTemplateResponse)(nil),
-		(*nexepadMessage_NotifyBlockAddedRequest)(nil),
-		(*nexepadMessage_NotifyBlockAddedResponse)(nil),
-		(*nexepadMessage_BlockAddedNotification)(nil),
-		(*nexepadMessage_GetPeerAddressesRequest)(nil),
-		(*nexepadMessage_GetPeerAddressesResponse)(nil),
-		(*nexepadMessage_GetSelectedTipHashRequest)(nil),
-		(*nexepadMessage_GetSelectedTipHashResponse)(nil),
-		(*nexepadMessage_GetMempoolEntryRequest)(nil),
-		(*nexepadMessage_GetMempoolEntryResponse)(nil),
-		(*nexepadMessage_GetConnectedPeerInfoRequest)(nil),
-		(*nexepadMessage_GetConnectedPeerInfoResponse)(nil),
-		(*nexepadMessage_AddPeerRequest)(nil),
-		(*nexepadMessage_AddPeerResponse)(nil),
-		(*nexepadMessage_SubmitTransactionRequest)(nil),
-		(*nexepadMessage_SubmitTransactionResponse)(nil),
-		(*nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
-		(*nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
-		(*nexepadMessage_VirtualSelectedParentChainChangedNotification)(nil),
-		(*nexepadMessage_GetBlockRequest)(nil),
-		(*nexepadMessage_GetBlockResponse)(nil),
-		(*nexepadMessage_GetSubnetworkRequest)(nil),
-		(*nexepadMessage_GetSubnetworkResponse)(nil),
-		(*nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
-		(*nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
-		(*nexepadMessage_GetBlocksRequest)(nil),
-		(*nexepadMessage_GetBlocksResponse)(nil),
-		(*nexepadMessage_GetBlockCountRequest)(nil),
-		(*nexepadMessage_GetBlockCountResponse)(nil),
-		(*nexepadMessage_GetBlockDagInfoRequest)(nil),
-		(*nexepadMessage_GetBlockDagInfoResponse)(nil),
-		(*nexepadMessage_ResolveFinalityConflictRequest)(nil),
-		(*nexepadMessage_ResolveFinalityConflictResponse)(nil),
-		(*nexepadMessage_NotifyFinalityConflictsRequest)(nil),
-		(*nexepadMessage_NotifyFinalityConflictsResponse)(nil),
-		(*nexepadMessage_FinalityConflictNotification)(nil),
-		(*nexepadMessage_FinalityConflictResolvedNotification)(nil),
-		(*nexepadMessage_GetMempoolEntriesRequest)(nil),
-		(*nexepadMessage_GetMempoolEntriesResponse)(nil),
-		(*nexepadMessage_ShutDownRequest)(nil),
-		(*nexepadMessage_ShutDownResponse)(nil),
-		(*nexepadMessage_GetHeadersRequest)(nil),
-		(*nexepadMessage_GetHeadersResponse)(nil),
-		(*nexepadMessage_NotifyUtxosChangedRequest)(nil),
-		(*nexepadMessage_NotifyUtxosChangedResponse)(nil),
-		(*nexepadMessage_UtxosChangedNotification)(nil),
-		(*nexepadMessage_GetUtxosByAddressesRequest)(nil),
-		(*nexepadMessage_GetUtxosByAddressesResponse)(nil),
-		(*nexepadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
-		(*nexepadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
-		(*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
-		(*nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
-		(*nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
-		(*nexepadMessage_BanRequest)(nil),
-		(*nexepadMessage_BanResponse)(nil),
-		(*nexepadMessage_UnbanRequest)(nil),
-		(*nexepadMessage_UnbanResponse)(nil),
-		(*nexepadMessage_GetInfoRequest)(nil),
-		(*nexepadMessage_GetInfoResponse)(nil),
-		(*nexepadMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*nexepadMessage_StopNotifyingUtxosChangedResponse)(nil),
-		(*nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
-		(*nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
-		(*nexepadMessage_PruningPointUTXOSetOverrideNotification)(nil),
-		(*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
-		(*nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
-		(*nexepadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
-		(*nexepadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
-		(*nexepadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
-		(*nexepadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
-		(*nexepadMessage_VirtualDaaScoreChangedNotification)(nil),
-		(*nexepadMessage_GetBalanceByAddressRequest)(nil),
-		(*nexepadMessage_GetBalanceByAddressResponse)(nil),
-		(*nexepadMessage_GetBalancesByAddressesRequest)(nil),
-		(*nexepadMessage_GetBalancesByAddressesResponse)(nil),
-		(*nexepadMessage_NotifyNewBlockTemplateRequest)(nil),
-		(*nexepadMessage_NotifyNewBlockTemplateResponse)(nil),
-		(*nexepadMessage_NewBlockTemplateNotification)(nil),
-		(*nexepadMessage_GetMempoolEntriesByAddressesRequest)(nil),
-		(*nexepadMessage_GetMempoolEntriesByAddressesResponse)(nil),
-		(*nexepadMessage_GetCoinSupplyRequest)(nil),
-		(*nexepadMessage_GetCoinSupplyResponse)(nil),
+		(*NexepadMessage_Addresses)(nil),
+		(*NexepadMessage_Block)(nil),
+		(*NexepadMessage_Transaction)(nil),
+		(*NexepadMessage_BlockLocator)(nil),
+		(*NexepadMessage_RequestAddresses)(nil),
+		(*NexepadMessage_RequestRelayBlocks)(nil),
+		(*NexepadMessage_RequestTransactions)(nil),
+		(*NexepadMessage_IbdBlock)(nil),
+		(*NexepadMessage_InvRelayBlock)(nil),
+		(*NexepadMessage_InvTransactions)(nil),
+		(*NexepadMessage_Ping)(nil),
+		(*NexepadMessage_Pong)(nil),
+		(*NexepadMessage_Verack)(nil),
+		(*NexepadMessage_Version)(nil),
+		(*NexepadMessage_TransactionNotFound)(nil),
+		(*NexepadMessage_Reject)(nil),
+		(*NexepadMessage_PruningPointUtxoSetChunk)(nil),
+		(*NexepadMessage_RequestIBDBlocks)(nil),
+		(*NexepadMessage_UnexpectedPruningPoint)(nil),
+		(*NexepadMessage_IbdBlockLocator)(nil),
+		(*NexepadMessage_IbdBlockLocatorHighestHash)(nil),
+		(*NexepadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
+		(*NexepadMessage_DonePruningPointUtxoSetChunks)(nil),
+		(*NexepadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
+		(*NexepadMessage_BlockWithTrustedData)(nil),
+		(*NexepadMessage_DoneBlocksWithTrustedData)(nil),
+		(*NexepadMessage_RequestPruningPointAndItsAnticone)(nil),
+		(*NexepadMessage_BlockHeaders)(nil),
+		(*NexepadMessage_RequestNextHeaders)(nil),
+		(*NexepadMessage_DoneHeaders)(nil),
+		(*NexepadMessage_RequestPruningPointUTXOSet)(nil),
+		(*NexepadMessage_RequestHeaders)(nil),
+		(*NexepadMessage_RequestBlockLocator)(nil),
+		(*NexepadMessage_PruningPoints)(nil),
+		(*NexepadMessage_RequestPruningPointProof)(nil),
+		(*NexepadMessage_PruningPointProof)(nil),
+		(*NexepadMessage_Ready)(nil),
+		(*NexepadMessage_BlockWithTrustedDataV4)(nil),
+		(*NexepadMessage_TrustedData)(nil),
+		(*NexepadMessage_RequestIBDChainBlockLocator)(nil),
+		(*NexepadMessage_IbdChainBlockLocator)(nil),
+		(*NexepadMessage_RequestAnticone)(nil),
+		(*NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
+		(*NexepadMessage_GetCurrentNetworkRequest)(nil),
+		(*NexepadMessage_GetCurrentNetworkResponse)(nil),
+		(*NexepadMessage_SubmitBlockRequest)(nil),
+		(*NexepadMessage_SubmitBlockResponse)(nil),
+		(*NexepadMessage_GetBlockTemplateRequest)(nil),
+		(*NexepadMessage_GetBlockTemplateResponse)(nil),
+		(*NexepadMessage_NotifyBlockAddedRequest)(nil),
+		(*NexepadMessage_NotifyBlockAddedResponse)(nil),
+		(*NexepadMessage_BlockAddedNotification)(nil),
+		(*NexepadMessage_GetPeerAddressesRequest)(nil),
+		(*NexepadMessage_GetPeerAddressesResponse)(nil),
+		(*NexepadMessage_GetSelectedTipHashRequest)(nil),
+		(*NexepadMessage_GetSelectedTipHashResponse)(nil),
+		(*NexepadMessage_GetMempoolEntryRequest)(nil),
+		(*NexepadMessage_GetMempoolEntryResponse)(nil),
+		(*NexepadMessage_GetConnectedPeerInfoRequest)(nil),
+		(*NexepadMessage_GetConnectedPeerInfoResponse)(nil),
+		(*NexepadMessage_AddPeerRequest)(nil),
+		(*NexepadMessage_AddPeerResponse)(nil),
+		(*NexepadMessage_SubmitTransactionRequest)(nil),
+		(*NexepadMessage_SubmitTransactionResponse)(nil),
+		(*NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
+		(*NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
+		(*NexepadMessage_VirtualSelectedParentChainChangedNotification)(nil),
+		(*NexepadMessage_GetBlockRequest)(nil),
+		(*NexepadMessage_GetBlockResponse)(nil),
+		(*NexepadMessage_GetSubnetworkRequest)(nil),
+		(*NexepadMessage_GetSubnetworkResponse)(nil),
+		(*NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
+		(*NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
+		(*NexepadMessage_GetBlocksRequest)(nil),
+		(*NexepadMessage_GetBlocksResponse)(nil),
+		(*NexepadMessage_GetBlockCountRequest)(nil),
+		(*NexepadMessage_GetBlockCountResponse)(nil),
+		(*NexepadMessage_GetBlockDagInfoRequest)(nil),
+		(*NexepadMessage_GetBlockDagInfoResponse)(nil),
+		(*NexepadMessage_ResolveFinalityConflictRequest)(nil),
+		(*NexepadMessage_ResolveFinalityConflictResponse)(nil),
+		(*NexepadMessage_NotifyFinalityConflictsRequest)(nil),
+		(*NexepadMessage_NotifyFinalityConflictsResponse)(nil),
+		(*NexepadMessage_FinalityConflictNotification)(nil),
+		(*NexepadMessage_FinalityConflictResolvedNotification)(nil),
+		(*NexepadMessage_GetMempoolEntriesRequest)(nil),
+		(*NexepadMessage_GetMempoolEntriesResponse)(nil),
+		(*NexepadMessage_ShutDownRequest)(nil),
+		(*NexepadMessage_ShutDownResponse)(nil),
+		(*NexepadMessage_GetHeadersRequest)(nil),
+		(*NexepadMessage_GetHeadersResponse)(nil),
+		(*NexepadMessage_NotifyUtxosChangedRequest)(nil),
+		(*NexepadMessage_NotifyUtxosChangedResponse)(nil),
+		(*NexepadMessage_UtxosChangedNotification)(nil),
+		(*NexepadMessage_GetUtxosByAddressesRequest)(nil),
+		(*NexepadMessage_GetUtxosByAddressesResponse)(nil),
+		(*NexepadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
+		(*NexepadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
+		(*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
+		(*NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
+		(*NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
+		(*NexepadMessage_BanRequest)(nil),
+		(*NexepadMessage_BanResponse)(nil),
+		(*NexepadMessage_UnbanRequest)(nil),
+		(*NexepadMessage_UnbanResponse)(nil),
+		(*NexepadMessage_GetInfoRequest)(nil),
+		(*NexepadMessage_GetInfoResponse)(nil),
+		(*NexepadMessage_StopNotifyingUtxosChangedRequest)(nil),
+		(*NexepadMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
+		(*NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
+		(*NexepadMessage_PruningPointUTXOSetOverrideNotification)(nil),
+		(*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
+		(*NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
+		(*NexepadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
+		(*NexepadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
+		(*NexepadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
+		(*NexepadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
+		(*NexepadMessage_VirtualDaaScoreChangedNotification)(nil),
+		(*NexepadMessage_GetBalanceByAddressRequest)(nil),
+		(*NexepadMessage_GetBalanceByAddressResponse)(nil),
+		(*NexepadMessage_GetBalancesByAddressesRequest)(nil),
+		(*NexepadMessage_GetBalancesByAddressesResponse)(nil),
+		(*NexepadMessage_NotifyNewBlockTemplateRequest)(nil),
+		(*NexepadMessage_NotifyNewBlockTemplateResponse)(nil),
+		(*NexepadMessage_NewBlockTemplateNotification)(nil),
+		(*NexepadMessage_GetMempoolEntriesByAddressesRequest)(nil),
+		(*NexepadMessage_GetMempoolEntriesByAddressesResponse)(nil),
+		(*NexepadMessage_GetCoinSupplyRequest)(nil),
+		(*NexepadMessage_GetCoinSupplyResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
