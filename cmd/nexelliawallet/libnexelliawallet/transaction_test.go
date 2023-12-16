@@ -1,4 +1,4 @@
-package libnexepawallet_test
+package libnexelliawallet_test
 
 import (
 	"fmt"
