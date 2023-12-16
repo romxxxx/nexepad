@@ -4,41 +4,43 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+
+	"github.com/romxxxx/nexepad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 var commandTypes = []reflect.Type{
-	reflect.TypeOf(protowire.nexepadMessage_AddPeerRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetConnectedPeerInfoRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetPeerAddressesRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetCurrentNetworkRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetInfoRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_AddPeerRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetConnectedPeerInfoRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetPeerAddressesRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetCurrentNetworkRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetInfoRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_GetBlockRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetBlocksRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetHeadersRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetBlockCountRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetBlockDagInfoRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetSelectedTipHashRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_ResolveFinalityConflictRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_EstimateNetworkHashesPerSecondRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBlockRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBlocksRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetHeadersRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBlockCountRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBlockDagInfoRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetSelectedTipHashRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_ResolveFinalityConflictRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_EstimateNetworkHashesPerSecondRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_GetBlockTemplateRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_SubmitBlockRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBlockTemplateRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_SubmitBlockRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntryRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntriesRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetMempoolEntriesByAddressesRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetMempoolEntryRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetMempoolEntriesRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetMempoolEntriesByAddressesRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_SubmitTransactionRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_SubmitTransactionRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_GetUtxosByAddressesRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetBalanceByAddressRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_GetCoinSupplyRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetUtxosByAddressesRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetBalanceByAddressRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_GetCoinSupplyRequest{}),
 
-	reflect.TypeOf(protowire.nexepadMessage_BanRequest{}),
-	reflect.TypeOf(protowire.nexepadMessage_UnbanRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_BanRequest{}),
+	reflect.TypeOf(protowire.NexepadMessage_UnbanRequest{}),
 }
 
 type commandDescription struct {

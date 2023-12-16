@@ -129,7 +129,7 @@ func areTipsAreEqual(resultA, resultB *appmessage.GetBlockDAGInfoResponseMessage
 }
 
 func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
-	nexepaMinerCmd, err := common.StartCmd("MINER",
+	nexelliaMinerCmd, err := common.StartCmd("MINER",
 		"nexelliaminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", syncerRPCAddress,
@@ -140,5 +140,5 @@ func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
 	if err != nil {
 		return err
 	}
-	return errors.Wrapf(nexepaMinerCmd.Wait(), "error with command '%s'", nexepaMinerCmd)
+	return errors.Wrapf(nexelliaMinerCmd.Wait(), "error with command '%s'", nexelliaMinerCmd)
 }

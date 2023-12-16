@@ -109,7 +109,7 @@ func startNode() (teardown func(), err error) {
 	}
 	log.Infof("nexepad datadir: %s", dataDir)
 
-	nexepadCmd, err := common.StartCmd("nexePAD",
+	nexepadCmd, err := common.StartCmd("NEXEPAD",
 		"nexepad",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
@@ -227,7 +227,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	}
 	numOfBlocksBeforeMining := dagInfo.BlockCount
 
-	nexepaMinerCmd, err := common.StartCmd("MINER",
+	nexelliaMinerCmd, err := common.StartCmd("MINER",
 		"nexelliaminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", rpcAddress,
@@ -241,8 +241,8 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	startMiningTime := time.Now()
 	shutdown := uint64(0)
 
-	spawn("nexepa-miner-Cmd.Wait", func() {
-		err := nexepaMinerCmd.Wait()
+	spawn("nexellia-miner-Cmd.Wait", func() {
+		err := nexelliaMinerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {
 				panics.Exit(log, fmt.Sprintf("minerCmd closed unexpectedly: %s.", err))
@@ -284,7 +284,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	numOfAddedBlocks := dagInfo.BlockCount - numOfBlocksBeforeMining
 	log.Infof("Added %d blocks to reach this.", numOfAddedBlocks)
 	atomic.StoreUint64(&shutdown, 1)
-	killWithSigterm(nexepaMinerCmd, "nexepaMinerCmd")
+	killWithSigterm(nexelliaMinerCmd, "nexelliaMinerCmd")
 	return nil
 }
 

@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func parseCommand(args []string, commandDescs []*commandDescription) (*protowire.nexepadMessage, error) {
+func parseCommand(args []string, commandDescs []*commandDescription) (*protowire.NexepadMessage, error) {
 	commandName, parameterStrings := args[0], args[1:]
 
 	var commandDesc *commandDescription
@@ -38,7 +38,7 @@ func parseCommand(args []string, commandDescs []*commandDescription) (*protowire
 		setField(commandValue, parameterValue, parameterDesc)
 	}
 
-	return generatenexepadMessage(commandValue, commandDesc)
+	return generateNexepadMessage(commandValue, commandDesc)
 }
 
 func setField(commandValue reflect.Value, parameterValue reflect.Value, parameterDesc *parameterDescription) {

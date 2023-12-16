@@ -12,8 +12,8 @@ import (
 	"google.golang.org/grpc"
 )
 
-// Connect connects to the nexepawalletd server, and returns the client instance
-func Connect(address string) (pb.nexelliawalletdClient, func(), error) {
+// Connect connects to the nexelliawalletd server, and returns the client instance
+func Connect(address string) (pb.NexelliawalletdClient, func(), error) {
 	// Connection is local, so 1 second timeout is sufficient
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
@@ -26,7 +26,7 @@ func Connect(address string) (pb.nexelliawalletdClient, func(), error) {
 		return nil, nil, err
 	}
 
-	return pb.NewnexepawalletdClient(conn), func() {
+	return pb.NewNexelliawalletdClient(conn), func() {
 		conn.Close()
 	}, nil
 }

@@ -64,7 +64,7 @@ func sweep(conf *sweepConfig) error {
 		return err
 	}
 
-	UTXOs, err := libnexelliawallet.nexepawalletdUTXOsTolibnexepawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
+	UTXOs, err := libnexelliawallet.NexelliawalletdUTXOsTolibnexelliawalletUTXOs(getExternalSpendableUTXOsResponse.Entries)
 	if err != nil {
 		return err
 	}

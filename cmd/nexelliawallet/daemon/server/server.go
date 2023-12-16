@@ -25,7 +25,7 @@ import (
 )
 
 type server struct {
-	pb.UnimplementednexepawalletdServer
+	pb.UnimplementedNexelliawalletdServer
 
 	rpcClient *rpcclient.RPCClient
 	params    *dagconfig.Params
@@ -48,7 +48,7 @@ type server struct {
 // Currently, set to 100MB
 const MaxDaemonSendMsgSize = 100_000_000
 
-// Start starts the nexepawalletd server
+// Start starts the nexelliawalletd server
 func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath string, profile string, timeout uint32) error {
 	initLog(defaultLogFile, defaultErrLogFile)
 
@@ -106,7 +106,7 @@ func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath stri
 	})
 
 	grpcServer := grpc.NewServer(grpc.MaxSendMsgSize(MaxDaemonSendMsgSize))
-	pb.RegisternexepawalletdServer(grpcServer, serverInstance)
+	pb.RegisterNexelliawalletdServer(grpcServer, serverInstance)
 
 	spawn("grpcServer.Serve", func() {
 		err := grpcServer.Serve(listener)

@@ -36,7 +36,7 @@ func main() {
 	defer client.Disconnect()
 
 	if !cfg.AllowConnectionToDifferentVersions {
-		nexepadMessage, err := client.Post(&protowire.nexepadMessage{Payload: &protowire.nexepadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
+		nexepadMessage, err := client.Post(&protowire.NexepadMessage{Payload: &protowire.NexepadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
 		if err != nil {
 			printErrorAndExit(fmt.Sprintf("Cannot post GetInfo message: %s", err))
 		}
@@ -101,7 +101,7 @@ func postJSON(cfg *configFlags, client *grpcclient.GRPCClient, doneChan chan str
 }
 
 func prettifyResponse(response string) string {
-	nexepadMessage := &protowire.nexepadMessage{}
+	nexepadMessage := &protowire.NexepadMessage{}
 	err := protojson.Unmarshal([]byte(response), nexepadMessage)
 	if err != nil {
 		printErrorAndExit(fmt.Sprintf("error parsing the response from the RPC server: %s", err))

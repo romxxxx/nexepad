@@ -14,10 +14,10 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// nexelliawalletdClient is the client API for nexepawalletd service.
+// nexelliawalletdClient is the client API for nexelliawalletd service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type nexelliawalletdClient interface {
+type NexelliawalletdClient interface {
 	GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error)
@@ -35,13 +35,13 @@ type nexelliawalletdClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewnexepawalletdClient(cc grpc.ClientConnInterface) nexelliawalletdClient {
+func NewNexelliawalletdClient(cc grpc.ClientConnInterface) NexelliawalletdClient {
 	return &nexelliawalletdClient{cc}
 }
 
 func (c *nexelliawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
 	out := new(GetBalanceResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/GetBalance", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/GetBalance", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -50,7 +50,7 @@ func (c *nexelliawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRe
 
 func (c *nexelliawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
 	out := new(GetExternalSpendableUTXOsResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/GetExternalSpendableUTXOs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/GetExternalSpendableUTXOs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -59,7 +59,7 @@ func (c *nexelliawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, i
 
 func (c *nexelliawalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
 	out := new(CreateUnsignedTransactionsResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/CreateUnsignedTransactions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/CreateUnsignedTransactions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -68,7 +68,7 @@ func (c *nexelliawalletdClient) CreateUnsignedTransactions(ctx context.Context, 
 
 func (c *nexelliawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
 	out := new(ShowAddressesResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/ShowAddresses", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/ShowAddresses", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *nexelliawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddre
 
 func (c *nexelliawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
 	out := new(NewAddressResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/NewAddress", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/NewAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -86,7 +86,7 @@ func (c *nexelliawalletdClient) NewAddress(ctx context.Context, in *NewAddressRe
 
 func (c *nexelliawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
 	out := new(ShutdownResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Shutdown", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Shutdown", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func (c *nexelliawalletdClient) Shutdown(ctx context.Context, in *ShutdownReques
 
 func (c *nexelliawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
 	out := new(BroadcastResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Broadcast", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Broadcast", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -104,7 +104,7 @@ func (c *nexelliawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequ
 
 func (c *nexelliawalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
 	out := new(SendResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Send", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Send", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -113,17 +113,17 @@ func (c *nexelliawalletdClient) Send(ctx context.Context, in *SendRequest, opts 
 
 func (c *nexelliawalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
 	out := new(SignResponse)
-	err := c.cc.Invoke(ctx, "/nexepawalletd.nexepawalletd/Sign", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Sign", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// nexepawalletdServer is the server API for nexepawalletd service.
-// All implementations must embed UnimplementednexepawalletdServer
+// nexelliawalletdServer is the server API for nexelliawalletd service.
+// All implementations must embed UnimplementednexelliawalletdServer
 // for forward compatibility
-type nexepawalletdServer interface {
+type nexelliawalletdServer interface {
 	GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error)
 	GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error)
 	CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error)
@@ -135,259 +135,259 @@ type nexepawalletdServer interface {
 	Send(context.Context, *SendRequest) (*SendResponse, error)
 	// Since SignRequest contains a password - this command should only be used on a trusted or secure connection
 	Sign(context.Context, *SignRequest) (*SignResponse, error)
-	mustEmbedUnimplementednexepawalletdServer()
+	mustEmbedUnimplementednexelliawalletdServer()
 }
 
-// UnimplementednexepawalletdServer must be embedded to have forward compatible implementations.
-type UnimplementednexepawalletdServer struct {
+// UnimplementednexelliawalletdServer must be embedded to have forward compatible implementations.
+type UnimplementednexelliawalletdServer struct {
 }
 
-func (UnimplementednexepawalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
+func (UnimplementednexelliawalletdServer) GetBalance(context.Context, *GetBalanceRequest) (*GetBalanceResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetBalance not implemented")
 }
-func (UnimplementednexepawalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
+func (UnimplementednexelliawalletdServer) GetExternalSpendableUTXOs(context.Context, *GetExternalSpendableUTXOsRequest) (*GetExternalSpendableUTXOsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetExternalSpendableUTXOs not implemented")
 }
-func (UnimplementednexepawalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
+func (UnimplementednexelliawalletdServer) CreateUnsignedTransactions(context.Context, *CreateUnsignedTransactionsRequest) (*CreateUnsignedTransactionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUnsignedTransactions not implemented")
 }
-func (UnimplementednexepawalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
+func (UnimplementednexelliawalletdServer) ShowAddresses(context.Context, *ShowAddressesRequest) (*ShowAddressesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ShowAddresses not implemented")
 }
-func (UnimplementednexepawalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
+func (UnimplementednexelliawalletdServer) NewAddress(context.Context, *NewAddressRequest) (*NewAddressResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method NewAddress not implemented")
 }
-func (UnimplementednexepawalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
+func (UnimplementednexelliawalletdServer) Shutdown(context.Context, *ShutdownRequest) (*ShutdownResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Shutdown not implemented")
 }
-func (UnimplementednexepawalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
+func (UnimplementednexelliawalletdServer) Broadcast(context.Context, *BroadcastRequest) (*BroadcastResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Broadcast not implemented")
 }
-func (UnimplementednexepawalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
+func (UnimplementednexelliawalletdServer) Send(context.Context, *SendRequest) (*SendResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Send not implemented")
 }
-func (UnimplementednexepawalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
+func (UnimplementednexelliawalletdServer) Sign(context.Context, *SignRequest) (*SignResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sign not implemented")
 }
-func (UnimplementednexepawalletdServer) mustEmbedUnimplementednexepawalletdServer() {}
+func (UnimplementednexelliawalletdServer) mustEmbedUnimplementednexelliawalletdServer() {}
 
-// UnsafenexepawalletdServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to nexepawalletdServer will
+// UnsafenexelliawalletdServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to nexelliawalletdServer will
 // result in compilation errors.
-type UnsafenexepawalletdServer interface {
-	mustEmbedUnimplementednexepawalletdServer()
+type UnsafenexelliawalletdServer interface {
+	mustEmbedUnimplementednexelliawalletdServer()
 }
 
-func RegisternexepawalletdServer(s grpc.ServiceRegistrar, srv nexepawalletdServer) {
-	s.RegisterService(&nexepawalletd_ServiceDesc, srv)
+func RegisternexelliawalletdServer(s grpc.ServiceRegistrar, srv nexelliawalletdServer) {
+	s.RegisterService(&nexelliawalletd_ServiceDesc, srv)
 }
 
-func _nexepawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetBalanceRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).GetBalance(ctx, in)
+		return srv.(nexelliawalletdServer).GetBalance(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/GetBalance",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/GetBalance",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
+		return srv.(nexelliawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetExternalSpendableUTXOsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).GetExternalSpendableUTXOs(ctx, in)
+		return srv.(nexelliawalletdServer).GetExternalSpendableUTXOs(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/GetExternalSpendableUTXOs",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/GetExternalSpendableUTXOs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
+		return srv.(nexelliawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateUnsignedTransactionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).CreateUnsignedTransactions(ctx, in)
+		return srv.(nexelliawalletdServer).CreateUnsignedTransactions(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/CreateUnsignedTransactions",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/CreateUnsignedTransactions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
+		return srv.(nexelliawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShowAddressesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).ShowAddresses(ctx, in)
+		return srv.(nexelliawalletdServer).ShowAddresses(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/ShowAddresses",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/ShowAddresses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
+		return srv.(nexelliawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(NewAddressRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).NewAddress(ctx, in)
+		return srv.(nexelliawalletdServer).NewAddress(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/NewAddress",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/NewAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
+		return srv.(nexelliawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ShutdownRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).Shutdown(ctx, in)
+		return srv.(nexelliawalletdServer).Shutdown(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/Shutdown",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/Shutdown",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
+		return srv.(nexelliawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BroadcastRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).Broadcast(ctx, in)
+		return srv.(nexelliawalletdServer).Broadcast(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/Broadcast",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/Broadcast",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
+		return srv.(nexelliawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).Send(ctx, in)
+		return srv.(nexelliawalletdServer).Send(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/Send",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/Send",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).Send(ctx, req.(*SendRequest))
+		return srv.(nexelliawalletdServer).Send(ctx, req.(*SendRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _nexepawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _nexelliawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SignRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(nexepawalletdServer).Sign(ctx, in)
+		return srv.(nexelliawalletdServer).Sign(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexepawalletd.nexepawalletd/Sign",
+		FullMethod: "/nexelliawalletd.nexelliawalletd/Sign",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(nexepawalletdServer).Sign(ctx, req.(*SignRequest))
+		return srv.(nexelliawalletdServer).Sign(ctx, req.(*SignRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// nexepawalletd_ServiceDesc is the grpc.ServiceDesc for nexepawalletd service.
+// nexelliawalletd_ServiceDesc is the grpc.ServiceDesc for nexelliawalletd service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var nexepawalletd_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "nexepawalletd.nexepawalletd",
-	HandlerType: (*nexepawalletdServer)(nil),
+var nexelliawalletd_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "nexelliawalletd.nexelliawalletd",
+	HandlerType: (*nexelliawalletdServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetBalance",
-			Handler:    _nexepawalletd_GetBalance_Handler,
+			Handler:    _nexelliawalletd_GetBalance_Handler,
 		},
 		{
 			MethodName: "GetExternalSpendableUTXOs",
-			Handler:    _nexepawalletd_GetExternalSpendableUTXOs_Handler,
+			Handler:    _nexelliawalletd_GetExternalSpendableUTXOs_Handler,
 		},
 		{
 			MethodName: "CreateUnsignedTransactions",
-			Handler:    _nexepawalletd_CreateUnsignedTransactions_Handler,
+			Handler:    _nexelliawalletd_CreateUnsignedTransactions_Handler,
 		},
 		{
 			MethodName: "ShowAddresses",
-			Handler:    _nexepawalletd_ShowAddresses_Handler,
+			Handler:    _nexelliawalletd_ShowAddresses_Handler,
 		},
 		{
 			MethodName: "NewAddress",
-			Handler:    _nexepawalletd_NewAddress_Handler,
+			Handler:    _nexelliawalletd_NewAddress_Handler,
 		},
 		{
 			MethodName: "Shutdown",
-			Handler:    _nexepawalletd_Shutdown_Handler,
+			Handler:    _nexelliawalletd_Shutdown_Handler,
 		},
 		{
 			MethodName: "Broadcast",
-			Handler:    _nexepawalletd_Broadcast_Handler,
+			Handler:    _nexelliawalletd_Broadcast_Handler,
 		},
 		{
 			MethodName: "Send",
-			Handler:    _nexepawalletd_Send_Handler,
+			Handler:    _nexelliawalletd_Send_Handler,
 		},
 		{
 			MethodName: "Sign",
-			Handler:    _nexepawalletd_Sign_Handler,
+			Handler:    _nexelliawalletd_Sign_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "nexepawalletd.proto",
+	Metadata: "nexelliawalletd.proto",
 }
