@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_DonePruningPointUtxoSetChunks) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_DonePruningPointUtxoSetChunks) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_DonePruningPointUtxoSetChunks is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_DonePruningPointUtxoSetChunks is nil")
 	}
 	return &appmessage.MsgDonePruningPointUTXOSetChunks{}, nil
 }
 
-func (x *nexepadMessage_DonePruningPointUtxoSetChunks) fromAppMessage(_ *appmessage.MsgDonePruningPointUTXOSetChunks) error {
+func (x *NexepadMessage_DonePruningPointUtxoSetChunks) fromAppMessage(_ *appmessage.MsgDonePruningPointUTXOSetChunks) error {
 	x.DonePruningPointUtxoSetChunks = &DonePruningPointUtxoSetChunksMessage{}
 	return nil
 }

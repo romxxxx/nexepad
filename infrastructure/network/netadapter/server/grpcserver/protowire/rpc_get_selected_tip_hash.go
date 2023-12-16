@@ -5,22 +5,22 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetSelectedTipHashRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetSelectedTipHashRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetSelectedTipHashRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetSelectedTipHashRequest) fromAppMessage(_ *appmessage.GetSelectedTipHashRequestMessage) error {
+func (x *NexepadMessage_GetSelectedTipHashRequest) fromAppMessage(_ *appmessage.GetSelectedTipHashRequestMessage) error {
 	return nil
 }
 
-func (x *nexepadMessage_GetSelectedTipHashResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetSelectedTipHashResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetSelectedTipHashResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetSelectedTipHashResponse is nil")
 	}
 	return x.GetSelectedTipHashResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetSelectedTipHashResponse) fromAppMessage(message *appmessage.GetSelectedTipHashResponseMessage) error {
+func (x *NexepadMessage_GetSelectedTipHashResponse) fromAppMessage(message *appmessage.GetSelectedTipHashResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

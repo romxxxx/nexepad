@@ -7,14 +7,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_Transaction) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_Transaction) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_Transaction is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_Transaction is nil")
 	}
 	return x.Transaction.toAppMessage()
 }
 
-func (x *nexepadMessage_Transaction) fromAppMessage(msgTx *appmessage.MsgTx) error {
+func (x *NexepadMessage_Transaction) fromAppMessage(msgTx *appmessage.MsgTx) error {
 	x.Transaction = new(TransactionMessage)
 	x.Transaction.fromAppMessage(msgTx)
 	return nil

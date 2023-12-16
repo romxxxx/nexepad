@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_RequestPruningPointUTXOSet) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_RequestPruningPointUTXOSet) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_RequestPruningPointUTXOSet is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_RequestPruningPointUTXOSet is nil")
 	}
 	return x.RequestPruningPointUTXOSet.toAppMessage()
 }
@@ -23,7 +23,7 @@ func (x *RequestPruningPointUTXOSetMessage) toAppMessage() (appmessage.Message, 
 	return &appmessage.MsgRequestPruningPointUTXOSet{PruningPointHash: pruningPointHash}, nil
 }
 
-func (x *nexepadMessage_RequestPruningPointUTXOSet) fromAppMessage(
+func (x *NexepadMessage_RequestPruningPointUTXOSet) fromAppMessage(
 	msgRequestPruningPointUTXOSet *appmessage.MsgRequestPruningPointUTXOSet) error {
 
 	x.RequestPruningPointUTXOSet = &RequestPruningPointUTXOSetMessage{}

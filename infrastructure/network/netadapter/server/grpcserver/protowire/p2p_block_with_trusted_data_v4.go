@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BlockWithTrustedDataV4 is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BlockWithTrustedDataV4 is nil")
 	}
 
 	msgBlock, err := x.BlockWithTrustedDataV4.Block.toAppMessage()
@@ -22,7 +22,7 @@ func (x *nexepadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Messa
 	}, nil
 }
 
-func (x *nexepadMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
+func (x *NexepadMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
 	x.BlockWithTrustedDataV4 = &BlockWithTrustedDataV4Message{
 		Block:               &BlockMessage{},
 		DaaWindowIndices:    msgBlockWithTrustedData.DAAWindowIndices,

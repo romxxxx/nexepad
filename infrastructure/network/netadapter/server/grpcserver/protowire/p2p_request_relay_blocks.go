@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_RequestRelayBlocks) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_RequestRelayBlocks) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_RequestRelayBlocks is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_RequestRelayBlocks is nil")
 	}
 	return x.RequestRelayBlocks.toAppMessage()
 }
@@ -28,7 +28,7 @@ func (x *RequestRelayBlocksMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *nexepadMessage_RequestRelayBlocks) fromAppMessage(msgGetRelayBlocks *appmessage.MsgRequestRelayBlocks) error {
+func (x *NexepadMessage_RequestRelayBlocks) fromAppMessage(msgGetRelayBlocks *appmessage.MsgRequestRelayBlocks) error {
 	if len(msgGetRelayBlocks.Hashes) > appmessage.MaxRequestRelayBlocksHashes {
 		return errors.Errorf("too many hashes for message "+
 			"[count %d, max %d]", len(msgGetRelayBlocks.Hashes), appmessage.MaxRequestRelayBlocksHashes)

@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_IbdBlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_IbdBlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_IbdBlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_IbdBlockLocator is nil")
 	}
 	return x.IbdBlockLocator.toAppMessage()
 }
@@ -30,7 +30,7 @@ func (x *IbdBlockLocatorMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_IbdBlockLocator) fromAppMessage(message *appmessage.MsgIBDBlockLocator) error {
+func (x *NexepadMessage_IbdBlockLocator) fromAppMessage(message *appmessage.MsgIBDBlockLocator) error {
 	x.IbdBlockLocator = &IbdBlockLocatorMessage{
 		TargetHash:         domainHashToProto(message.TargetHash),
 		BlockLocatorHashes: domainHashesToProto(message.BlockLocatorHashes),

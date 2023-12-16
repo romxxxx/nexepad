@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_IbdBlockLocatorHighestHash) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_IbdBlockLocatorHighestHash) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_IbdBlockLocatorHighestHash is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_IbdBlockLocatorHighestHash is nil")
 	}
 	return x.IbdBlockLocatorHighestHash.toAppMessgage()
 }
@@ -27,7 +27,7 @@ func (x *IbdBlockLocatorHighestHashMessage) toAppMessgage() (appmessage.Message,
 
 }
 
-func (x *nexepadMessage_IbdBlockLocatorHighestHash) fromAppMessage(message *appmessage.MsgIBDBlockLocatorHighestHash) error {
+func (x *NexepadMessage_IbdBlockLocatorHighestHash) fromAppMessage(message *appmessage.MsgIBDBlockLocatorHighestHash) error {
 	x.IbdBlockLocatorHighestHash = &IbdBlockLocatorHighestHashMessage{
 		HighestHash: domainHashToProto(message.HighestHash),
 	}

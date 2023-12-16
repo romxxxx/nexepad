@@ -7,14 +7,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_SubmitTransactionRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_SubmitTransactionRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_SubmitTransactionRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_SubmitTransactionRequest is nil")
 	}
 	return x.SubmitTransactionRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_SubmitTransactionRequest) fromAppMessage(message *appmessage.SubmitTransactionRequestMessage) error {
+func (x *NexepadMessage_SubmitTransactionRequest) fromAppMessage(message *appmessage.SubmitTransactionRequestMessage) error {
 	x.SubmitTransactionRequest = &SubmitTransactionRequestMessage{
 		Transaction: &RpcTransaction{},
 		AllowOrphan: message.AllowOrphan,
@@ -37,14 +37,14 @@ func (x *SubmitTransactionRequestMessage) toAppMessage() (appmessage.Message, er
 	}, nil
 }
 
-func (x *nexepadMessage_SubmitTransactionResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_SubmitTransactionResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_SubmitTransactionResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_SubmitTransactionResponse is nil")
 	}
 	return x.SubmitTransactionResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_SubmitTransactionResponse) fromAppMessage(message *appmessage.SubmitTransactionResponseMessage) error {
+func (x *NexepadMessage_SubmitTransactionResponse) fromAppMessage(message *appmessage.SubmitTransactionResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

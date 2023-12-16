@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_ResolveFinalityConflictRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_ResolveFinalityConflictRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_ResolveFinalityConflictRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_ResolveFinalityConflictRequest is nil")
 	}
 	return x.ResolveFinalityConflictRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_ResolveFinalityConflictRequest) fromAppMessage(message *appmessage.ResolveFinalityConflictRequestMessage) error {
+func (x *NexepadMessage_ResolveFinalityConflictRequest) fromAppMessage(message *appmessage.ResolveFinalityConflictRequestMessage) error {
 	x.ResolveFinalityConflictRequest = &ResolveFinalityConflictRequestMessage{
 		FinalityBlockHash: message.FinalityBlockHash,
 	}
@@ -28,14 +28,14 @@ func (x *ResolveFinalityConflictRequestMessage) toAppMessage() (appmessage.Messa
 	}, nil
 }
 
-func (x *nexepadMessage_ResolveFinalityConflictResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_ResolveFinalityConflictResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_ResolveFinalityConflictResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_ResolveFinalityConflictResponse is nil")
 	}
 	return x.ResolveFinalityConflictResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_ResolveFinalityConflictResponse) fromAppMessage(message *appmessage.ResolveFinalityConflictResponseMessage) error {
+func (x *NexepadMessage_ResolveFinalityConflictResponse) fromAppMessage(message *appmessage.ResolveFinalityConflictResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

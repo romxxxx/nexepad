@@ -5,30 +5,30 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest is nil")
 	}
 	return &appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage{
 		IncludeAcceptedTransactionIDs: x.NotifyVirtualSelectedParentChainChangedRequest.IncludeAcceptedTransactionIds,
 	}, nil
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) fromAppMessage(appmessage *appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage) error {
+func (x *NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest) fromAppMessage(appmessage *appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage) error {
 	x.NotifyVirtualSelectedParentChainChangedRequest = &NotifyVirtualSelectedParentChainChangedRequestMessage{
 		IncludeAcceptedTransactionIds: appmessage.IncludeAcceptedTransactionIDs,
 	}
 	return nil
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse is nil")
 	}
 	return x.NotifyVirtualSelectedParentChainChangedResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentChainChangedResponseMessage) error {
+func (x *NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentChainChangedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -53,14 +53,14 @@ func (x *NotifyVirtualSelectedParentChainChangedResponseMessage) toAppMessage() 
 	}, nil
 }
 
-func (x *nexepadMessage_VirtualSelectedParentChainChangedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_VirtualSelectedParentChainChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_VirtualSelectedParentChainChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_VirtualSelectedParentChainChangedNotification is nil")
 	}
 	return x.VirtualSelectedParentChainChangedNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_VirtualSelectedParentChainChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentChainChangedNotificationMessage) error {
+func (x *NexepadMessage_VirtualSelectedParentChainChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentChainChangedNotificationMessage) error {
 	x.VirtualSelectedParentChainChangedNotification = &VirtualSelectedParentChainChangedNotificationMessage{
 		RemovedChainBlockHashes: message.RemovedChainBlockHashes,
 		AddedChainBlockHashes:   message.AddedChainBlockHashes,

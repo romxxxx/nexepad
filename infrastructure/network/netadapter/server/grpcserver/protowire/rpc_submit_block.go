@@ -7,14 +7,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "SubmitBlockRequestMessage is nil")
 	}
 	return x.SubmitBlockRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_SubmitBlockRequest) fromAppMessage(message *appmessage.SubmitBlockRequestMessage) error {
+func (x *NexepadMessage_SubmitBlockRequest) fromAppMessage(message *appmessage.SubmitBlockRequestMessage) error {
 	x.SubmitBlockRequest = &SubmitBlockRequestMessage{Block: &RpcBlock{}}
 	x.SubmitBlockRequest.AllowNonDAABlocks = message.AllowNonDAABlocks
 	return x.SubmitBlockRequest.Block.fromAppMessage(message.Block)
@@ -34,14 +34,14 @@ func (x *SubmitBlockRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_SubmitBlockResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_SubmitBlockResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_SubmitBlockResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_SubmitBlockResponse is nil")
 	}
 	return x.SubmitBlockResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_SubmitBlockResponse) fromAppMessage(message *appmessage.SubmitBlockResponseMessage) error {
+func (x *NexepadMessage_SubmitBlockResponse) fromAppMessage(message *appmessage.SubmitBlockResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

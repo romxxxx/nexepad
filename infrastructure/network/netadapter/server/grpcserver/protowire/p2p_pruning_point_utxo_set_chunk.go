@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_PruningPointUtxoSetChunk) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_PruningPointUtxoSetChunk) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_PruningPointUtxoSetChunk is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_PruningPointUtxoSetChunk is nil")
 	}
 	outpointAndUTXOEntryPairs := make([]*appmessage.OutpointAndUTXOEntryPair, len(x.PruningPointUtxoSetChunk.OutpointAndUtxoEntryPairs))
 	for i, outpointAndUTXOEntryPair := range x.PruningPointUtxoSetChunk.OutpointAndUtxoEntryPairs {
@@ -40,7 +40,7 @@ func (x *OutpointAndUtxoEntryPair) toAppMessage() (*appmessage.OutpointAndUTXOEn
 	}, nil
 }
 
-func (x *nexepadMessage_PruningPointUtxoSetChunk) fromAppMessage(message *appmessage.MsgPruningPointUTXOSetChunk) error {
+func (x *NexepadMessage_PruningPointUtxoSetChunk) fromAppMessage(message *appmessage.MsgPruningPointUTXOSetChunk) error {
 	outpointAndUTXOEntryPairs := make([]*OutpointAndUtxoEntryPair, len(message.OutpointAndUTXOEntryPairs))
 	for i, outpointAndUTXOEntryPair := range message.OutpointAndUTXOEntryPairs {
 		transactionID := domainTransactionIDToProto(&outpointAndUTXOEntryPair.Outpoint.TxID)

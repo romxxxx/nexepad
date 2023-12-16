@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_StopNotifyingUtxosChangedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_StopNotifyingUtxosChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_StopNotifyingUtxosChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_StopNotifyingUtxosChangedRequest is nil")
 	}
 	return x.StopNotifyingUtxosChangedRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_StopNotifyingUtxosChangedRequest) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedRequestMessage) error {
+func (x *NexepadMessage_StopNotifyingUtxosChangedRequest) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedRequestMessage) error {
 	x.StopNotifyingUtxosChangedRequest = &StopNotifyingUtxosChangedRequestMessage{
 		Addresses: message.Addresses,
 	}
@@ -28,14 +28,14 @@ func (x *StopNotifyingUtxosChangedRequestMessage) toAppMessage() (appmessage.Mes
 	}, nil
 }
 
-func (x *nexepadMessage_StopNotifyingUtxosChangedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_StopNotifyingUtxosChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_StopNotifyingUtxosChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_StopNotifyingUtxosChangedResponse is nil")
 	}
 	return x.StopNotifyingUtxosChangedResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_StopNotifyingUtxosChangedResponse) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedResponseMessage) error {
+func (x *NexepadMessage_StopNotifyingUtxosChangedResponse) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

@@ -5,22 +5,22 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetCurrentNetworkRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetCurrentNetworkRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetCurrentNetworkRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetCurrentNetworkRequest) fromAppMessage(_ *appmessage.GetCurrentNetworkRequestMessage) error {
+func (x *NexepadMessage_GetCurrentNetworkRequest) fromAppMessage(_ *appmessage.GetCurrentNetworkRequestMessage) error {
 	return nil
 }
 
-func (x *nexepadMessage_GetCurrentNetworkResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetCurrentNetworkResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetCurrentNetworkResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetCurrentNetworkResponse is nil")
 	}
 	return x.toAppMessage()
 }
 
-func (x *nexepadMessage_GetCurrentNetworkResponse) fromAppMessage(message *appmessage.GetCurrentNetworkResponseMessage) error {
+func (x *NexepadMessage_GetCurrentNetworkResponse) fromAppMessage(message *appmessage.GetCurrentNetworkResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

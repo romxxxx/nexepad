@@ -5,23 +5,23 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_NotifyFinalityConflictsRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyFinalityConflictsRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.NotifyFinalityConflictsRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_NotifyFinalityConflictsRequest) fromAppMessage(_ *appmessage.NotifyFinalityConflictsRequestMessage) error {
+func (x *NexepadMessage_NotifyFinalityConflictsRequest) fromAppMessage(_ *appmessage.NotifyFinalityConflictsRequestMessage) error {
 	x.NotifyFinalityConflictsRequest = &NotifyFinalityConflictsRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_NotifyFinalityConflictsResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyFinalityConflictsResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyFinalityConflictsResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyFinalityConflictsResponse is nil")
 	}
 	return x.NotifyFinalityConflictsResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_NotifyFinalityConflictsResponse) fromAppMessage(message *appmessage.NotifyFinalityConflictsResponseMessage) error {
+func (x *NexepadMessage_NotifyFinalityConflictsResponse) fromAppMessage(message *appmessage.NotifyFinalityConflictsResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -46,14 +46,14 @@ func (x *NotifyFinalityConflictsResponseMessage) toAppMessage() (appmessage.Mess
 	}, nil
 }
 
-func (x *nexepadMessage_FinalityConflictNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_FinalityConflictNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_FinalityConflictNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_FinalityConflictNotification is nil")
 	}
 	return x.FinalityConflictNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_FinalityConflictNotification) fromAppMessage(message *appmessage.FinalityConflictNotificationMessage) error {
+func (x *NexepadMessage_FinalityConflictNotification) fromAppMessage(message *appmessage.FinalityConflictNotificationMessage) error {
 	x.FinalityConflictNotification = &FinalityConflictNotificationMessage{
 		ViolatingBlockHash: message.ViolatingBlockHash,
 	}
@@ -69,14 +69,14 @@ func (x *FinalityConflictNotificationMessage) toAppMessage() (appmessage.Message
 	}, nil
 }
 
-func (x *nexepadMessage_FinalityConflictResolvedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_FinalityConflictResolvedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_FinalityConflictResolvedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_FinalityConflictResolvedNotification is nil")
 	}
 	return x.FinalityConflictResolvedNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_FinalityConflictResolvedNotification) fromAppMessage(message *appmessage.FinalityConflictResolvedNotificationMessage) error {
+func (x *NexepadMessage_FinalityConflictResolvedNotification) fromAppMessage(message *appmessage.FinalityConflictResolvedNotificationMessage) error {
 	x.FinalityConflictResolvedNotification = &FinalityConflictResolvedNotificationMessage{
 		FinalityBlockHash: message.FinalityBlockHash,
 	}

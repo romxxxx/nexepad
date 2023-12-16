@@ -5,23 +5,23 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_NotifyBlockAddedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyBlockAddedRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.NotifyBlockAddedRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_NotifyBlockAddedRequest) fromAppMessage(_ *appmessage.NotifyBlockAddedRequestMessage) error {
+func (x *NexepadMessage_NotifyBlockAddedRequest) fromAppMessage(_ *appmessage.NotifyBlockAddedRequestMessage) error {
 	x.NotifyBlockAddedRequest = &NotifyBlockAddedRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_NotifyBlockAddedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyBlockAddedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyBlockAddedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyBlockAddedResponse is nil")
 	}
 	return x.NotifyBlockAddedResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_NotifyBlockAddedResponse) fromAppMessage(message *appmessage.NotifyBlockAddedResponseMessage) error {
+func (x *NexepadMessage_NotifyBlockAddedResponse) fromAppMessage(message *appmessage.NotifyBlockAddedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -46,14 +46,14 @@ func (x *NotifyBlockAddedResponseMessage) toAppMessage() (appmessage.Message, er
 	}, nil
 }
 
-func (x *nexepadMessage_BlockAddedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BlockAddedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BlockAddedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BlockAddedNotification is nil")
 	}
 	return x.BlockAddedNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_BlockAddedNotification) fromAppMessage(message *appmessage.BlockAddedNotificationMessage) error {
+func (x *NexepadMessage_BlockAddedNotification) fromAppMessage(message *appmessage.BlockAddedNotificationMessage) error {
 	block := &RpcBlock{}
 	err := block.fromAppMessage(message.Block)
 	if err != nil {

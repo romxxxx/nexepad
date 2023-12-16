@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_BlockHeaders) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BlockHeaders) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BlockHeaders is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BlockHeaders is nil")
 	}
 	blockHeaders, err := x.BlockHeaders.toAppMessage()
 	if err != nil {
@@ -34,7 +34,7 @@ func (x *BlockHeadersMessage) toAppMessage() ([]*appmessage.MsgBlockHeader, erro
 	return blockHeaders, nil
 }
 
-func (x *nexepadMessage_BlockHeaders) fromAppMessage(blockHeadersMessage *appmessage.BlockHeadersMessage) error {
+func (x *NexepadMessage_BlockHeaders) fromAppMessage(blockHeadersMessage *appmessage.BlockHeadersMessage) error {
 	blockHeaders := make([]*BlockHeader, len(blockHeadersMessage.BlockHeaders))
 	for i, blockHeader := range blockHeadersMessage.BlockHeaders {
 		blockHeaders[i] = &BlockHeader{}

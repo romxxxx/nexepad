@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetUtxosByAddressesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetUtxosByAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetUtxosByAddressesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetUtxosByAddressesRequest is nil")
 	}
 	return x.GetUtxosByAddressesRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetUtxosByAddressesRequest) fromAppMessage(message *appmessage.GetUTXOsByAddressesRequestMessage) error {
+func (x *NexepadMessage_GetUtxosByAddressesRequest) fromAppMessage(message *appmessage.GetUTXOsByAddressesRequestMessage) error {
 	x.GetUtxosByAddressesRequest = &GetUtxosByAddressesRequestMessage{
 		Addresses: message.Addresses,
 	}
@@ -28,14 +28,14 @@ func (x *GetUtxosByAddressesRequestMessage) toAppMessage() (appmessage.Message, 
 	}, nil
 }
 
-func (x *nexepadMessage_GetUtxosByAddressesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetUtxosByAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GetUtxosByAddressesResponseMessage is nil")
 	}
 	return x.GetUtxosByAddressesResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetUtxosByAddressesResponse) fromAppMessage(message *appmessage.GetUTXOsByAddressesResponseMessage) error {
+func (x *NexepadMessage_GetUtxosByAddressesResponse) fromAppMessage(message *appmessage.GetUTXOsByAddressesResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

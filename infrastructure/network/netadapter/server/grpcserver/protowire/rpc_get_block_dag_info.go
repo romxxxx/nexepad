@@ -5,21 +5,21 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetBlockDagInfoRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockDagInfoRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockDagInfoRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockDagInfoRequest is nil")
 	}
 	return &appmessage.GetBlockDAGInfoRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetBlockDagInfoRequest) fromAppMessage(_ *appmessage.GetBlockDAGInfoRequestMessage) error {
+func (x *NexepadMessage_GetBlockDagInfoRequest) fromAppMessage(_ *appmessage.GetBlockDAGInfoRequestMessage) error {
 	x.GetBlockDagInfoRequest = &GetBlockDagInfoRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_GetBlockDagInfoResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockDagInfoResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockDagInfoResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockDagInfoResponse is nil")
 	}
 	return x.GetBlockDagInfoResponse.toAppMessage()
 }
@@ -50,7 +50,7 @@ func (x *GetBlockDagInfoResponseMessage) toAppMessage() (appmessage.Message, err
 	}, nil
 }
 
-func (x *nexepadMessage_GetBlockDagInfoResponse) fromAppMessage(message *appmessage.GetBlockDAGInfoResponseMessage) error {
+func (x *NexepadMessage_GetBlockDagInfoResponse) fromAppMessage(message *appmessage.GetBlockDAGInfoResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

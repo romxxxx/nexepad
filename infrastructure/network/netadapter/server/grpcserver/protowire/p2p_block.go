@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_Block) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_Block) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrap(errorNil, "nexepadMessage_Block is nil")
+		return nil, errors.Wrap(errorNil, "NexepadMessage_Block is nil")
 	}
 	return x.Block.toAppMessage()
 }
 
-func (x *nexepadMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
+func (x *NexepadMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
 	x.Block = new(BlockMessage)
 	return x.Block.fromAppMessage(msgBlock)
 }

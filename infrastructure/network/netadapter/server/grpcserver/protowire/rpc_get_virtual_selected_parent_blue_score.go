@@ -5,26 +5,26 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetVirtualSelectedParentBlueScoreRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetVirtualSelectedParentBlueScoreRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetVirtualSelectedParentBlueScoreRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetVirtualSelectedParentBlueScoreRequest is nil")
 	}
 	return &appmessage.GetVirtualSelectedParentBlueScoreRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetVirtualSelectedParentBlueScoreRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreRequestMessage) error {
+func (x *NexepadMessage_GetVirtualSelectedParentBlueScoreRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreRequestMessage) error {
 	x.GetVirtualSelectedParentBlueScoreRequest = &GetVirtualSelectedParentBlueScoreRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_GetVirtualSelectedParentBlueScoreResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetVirtualSelectedParentBlueScoreResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetVirtualSelectedParentBlueScoreResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetVirtualSelectedParentBlueScoreResponse is nil")
 	}
 	return x.GetVirtualSelectedParentBlueScoreResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetVirtualSelectedParentBlueScoreResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreResponseMessage) error {
+func (x *NexepadMessage_GetVirtualSelectedParentBlueScoreResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

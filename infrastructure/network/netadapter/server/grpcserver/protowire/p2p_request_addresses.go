@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_RequestAddresses) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_RequestAddresses) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_RequestAddresses is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_RequestAddresses is nil")
 	}
 	return x.RequestAddresses.toAppMessage()
 }
@@ -17,7 +17,7 @@ func (x *RequestAddressesMessage) toAppMessage() (appmessage.Message, error) {
 		return nil, errors.Wrapf(errorNil, "RequestAddressesMessage is nil")
 	}
 	subnetworkID, err := x.SubnetworkId.toDomain()
-	//  Full nexepa nodes set SubnetworkId==nil
+	//  Full Nexellia nodes set SubnetworkId==nil
 	if err != nil && !errors.Is(err, errorNil) {
 		return nil, err
 	}
@@ -29,7 +29,7 @@ func (x *RequestAddressesMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *nexepadMessage_RequestAddresses) fromAppMessage(msgGetAddresses *appmessage.MsgRequestAddresses) error {
+func (x *NexepadMessage_RequestAddresses) fromAppMessage(msgGetAddresses *appmessage.MsgRequestAddresses) error {
 	x.RequestAddresses = &RequestAddressesMessage{
 		IncludeAllSubnetworks: msgGetAddresses.IncludeAllSubnetworks,
 		SubnetworkId:          domainSubnetworkIDToProto(msgGetAddresses.SubnetworkID),

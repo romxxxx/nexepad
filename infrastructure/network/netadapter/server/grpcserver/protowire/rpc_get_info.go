@@ -5,23 +5,23 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetInfoRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetInfoRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetInfoRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetInfoRequest) fromAppMessage(_ *appmessage.GetInfoRequestMessage) error {
+func (x *NexepadMessage_GetInfoRequest) fromAppMessage(_ *appmessage.GetInfoRequestMessage) error {
 	x.GetInfoRequest = &GetInfoRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_GetInfoResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetInfoResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetInfoResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetInfoResponse is nil")
 	}
 	return x.GetInfoResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetInfoResponse) fromAppMessage(message *appmessage.GetInfoResponseMessage) error {
+func (x *NexepadMessage_GetInfoResponse) fromAppMessage(message *appmessage.GetInfoResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

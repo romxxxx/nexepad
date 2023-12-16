@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_TrustedData) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_TrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_TrustedDataMessage is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_TrustedDataMessage is nil")
 	}
 
 	daaWindow := make([]*appmessage.TrustedDataDAAHeader, len(x.TrustedData.DaaWindow))
@@ -43,7 +43,7 @@ func (x *nexepadMessage_TrustedData) toAppMessage() (appmessage.Message, error) 
 	}, nil
 }
 
-func (x *nexepadMessage_TrustedData) fromAppMessage(msgTrustedData *appmessage.MsgTrustedData) error {
+func (x *NexepadMessage_TrustedData) fromAppMessage(msgTrustedData *appmessage.MsgTrustedData) error {
 	x.TrustedData = &TrustedDataMessage{
 		DaaWindow:    make([]*DaaBlockV4, len(msgTrustedData.DAAWindow)),
 		GhostdagData: make([]*BlockGhostdagDataHashPair, len(msgTrustedData.GHOSTDAGData)),

@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetHeadersRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetHeadersRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetHeadersRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetHeadersRequest is nil")
 	}
 	return x.GetHeadersRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetHeadersRequest) fromAppMessage(message *appmessage.GetHeadersRequestMessage) error {
+func (x *NexepadMessage_GetHeadersRequest) fromAppMessage(message *appmessage.GetHeadersRequestMessage) error {
 	x.GetHeadersRequest = &GetHeadersRequestMessage{
 		StartHash:   message.StartHash,
 		Limit:       message.Limit,
@@ -32,14 +32,14 @@ func (x *GetHeadersRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_GetHeadersResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetHeadersResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetHeadersResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetHeadersResponse is nil")
 	}
 	return x.GetHeadersResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetHeadersResponse) fromAppMessage(message *appmessage.GetHeadersResponseMessage) error {
+func (x *NexepadMessage_GetHeadersResponse) fromAppMessage(message *appmessage.GetHeadersResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

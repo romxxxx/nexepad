@@ -6,9 +6,9 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-func (x *nexepadMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BlockLocator is nil")
 	}
 	hashes, err := x.BlockLocator.toAppMessage()
 	if err != nil {
@@ -28,7 +28,7 @@ func (x *BlockLocatorMessage) toAppMessage() ([]*externalapi.DomainHash, error) 
 	return protoHashesToDomain(x.Hashes)
 }
 
-func (x *nexepadMessage_BlockLocator) fromAppMessage(msgBlockLocator *appmessage.MsgBlockLocator) error {
+func (x *NexepadMessage_BlockLocator) fromAppMessage(msgBlockLocator *appmessage.MsgBlockLocator) error {
 	if len(msgBlockLocator.BlockLocatorHashes) > appmessage.MaxBlockLocatorsPerMsg {
 		return errors.Errorf("too many block locator hashes for message "+
 			"[count %d, max %d]", len(msgBlockLocator.BlockLocatorHashes), appmessage.MaxBlockLocatorsPerMsg)

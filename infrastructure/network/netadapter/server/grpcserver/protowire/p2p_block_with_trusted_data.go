@@ -8,9 +8,9 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-func (x *nexepadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BlockWithTrustedData is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BlockWithTrustedData is nil")
 	}
 
 	msgBlock, err := x.BlockWithTrustedData.Block.toAppMessage()
@@ -52,7 +52,7 @@ func (x *nexepadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message
 	}, nil
 }
 
-func (x *nexepadMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
+func (x *NexepadMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
 	x.BlockWithTrustedData = &BlockWithTrustedDataMessage{
 		Block:        &BlockMessage{},
 		DaaScore:     msgBlockWithTrustedData.DAAScore,

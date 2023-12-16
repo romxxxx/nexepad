@@ -5,23 +5,23 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_NotifyNewBlockTemplateRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyNewBlockTemplateRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.NotifyNewBlockTemplateRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_NotifyNewBlockTemplateRequest) fromAppMessage(_ *appmessage.NotifyNewBlockTemplateRequestMessage) error {
+func (x *NexepadMessage_NotifyNewBlockTemplateRequest) fromAppMessage(_ *appmessage.NotifyNewBlockTemplateRequestMessage) error {
 	x.NotifyNewBlockTemplateRequest = &NotifyNewBlockTemplateRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_NotifyNewBlockTemplateResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyNewBlockTemplateResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyNewBlockTemplateResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyNewBlockTemplateResponse is nil")
 	}
 	return x.NotifyNewBlockTemplateResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_NotifyNewBlockTemplateResponse) fromAppMessage(message *appmessage.NotifyNewBlockTemplateResponseMessage) error {
+func (x *NexepadMessage_NotifyNewBlockTemplateResponse) fromAppMessage(message *appmessage.NotifyNewBlockTemplateResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -46,14 +46,14 @@ func (x *NotifyNewBlockTemplateResponseMessage) toAppMessage() (appmessage.Messa
 	}, nil
 }
 
-func (x *nexepadMessage_NewBlockTemplateNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NewBlockTemplateNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NewBlockTemplateNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NewBlockTemplateNotification is nil")
 	}
 	return x.NewBlockTemplateNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_NewBlockTemplateNotification) fromAppMessage(message *appmessage.NewBlockTemplateNotificationMessage) error {
+func (x *NexepadMessage_NewBlockTemplateNotification) fromAppMessage(message *appmessage.NewBlockTemplateNotificationMessage) error {
 	x.NewBlockTemplateNotification = &NewBlockTemplateNotificationMessage{}
 	return nil
 }

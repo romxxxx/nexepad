@@ -5,23 +5,23 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetCoinSupplyRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetCoinSupplyRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetCoinSupplyRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetCoinSupplyRequest) fromAppMessage(_ *appmessage.GetCoinSupplyRequestMessage) error {
+func (x *NexepadMessage_GetCoinSupplyRequest) fromAppMessage(_ *appmessage.GetCoinSupplyRequestMessage) error {
 	x.GetCoinSupplyRequest = &GetCoinSupplyRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_GetCoinSupplyResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetCoinSupplyResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetCoinSupplyResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetCoinSupplyResponse is nil")
 	}
 	return x.GetCoinSupplyResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetCoinSupplyResponse) fromAppMessage(message *appmessage.GetCoinSupplyResponseMessage) error {
+func (x *NexepadMessage_GetCoinSupplyResponse) fromAppMessage(message *appmessage.GetCoinSupplyResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

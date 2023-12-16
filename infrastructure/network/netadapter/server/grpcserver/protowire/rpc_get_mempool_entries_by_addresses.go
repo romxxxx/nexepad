@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetMempoolEntriesByAddressesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetMempoolEntriesByAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_nexepadMessage_GetMempoolEntriesByAddressesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NexepadMessage_GetMempoolEntriesByAddressesRequest is nil")
 	}
 	return x.GetMempoolEntriesByAddressesRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetMempoolEntriesByAddressesRequest) fromAppMessage(message *appmessage.GetMempoolEntriesByAddressesRequestMessage) error {
+func (x *NexepadMessage_GetMempoolEntriesByAddressesRequest) fromAppMessage(message *appmessage.GetMempoolEntriesByAddressesRequestMessage) error {
 	x.GetMempoolEntriesByAddressesRequest = &GetMempoolEntriesByAddressesRequestMessage{
 		Addresses:             message.Addresses,
 		IncludeOrphanPool:     message.IncludeOrphanPool,
@@ -23,7 +23,7 @@ func (x *nexepadMessage_GetMempoolEntriesByAddressesRequest) fromAppMessage(mess
 
 func (x *GetMempoolEntriesByAddressesRequestMessage) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetMempoolEntriesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetMempoolEntriesRequest is nil")
 	}
 	return &appmessage.GetMempoolEntriesByAddressesRequestMessage{
 		Addresses:             x.Addresses,
@@ -32,14 +32,14 @@ func (x *GetMempoolEntriesByAddressesRequestMessage) toAppMessage() (appmessage.
 	}, nil
 }
 
-func (x *nexepadMessage_GetMempoolEntriesByAddressesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetMempoolEntriesByAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetMempoolEntriesByAddressesResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetMempoolEntriesByAddressesResponse is nil")
 	}
 	return x.GetMempoolEntriesByAddressesResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetMempoolEntriesByAddressesResponse) fromAppMessage(message *appmessage.GetMempoolEntriesByAddressesResponseMessage) error {
+func (x *NexepadMessage_GetMempoolEntriesByAddressesResponse) fromAppMessage(message *appmessage.GetMempoolEntriesByAddressesResponseMessage) error {
 	var rpcErr *RPCError
 	if message.Error != nil {
 		rpcErr = &RPCError{Message: message.Error.Message}

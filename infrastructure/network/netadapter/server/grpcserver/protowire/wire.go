@@ -9,10 +9,10 @@ type converter interface {
 	toAppMessage() (appmessage.Message, error)
 }
 
-// ToAppMessage converts a nexepadMessage to its appmessage.Message representation
-func (x *nexepadMessage) ToAppMessage() (appmessage.Message, error) {
+// ToAppMessage converts a NexepadMessage to its appmessage.Message representation
+func (x *NexepadMessage) ToAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage is nil")
 	}
 	converter, ok := x.Payload.(converter)
 	if !ok {
@@ -25,18 +25,18 @@ func (x *nexepadMessage) ToAppMessage() (appmessage.Message, error) {
 	return appMessage, nil
 }
 
-// FromAppMessage creates a nexepadMessage from a appmessage.Message
-func FromAppMessage(message appmessage.Message) (*nexepadMessage, error) {
+// FromAppMessage creates a NexepadMessage from a appmessage.Message
+func FromAppMessage(message appmessage.Message) (*NexepadMessage, error) {
 	payload, err := toPayload(message)
 	if err != nil {
 		return nil, err
 	}
-	return &nexepadMessage{
+	return &NexepadMessage{
 		Payload: payload,
 	}, nil
 }
 
-func toPayload(message appmessage.Message) (isnexepadMessage_Payload, error) {
+func toPayload(message appmessage.Message) (isNexepadMessage_Payload, error) {
 	p2pPayload, err := toP2PPayload(message)
 	if err != nil {
 		return nil, err
@@ -56,304 +56,304 @@ func toPayload(message appmessage.Message) (isnexepadMessage_Payload, error) {
 	return nil, errors.Errorf("unknown message type %T", message)
 }
 
-func toP2PPayload(message appmessage.Message) (isnexepadMessage_Payload, error) {
+func toP2PPayload(message appmessage.Message) (isNexepadMessage_Payload, error) {
 	switch message := message.(type) {
 	case *appmessage.MsgAddresses:
-		payload := new(nexepadMessage_Addresses)
+		payload := new(NexepadMessage_Addresses)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgBlock:
-		payload := new(nexepadMessage_Block)
+		payload := new(NexepadMessage_Block)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestBlockLocator:
-		payload := new(nexepadMessage_RequestBlockLocator)
+		payload := new(NexepadMessage_RequestBlockLocator)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgBlockLocator:
-		payload := new(nexepadMessage_BlockLocator)
+		payload := new(NexepadMessage_BlockLocator)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestAddresses:
-		payload := new(nexepadMessage_RequestAddresses)
+		payload := new(NexepadMessage_RequestAddresses)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestIBDBlocks:
-		payload := new(nexepadMessage_RequestIBDBlocks)
+		payload := new(NexepadMessage_RequestIBDBlocks)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestNextHeaders:
-		payload := new(nexepadMessage_RequestNextHeaders)
+		payload := new(NexepadMessage_RequestNextHeaders)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgDoneHeaders:
-		payload := new(nexepadMessage_DoneHeaders)
+		payload := new(NexepadMessage_DoneHeaders)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestRelayBlocks:
-		payload := new(nexepadMessage_RequestRelayBlocks)
+		payload := new(NexepadMessage_RequestRelayBlocks)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestTransactions:
-		payload := new(nexepadMessage_RequestTransactions)
+		payload := new(NexepadMessage_RequestTransactions)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgTransactionNotFound:
-		payload := new(nexepadMessage_TransactionNotFound)
+		payload := new(NexepadMessage_TransactionNotFound)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgInvRelayBlock:
-		payload := new(nexepadMessage_InvRelayBlock)
+		payload := new(NexepadMessage_InvRelayBlock)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgInvTransaction:
-		payload := new(nexepadMessage_InvTransactions)
+		payload := new(NexepadMessage_InvTransactions)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgPing:
-		payload := new(nexepadMessage_Ping)
+		payload := new(NexepadMessage_Ping)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgPong:
-		payload := new(nexepadMessage_Pong)
+		payload := new(NexepadMessage_Pong)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgTx:
-		payload := new(nexepadMessage_Transaction)
+		payload := new(NexepadMessage_Transaction)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgVerAck:
-		payload := new(nexepadMessage_Verack)
+		payload := new(NexepadMessage_Verack)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgVersion:
-		payload := new(nexepadMessage_Version)
+		payload := new(NexepadMessage_Version)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgReject:
-		payload := new(nexepadMessage_Reject)
+		payload := new(NexepadMessage_Reject)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestPruningPointUTXOSet:
-		payload := new(nexepadMessage_RequestPruningPointUTXOSet)
+		payload := new(NexepadMessage_RequestPruningPointUTXOSet)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgPruningPointUTXOSetChunk:
-		payload := new(nexepadMessage_PruningPointUtxoSetChunk)
+		payload := new(NexepadMessage_PruningPointUtxoSetChunk)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgUnexpectedPruningPoint:
-		payload := new(nexepadMessage_UnexpectedPruningPoint)
+		payload := new(NexepadMessage_UnexpectedPruningPoint)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgIBDBlockLocator:
-		payload := new(nexepadMessage_IbdBlockLocator)
+		payload := new(NexepadMessage_IbdBlockLocator)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgIBDBlockLocatorHighestHash:
-		payload := new(nexepadMessage_IbdBlockLocatorHighestHash)
+		payload := new(NexepadMessage_IbdBlockLocatorHighestHash)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgIBDBlockLocatorHighestHashNotFound:
-		payload := new(nexepadMessage_IbdBlockLocatorHighestHashNotFound)
+		payload := new(NexepadMessage_IbdBlockLocatorHighestHashNotFound)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.BlockHeadersMessage:
-		payload := new(nexepadMessage_BlockHeaders)
+		payload := new(NexepadMessage_BlockHeaders)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestNextPruningPointUTXOSetChunk:
-		payload := new(nexepadMessage_RequestNextPruningPointUtxoSetChunk)
+		payload := new(NexepadMessage_RequestNextPruningPointUtxoSetChunk)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgDonePruningPointUTXOSetChunks:
-		payload := new(nexepadMessage_DonePruningPointUtxoSetChunks)
+		payload := new(NexepadMessage_DonePruningPointUtxoSetChunks)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgBlockWithTrustedData:
-		payload := new(nexepadMessage_BlockWithTrustedData)
+		payload := new(NexepadMessage_BlockWithTrustedData)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestPruningPointAndItsAnticone:
-		payload := new(nexepadMessage_RequestPruningPointAndItsAnticone)
+		payload := new(NexepadMessage_RequestPruningPointAndItsAnticone)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgDoneBlocksWithTrustedData:
-		payload := new(nexepadMessage_DoneBlocksWithTrustedData)
+		payload := new(NexepadMessage_DoneBlocksWithTrustedData)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgIBDBlock:
-		payload := new(nexepadMessage_IbdBlock)
+		payload := new(NexepadMessage_IbdBlock)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestHeaders:
-		payload := new(nexepadMessage_RequestHeaders)
+		payload := new(NexepadMessage_RequestHeaders)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgPruningPoints:
-		payload := new(nexepadMessage_PruningPoints)
+		payload := new(NexepadMessage_PruningPoints)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestPruningPointProof:
-		payload := new(nexepadMessage_RequestPruningPointProof)
+		payload := new(NexepadMessage_RequestPruningPointProof)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgPruningPointProof:
-		payload := new(nexepadMessage_PruningPointProof)
+		payload := new(NexepadMessage_PruningPointProof)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgReady:
-		payload := new(nexepadMessage_Ready)
+		payload := new(NexepadMessage_Ready)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgTrustedData:
-		payload := new(nexepadMessage_TrustedData)
+		payload := new(NexepadMessage_TrustedData)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgBlockWithTrustedDataV4:
-		payload := new(nexepadMessage_BlockWithTrustedDataV4)
+		payload := new(NexepadMessage_BlockWithTrustedDataV4)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestNextPruningPointAndItsAnticoneBlocks:
-		payload := new(nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks)
+		payload := new(NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestIBDChainBlockLocator:
-		payload := new(nexepadMessage_RequestIBDChainBlockLocator)
+		payload := new(NexepadMessage_RequestIBDChainBlockLocator)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgIBDChainBlockLocator:
-		payload := new(nexepadMessage_IbdChainBlockLocator)
+		payload := new(NexepadMessage_IbdChainBlockLocator)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.MsgRequestAnticone:
-		payload := new(nexepadMessage_RequestAnticone)
+		payload := new(NexepadMessage_RequestAnticone)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
@@ -364,605 +364,605 @@ func toP2PPayload(message appmessage.Message) (isnexepadMessage_Payload, error) 
 	}
 }
 
-func toRPCPayload(message appmessage.Message) (isnexepadMessage_Payload, error) {
+func toRPCPayload(message appmessage.Message) (isNexepadMessage_Payload, error) {
 	switch message := message.(type) {
 	case *appmessage.GetCurrentNetworkRequestMessage:
-		payload := new(nexepadMessage_GetCurrentNetworkRequest)
+		payload := new(NexepadMessage_GetCurrentNetworkRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetCurrentNetworkResponseMessage:
-		payload := new(nexepadMessage_GetCurrentNetworkResponse)
+		payload := new(NexepadMessage_GetCurrentNetworkResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.SubmitBlockRequestMessage:
-		payload := new(nexepadMessage_SubmitBlockRequest)
+		payload := new(NexepadMessage_SubmitBlockRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.SubmitBlockResponseMessage:
-		payload := new(nexepadMessage_SubmitBlockResponse)
+		payload := new(NexepadMessage_SubmitBlockResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockTemplateRequestMessage:
-		payload := new(nexepadMessage_GetBlockTemplateRequest)
+		payload := new(NexepadMessage_GetBlockTemplateRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockTemplateResponseMessage:
-		payload := new(nexepadMessage_GetBlockTemplateResponse)
+		payload := new(NexepadMessage_GetBlockTemplateResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyBlockAddedRequestMessage:
-		payload := new(nexepadMessage_NotifyBlockAddedRequest)
+		payload := new(NexepadMessage_NotifyBlockAddedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyBlockAddedResponseMessage:
-		payload := new(nexepadMessage_NotifyBlockAddedResponse)
+		payload := new(NexepadMessage_NotifyBlockAddedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.BlockAddedNotificationMessage:
-		payload := new(nexepadMessage_BlockAddedNotification)
+		payload := new(NexepadMessage_BlockAddedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetPeerAddressesRequestMessage:
-		payload := new(nexepadMessage_GetPeerAddressesRequest)
+		payload := new(NexepadMessage_GetPeerAddressesRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetPeerAddressesResponseMessage:
-		payload := new(nexepadMessage_GetPeerAddressesResponse)
+		payload := new(NexepadMessage_GetPeerAddressesResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetSelectedTipHashRequestMessage:
-		payload := new(nexepadMessage_GetSelectedTipHashRequest)
+		payload := new(NexepadMessage_GetSelectedTipHashRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetSelectedTipHashResponseMessage:
-		payload := new(nexepadMessage_GetSelectedTipHashResponse)
+		payload := new(NexepadMessage_GetSelectedTipHashResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntryRequestMessage:
-		payload := new(nexepadMessage_GetMempoolEntryRequest)
+		payload := new(NexepadMessage_GetMempoolEntryRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntryResponseMessage:
-		payload := new(nexepadMessage_GetMempoolEntryResponse)
+		payload := new(NexepadMessage_GetMempoolEntryResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetConnectedPeerInfoRequestMessage:
-		payload := new(nexepadMessage_GetConnectedPeerInfoRequest)
+		payload := new(NexepadMessage_GetConnectedPeerInfoRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetConnectedPeerInfoResponseMessage:
-		payload := new(nexepadMessage_GetConnectedPeerInfoResponse)
+		payload := new(NexepadMessage_GetConnectedPeerInfoResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.AddPeerRequestMessage:
-		payload := new(nexepadMessage_AddPeerRequest)
+		payload := new(NexepadMessage_AddPeerRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.AddPeerResponseMessage:
-		payload := new(nexepadMessage_AddPeerResponse)
+		payload := new(NexepadMessage_AddPeerResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.SubmitTransactionRequestMessage:
-		payload := new(nexepadMessage_SubmitTransactionRequest)
+		payload := new(NexepadMessage_SubmitTransactionRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.SubmitTransactionResponseMessage:
-		payload := new(nexepadMessage_SubmitTransactionResponse)
+		payload := new(NexepadMessage_SubmitTransactionResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage:
-		payload := new(nexepadMessage_NotifyVirtualSelectedParentChainChangedRequest)
+		payload := new(NexepadMessage_NotifyVirtualSelectedParentChainChangedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualSelectedParentChainChangedResponseMessage:
-		payload := new(nexepadMessage_NotifyVirtualSelectedParentChainChangedResponse)
+		payload := new(NexepadMessage_NotifyVirtualSelectedParentChainChangedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.VirtualSelectedParentChainChangedNotificationMessage:
-		payload := new(nexepadMessage_VirtualSelectedParentChainChangedNotification)
+		payload := new(NexepadMessage_VirtualSelectedParentChainChangedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockRequestMessage:
-		payload := new(nexepadMessage_GetBlockRequest)
+		payload := new(NexepadMessage_GetBlockRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockResponseMessage:
-		payload := new(nexepadMessage_GetBlockResponse)
+		payload := new(NexepadMessage_GetBlockResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetSubnetworkRequestMessage:
-		payload := new(nexepadMessage_GetSubnetworkRequest)
+		payload := new(NexepadMessage_GetSubnetworkRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetSubnetworkResponseMessage:
-		payload := new(nexepadMessage_GetSubnetworkResponse)
+		payload := new(NexepadMessage_GetSubnetworkResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetVirtualSelectedParentChainFromBlockRequestMessage:
-		payload := new(nexepadMessage_GetVirtualSelectedParentChainFromBlockRequest)
+		payload := new(NexepadMessage_GetVirtualSelectedParentChainFromBlockRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetVirtualSelectedParentChainFromBlockResponseMessage:
-		payload := new(nexepadMessage_GetVirtualSelectedParentChainFromBlockResponse)
+		payload := new(NexepadMessage_GetVirtualSelectedParentChainFromBlockResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlocksRequestMessage:
-		payload := new(nexepadMessage_GetBlocksRequest)
+		payload := new(NexepadMessage_GetBlocksRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlocksResponseMessage:
-		payload := new(nexepadMessage_GetBlocksResponse)
+		payload := new(NexepadMessage_GetBlocksResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockCountRequestMessage:
-		payload := new(nexepadMessage_GetBlockCountRequest)
+		payload := new(NexepadMessage_GetBlockCountRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockCountResponseMessage:
-		payload := new(nexepadMessage_GetBlockCountResponse)
+		payload := new(NexepadMessage_GetBlockCountResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockDAGInfoRequestMessage:
-		payload := new(nexepadMessage_GetBlockDagInfoRequest)
+		payload := new(NexepadMessage_GetBlockDagInfoRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBlockDAGInfoResponseMessage:
-		payload := new(nexepadMessage_GetBlockDagInfoResponse)
+		payload := new(NexepadMessage_GetBlockDagInfoResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.ResolveFinalityConflictRequestMessage:
-		payload := new(nexepadMessage_ResolveFinalityConflictRequest)
+		payload := new(NexepadMessage_ResolveFinalityConflictRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.ResolveFinalityConflictResponseMessage:
-		payload := new(nexepadMessage_ResolveFinalityConflictResponse)
+		payload := new(NexepadMessage_ResolveFinalityConflictResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyFinalityConflictsRequestMessage:
-		payload := new(nexepadMessage_NotifyFinalityConflictsRequest)
+		payload := new(NexepadMessage_NotifyFinalityConflictsRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyFinalityConflictsResponseMessage:
-		payload := new(nexepadMessage_NotifyFinalityConflictsResponse)
+		payload := new(NexepadMessage_NotifyFinalityConflictsResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.FinalityConflictNotificationMessage:
-		payload := new(nexepadMessage_FinalityConflictNotification)
+		payload := new(NexepadMessage_FinalityConflictNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.FinalityConflictResolvedNotificationMessage:
-		payload := new(nexepadMessage_FinalityConflictResolvedNotification)
+		payload := new(NexepadMessage_FinalityConflictResolvedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntriesRequestMessage:
-		payload := new(nexepadMessage_GetMempoolEntriesRequest)
+		payload := new(NexepadMessage_GetMempoolEntriesRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntriesResponseMessage:
-		payload := new(nexepadMessage_GetMempoolEntriesResponse)
+		payload := new(NexepadMessage_GetMempoolEntriesResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.ShutDownRequestMessage:
-		payload := new(nexepadMessage_ShutDownRequest)
+		payload := new(NexepadMessage_ShutDownRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.ShutDownResponseMessage:
-		payload := new(nexepadMessage_ShutDownResponse)
+		payload := new(NexepadMessage_ShutDownResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetHeadersRequestMessage:
-		payload := new(nexepadMessage_GetHeadersRequest)
+		payload := new(NexepadMessage_GetHeadersRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetHeadersResponseMessage:
-		payload := new(nexepadMessage_GetHeadersResponse)
+		payload := new(NexepadMessage_GetHeadersResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyUTXOsChangedRequestMessage:
-		payload := new(nexepadMessage_NotifyUtxosChangedRequest)
+		payload := new(NexepadMessage_NotifyUtxosChangedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyUTXOsChangedResponseMessage:
-		payload := new(nexepadMessage_NotifyUtxosChangedResponse)
+		payload := new(NexepadMessage_NotifyUtxosChangedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.UTXOsChangedNotificationMessage:
-		payload := new(nexepadMessage_UtxosChangedNotification)
+		payload := new(NexepadMessage_UtxosChangedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.StopNotifyingUTXOsChangedRequestMessage:
-		payload := new(nexepadMessage_StopNotifyingUtxosChangedRequest)
+		payload := new(NexepadMessage_StopNotifyingUtxosChangedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.StopNotifyingUTXOsChangedResponseMessage:
-		payload := new(nexepadMessage_StopNotifyingUtxosChangedResponse)
+		payload := new(NexepadMessage_StopNotifyingUtxosChangedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetUTXOsByAddressesRequestMessage:
-		payload := new(nexepadMessage_GetUtxosByAddressesRequest)
+		payload := new(NexepadMessage_GetUtxosByAddressesRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetUTXOsByAddressesResponseMessage:
-		payload := new(nexepadMessage_GetUtxosByAddressesResponse)
+		payload := new(NexepadMessage_GetUtxosByAddressesResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBalanceByAddressRequestMessage:
-		payload := new(nexepadMessage_GetBalanceByAddressRequest)
+		payload := new(NexepadMessage_GetBalanceByAddressRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBalanceByAddressResponseMessage:
-		payload := new(nexepadMessage_GetBalanceByAddressResponse)
+		payload := new(NexepadMessage_GetBalanceByAddressResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetVirtualSelectedParentBlueScoreRequestMessage:
-		payload := new(nexepadMessage_GetVirtualSelectedParentBlueScoreRequest)
+		payload := new(NexepadMessage_GetVirtualSelectedParentBlueScoreRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetVirtualSelectedParentBlueScoreResponseMessage:
-		payload := new(nexepadMessage_GetVirtualSelectedParentBlueScoreResponse)
+		payload := new(NexepadMessage_GetVirtualSelectedParentBlueScoreResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage:
-		payload := new(nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)
+		payload := new(NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage:
-		payload := new(nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)
+		payload := new(NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.VirtualSelectedParentBlueScoreChangedNotificationMessage:
-		payload := new(nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification)
+		payload := new(NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.BanRequestMessage:
-		payload := new(nexepadMessage_BanRequest)
+		payload := new(NexepadMessage_BanRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.BanResponseMessage:
-		payload := new(nexepadMessage_BanResponse)
+		payload := new(NexepadMessage_BanResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.UnbanRequestMessage:
-		payload := new(nexepadMessage_UnbanRequest)
+		payload := new(NexepadMessage_UnbanRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.UnbanResponseMessage:
-		payload := new(nexepadMessage_UnbanResponse)
+		payload := new(NexepadMessage_UnbanResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetInfoRequestMessage:
-		payload := new(nexepadMessage_GetInfoRequest)
+		payload := new(NexepadMessage_GetInfoRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetInfoResponseMessage:
-		payload := new(nexepadMessage_GetInfoResponse)
+		payload := new(NexepadMessage_GetInfoResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyPruningPointUTXOSetOverrideRequestMessage:
-		payload := new(nexepadMessage_NotifyPruningPointUTXOSetOverrideRequest)
+		payload := new(NexepadMessage_NotifyPruningPointUTXOSetOverrideRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyPruningPointUTXOSetOverrideResponseMessage:
-		payload := new(nexepadMessage_NotifyPruningPointUTXOSetOverrideResponse)
+		payload := new(NexepadMessage_NotifyPruningPointUTXOSetOverrideResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.PruningPointUTXOSetOverrideNotificationMessage:
-		payload := new(nexepadMessage_PruningPointUTXOSetOverrideNotification)
+		payload := new(NexepadMessage_PruningPointUTXOSetOverrideNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.StopNotifyingPruningPointUTXOSetOverrideRequestMessage:
-		payload := new(nexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)
+		payload := new(NexepadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.EstimateNetworkHashesPerSecondRequestMessage:
-		payload := new(nexepadMessage_EstimateNetworkHashesPerSecondRequest)
+		payload := new(NexepadMessage_EstimateNetworkHashesPerSecondRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.EstimateNetworkHashesPerSecondResponseMessage:
-		payload := new(nexepadMessage_EstimateNetworkHashesPerSecondResponse)
+		payload := new(NexepadMessage_EstimateNetworkHashesPerSecondResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualDaaScoreChangedRequestMessage:
-		payload := new(nexepadMessage_NotifyVirtualDaaScoreChangedRequest)
+		payload := new(NexepadMessage_NotifyVirtualDaaScoreChangedRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyVirtualDaaScoreChangedResponseMessage:
-		payload := new(nexepadMessage_NotifyVirtualDaaScoreChangedResponse)
+		payload := new(NexepadMessage_NotifyVirtualDaaScoreChangedResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.VirtualDaaScoreChangedNotificationMessage:
-		payload := new(nexepadMessage_VirtualDaaScoreChangedNotification)
+		payload := new(NexepadMessage_VirtualDaaScoreChangedNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBalancesByAddressesRequestMessage:
-		payload := new(nexepadMessage_GetBalancesByAddressesRequest)
+		payload := new(NexepadMessage_GetBalancesByAddressesRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetBalancesByAddressesResponseMessage:
-		payload := new(nexepadMessage_GetBalancesByAddressesResponse)
+		payload := new(NexepadMessage_GetBalancesByAddressesResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyNewBlockTemplateRequestMessage:
-		payload := new(nexepadMessage_NotifyNewBlockTemplateRequest)
+		payload := new(NexepadMessage_NotifyNewBlockTemplateRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NotifyNewBlockTemplateResponseMessage:
-		payload := new(nexepadMessage_NotifyNewBlockTemplateResponse)
+		payload := new(NexepadMessage_NotifyNewBlockTemplateResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.NewBlockTemplateNotificationMessage:
-		payload := new(nexepadMessage_NewBlockTemplateNotification)
+		payload := new(NexepadMessage_NewBlockTemplateNotification)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntriesByAddressesRequestMessage:
-		payload := new(nexepadMessage_GetMempoolEntriesByAddressesRequest)
+		payload := new(NexepadMessage_GetMempoolEntriesByAddressesRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetMempoolEntriesByAddressesResponseMessage:
-		payload := new(nexepadMessage_GetMempoolEntriesByAddressesResponse)
+		payload := new(NexepadMessage_GetMempoolEntriesByAddressesResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetCoinSupplyRequestMessage:
-		payload := new(nexepadMessage_GetCoinSupplyRequest)
+		payload := new(NexepadMessage_GetCoinSupplyRequest)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err
 		}
 		return payload, nil
 	case *appmessage.GetCoinSupplyResponseMessage:
-		payload := new(nexepadMessage_GetCoinSupplyResponse)
+		payload := new(NexepadMessage_GetCoinSupplyResponse)
 		err := payload.fromAppMessage(message)
 		if err != nil {
 			return nil, err

@@ -5,22 +5,22 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetConnectedPeerInfoRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetConnectedPeerInfoRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetConnectedPeerInfoRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetConnectedPeerInfoRequest) fromAppMessage(_ *appmessage.GetConnectedPeerInfoRequestMessage) error {
+func (x *NexepadMessage_GetConnectedPeerInfoRequest) fromAppMessage(_ *appmessage.GetConnectedPeerInfoRequestMessage) error {
 	return nil
 }
 
-func (x *nexepadMessage_GetConnectedPeerInfoResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetConnectedPeerInfoResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetConnectedPeerInfoResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetConnectedPeerInfoResponse is nil")
 	}
 	return x.GetConnectedPeerInfoResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetConnectedPeerInfoResponse) fromAppMessage(message *appmessage.GetConnectedPeerInfoResponseMessage) error {
+func (x *NexepadMessage_GetConnectedPeerInfoResponse) fromAppMessage(message *appmessage.GetConnectedPeerInfoResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

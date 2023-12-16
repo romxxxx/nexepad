@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_UnbanRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_UnbanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_UnbanRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_UnbanRequest is nil")
 	}
 	return x.UnbanRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_UnbanRequest) fromAppMessage(message *appmessage.UnbanRequestMessage) error {
+func (x *NexepadMessage_UnbanRequest) fromAppMessage(message *appmessage.UnbanRequestMessage) error {
 	x.UnbanRequest = &UnbanRequestMessage{Ip: message.IP}
 	return nil
 }
@@ -26,14 +26,14 @@ func (x *UnbanRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_UnbanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_UnbanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_UnbanResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_UnbanResponse is nil")
 	}
 	return x.UnbanResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_UnbanResponse) fromAppMessage(message *appmessage.UnbanResponseMessage) error {
+func (x *NexepadMessage_UnbanResponse) fromAppMessage(message *appmessage.UnbanResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

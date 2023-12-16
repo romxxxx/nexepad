@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_RequestAnticone) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_RequestAnticone) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_RequestAnticone is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_RequestAnticone is nil")
 	}
 	return x.RequestAnticone.toAppMessage()
 }
@@ -33,7 +33,7 @@ func (x *RequestAnticoneMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *nexepadMessage_RequestAnticone) fromAppMessage(msgRequestPastDiff *appmessage.MsgRequestAnticone) error {
+func (x *NexepadMessage_RequestAnticone) fromAppMessage(msgRequestPastDiff *appmessage.MsgRequestAnticone) error {
 	x.RequestAnticone = &RequestAnticoneMessage{
 		BlockHash:   domainHashToProto(msgRequestPastDiff.BlockHash),
 		ContextHash: domainHashToProto(msgRequestPastDiff.ContextHash),

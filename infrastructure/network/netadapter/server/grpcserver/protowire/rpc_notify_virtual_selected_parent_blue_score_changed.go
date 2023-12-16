@@ -5,26 +5,26 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest is nil")
 	}
 	return &appmessage.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) fromAppMessage(_ *appmessage.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage) error {
+func (x *NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) fromAppMessage(_ *appmessage.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage) error {
 	x.NotifyVirtualSelectedParentBlueScoreChangedRequest = &NotifyVirtualSelectedParentBlueScoreChangedRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse is nil")
 	}
 	return x.NotifyVirtualSelectedParentBlueScoreChangedResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage) error {
+func (x *NexepadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -49,14 +49,14 @@ func (x *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage) toAppMessag
 	}, nil
 }
 
-func (x *nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification is nil")
 	}
 	return x.VirtualSelectedParentBlueScoreChangedNotification.toAppMessage()
 }
 
-func (x *nexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentBlueScoreChangedNotificationMessage) error {
+func (x *NexepadMessage_VirtualSelectedParentBlueScoreChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentBlueScoreChangedNotificationMessage) error {
 	x.VirtualSelectedParentBlueScoreChangedNotification = &VirtualSelectedParentBlueScoreChangedNotificationMessage{
 		VirtualSelectedParentBlueScore: message.VirtualSelectedParentBlueScore,
 	}

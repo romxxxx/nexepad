@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_Pong) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_Pong) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_Pong is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_Pong is nil")
 	}
 	return x.Pong.toAppMessage()
 }
@@ -21,7 +21,7 @@ func (x *PongMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
+func (x *NexepadMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
 	x.Pong = &PongMessage{
 		Nonce: msgPong.Nonce,
 	}

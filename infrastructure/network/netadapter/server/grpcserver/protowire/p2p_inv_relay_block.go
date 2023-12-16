@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_InvRelayBlock is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_InvRelayBlock is nil")
 	}
 	return x.InvRelayBlock.toAppMessage()
 }
@@ -25,7 +25,7 @@ func (x *InvRelayBlockMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *nexepadMessage_InvRelayBlock) fromAppMessage(msgInvRelayBlock *appmessage.MsgInvRelayBlock) error {
+func (x *NexepadMessage_InvRelayBlock) fromAppMessage(msgInvRelayBlock *appmessage.MsgInvRelayBlock) error {
 	x.InvRelayBlock = &InvRelayBlockMessage{
 		Hash: domainHashToProto(msgInvRelayBlock.Hash),
 	}

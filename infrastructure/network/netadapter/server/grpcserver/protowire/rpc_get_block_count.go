@@ -5,26 +5,26 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetBlockCountRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockCountRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockCountRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockCountRequest is nil")
 	}
 	return &appmessage.GetBlockCountRequestMessage{}, nil
 }
 
-func (x *nexepadMessage_GetBlockCountRequest) fromAppMessage(_ *appmessage.GetBlockCountRequestMessage) error {
+func (x *NexepadMessage_GetBlockCountRequest) fromAppMessage(_ *appmessage.GetBlockCountRequestMessage) error {
 	x.GetBlockCountRequest = &GetBlockCountRequestMessage{}
 	return nil
 }
 
-func (x *nexepadMessage_GetBlockCountResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockCountResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockCountResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockCountResponse is nil")
 	}
 	return x.GetBlockCountResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBlockCountResponse) fromAppMessage(message *appmessage.GetBlockCountResponseMessage) error {
+func (x *NexepadMessage_GetBlockCountResponse) fromAppMessage(message *appmessage.GetBlockCountResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

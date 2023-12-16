@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_PruningPointProof) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_PruningPointProof) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_PruningPointProof is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_PruningPointProof is nil")
 	}
 
 	if x.PruningPointProof == nil {
@@ -30,7 +30,7 @@ func (x *nexepadMessage_PruningPointProof) toAppMessage() (appmessage.Message, e
 	}, nil
 }
 
-func (x *nexepadMessage_PruningPointProof) fromAppMessage(msgPruningPointProof *appmessage.MsgPruningPointProof) error {
+func (x *NexepadMessage_PruningPointProof) fromAppMessage(msgPruningPointProof *appmessage.MsgPruningPointProof) error {
 	blockHeaders := make([]*PruningPointProofHeaderArray, len(msgPruningPointProof.Headers))
 	for i, blockHeaderArray := range msgPruningPointProof.Headers {
 		blockHeaders[i] = &PruningPointProofHeaderArray{Headers: make([]*BlockHeader, len(blockHeaderArray))}

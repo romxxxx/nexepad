@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetBlocksRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlocksRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlocksRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlocksRequest is nil")
 	}
 	return x.GetBlocksRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBlocksRequest) fromAppMessage(message *appmessage.GetBlocksRequestMessage) error {
+func (x *NexepadMessage_GetBlocksRequest) fromAppMessage(message *appmessage.GetBlocksRequestMessage) error {
 	x.GetBlocksRequest = &GetBlocksRequestMessage{
 		LowHash:             message.LowHash,
 		IncludeBlocks:       message.IncludeBlocks,
@@ -32,14 +32,14 @@ func (x *GetBlocksRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_GetBlocksResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlocksResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlocksResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlocksResponse is nil")
 	}
 	return x.GetBlocksResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBlocksResponse) fromAppMessage(message *appmessage.GetBlocksResponseMessage) error {
+func (x *NexepadMessage_GetBlocksResponse) fromAppMessage(message *appmessage.GetBlocksResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

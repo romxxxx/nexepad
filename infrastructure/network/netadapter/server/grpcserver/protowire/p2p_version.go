@@ -7,9 +7,9 @@ import (
 	"github.com/romxxxx/nexepad/util/mstime"
 )
 
-func (x *nexepadMessage_Version) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_Version) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_Version is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_Version is nil")
 	}
 	return x.Version.toAppMessage()
 }
@@ -25,7 +25,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}
 
 	subnetworkID, err := x.SubnetworkId.toDomain()
-	//  Full nexepa nodes set SubnetworkId==nil
+	//  Full Nexellia nodes set SubnetworkId==nil
 	if err != nil && !errors.Is(err, errorNil) {
 		return nil, err
 	}
@@ -57,7 +57,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
+func (x *NexepadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
 	err := appmessage.ValidateUserAgent(msgVersion.UserAgent)
 	if err != nil {
 		return err

@@ -5,9 +5,9 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BanRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BanRequest is nil")
 	}
 	return x.BanRequest.toAppMessage()
 }
@@ -21,14 +21,14 @@ func (x *BanRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
+func (x *NexepadMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
 	x.BanRequest = &BanRequestMessage{Ip: message.IP}
 	return nil
 }
 
-func (x *nexepadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_BanResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_BanResponse is nil")
 	}
 	return x.BanResponse.toAppMessage()
 }
@@ -47,7 +47,7 @@ func (x *BanResponseMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
+func (x *NexepadMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

@@ -5,13 +5,13 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_DoneHeaders) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_DoneHeaders) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_DoneHeaders is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_DoneHeaders is nil")
 	}
 	return &appmessage.MsgDoneHeaders{}, nil
 }
 
-func (x *nexepadMessage_DoneHeaders) fromAppMessage(_ *appmessage.MsgDoneHeaders) error {
+func (x *NexepadMessage_DoneHeaders) fromAppMessage(_ *appmessage.MsgDoneHeaders) error {
 	return nil
 }

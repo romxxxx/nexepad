@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_AddPeerRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_AddPeerRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_AddPeerRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_AddPeerRequest is nil")
 	}
 	return x.AddPeerRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_AddPeerRequest) fromAppMessage(message *appmessage.AddPeerRequestMessage) error {
+func (x *NexepadMessage_AddPeerRequest) fromAppMessage(message *appmessage.AddPeerRequestMessage) error {
 	x.AddPeerRequest = &AddPeerRequestMessage{
 		Address:     message.Address,
 		IsPermanent: message.IsPermanent,
@@ -30,14 +30,14 @@ func (x *AddPeerRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *nexepadMessage_AddPeerResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_AddPeerResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_AddPeerResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_AddPeerResponse is nil")
 	}
 	return x.AddPeerResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_AddPeerResponse) fromAppMessage(message *appmessage.AddPeerResponseMessage) error {
+func (x *NexepadMessage_AddPeerResponse) fromAppMessage(message *appmessage.AddPeerResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

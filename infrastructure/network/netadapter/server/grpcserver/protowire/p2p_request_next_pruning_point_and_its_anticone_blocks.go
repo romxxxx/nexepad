@@ -5,13 +5,13 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_DonePruningPointAndItsAnticoneBlocks is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_DonePruningPointAndItsAnticoneBlocks is nil")
 	}
 	return &appmessage.MsgRequestNextPruningPointAndItsAnticoneBlocks{}, nil
 }
 
-func (x *nexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) fromAppMessage(_ *appmessage.MsgRequestNextPruningPointAndItsAnticoneBlocks) error {
+func (x *NexepadMessage_RequestNextPruningPointAndItsAnticoneBlocks) fromAppMessage(_ *appmessage.MsgRequestNextPruningPointAndItsAnticoneBlocks) error {
 	return nil
 }

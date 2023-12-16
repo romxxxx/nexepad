@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetBlockTemplateRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockTemplateRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockTemplateRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockTemplateRequest is nil")
 	}
 	return x.GetBlockTemplateRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBlockTemplateRequest) fromAppMessage(message *appmessage.GetBlockTemplateRequestMessage) error {
+func (x *NexepadMessage_GetBlockTemplateRequest) fromAppMessage(message *appmessage.GetBlockTemplateRequestMessage) error {
 	x.GetBlockTemplateRequest = &GetBlockTemplateRequestMessage{
 		PayAddress: message.PayAddress,
 		ExtraData:  message.ExtraData,
@@ -30,14 +30,14 @@ func (x *GetBlockTemplateRequestMessage) toAppMessage() (appmessage.Message, err
 	}, nil
 }
 
-func (x *nexepadMessage_GetBlockTemplateResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBlockTemplateResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBlockTemplateResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBlockTemplateResponse is nil")
 	}
 	return x.GetBlockTemplateResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBlockTemplateResponse) fromAppMessage(message *appmessage.GetBlockTemplateResponseMessage) error {
+func (x *NexepadMessage_GetBlockTemplateResponse) fromAppMessage(message *appmessage.GetBlockTemplateResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

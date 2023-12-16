@@ -5,14 +5,14 @@ import (
 	"github.com/romxxxx/nexepad/app/appmessage"
 )
 
-func (x *nexepadMessage_GetBalancesByAddressesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBalancesByAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "nexepadMessage_GetBalanceByAddressRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NexepadMessage_GetBalanceByAddressRequest is nil")
 	}
 	return x.GetBalancesByAddressesRequest.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBalancesByAddressesRequest) fromAppMessage(message *appmessage.GetBalancesByAddressesRequestMessage) error {
+func (x *NexepadMessage_GetBalancesByAddressesRequest) fromAppMessage(message *appmessage.GetBalancesByAddressesRequestMessage) error {
 	x.GetBalancesByAddressesRequest = &GetBalancesByAddressesRequestMessage{
 		Addresses: message.Addresses,
 	}
@@ -28,14 +28,14 @@ func (x *GetBalancesByAddressesRequestMessage) toAppMessage() (appmessage.Messag
 	}, nil
 }
 
-func (x *nexepadMessage_GetBalancesByAddressesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NexepadMessage_GetBalancesByAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GetBalanceByAddressResponse is nil")
 	}
 	return x.GetBalancesByAddressesResponse.toAppMessage()
 }
 
-func (x *nexepadMessage_GetBalancesByAddressesResponse) fromAppMessage(message *appmessage.GetBalancesByAddressesResponseMessage) error {
+func (x *NexepadMessage_GetBalancesByAddressesResponse) fromAppMessage(message *appmessage.GetBalancesByAddressesResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
