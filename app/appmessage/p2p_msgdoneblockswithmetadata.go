@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgDoneBlocksWithTrustedData implements the Message interface and represents a nexepa
+// MsgDoneBlocksWithTrustedData implements the Message interface and represents a Nexellia
 // DoneBlocksWithTrustedData message
 //
 // This message has no payload.
@@ -14,7 +14,7 @@ func (msg *MsgDoneBlocksWithTrustedData) Command() MessageCommand {
 	return CmdDoneBlocksWithTrustedData
 }
 
-// NewMsgDoneBlocksWithTrustedData returns a new nexepa DoneBlocksWithTrustedData message that conforms to the
+// NewMsgDoneBlocksWithTrustedData returns a new Nexellia DoneBlocksWithTrustedData message that conforms to the
 // Message interface.
 func NewMsgDoneBlocksWithTrustedData() *MsgDoneBlocksWithTrustedData {
 	return &MsgDoneBlocksWithTrustedData{}

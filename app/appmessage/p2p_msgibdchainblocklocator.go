@@ -4,7 +4,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgIBDChainBlockLocator implements the Message interface and represents a nexepa
+// MsgIBDChainBlockLocator implements the Message interface and represents a Nexellia
 // locator message. It is used to find the blockLocator of a peer that is
 // syncing with you.
 type MsgIBDChainBlockLocator struct {
@@ -18,7 +18,7 @@ func (msg *MsgIBDChainBlockLocator) Command() MessageCommand {
 	return CmdIBDChainBlockLocator
 }
 
-// NewMsgIBDChainBlockLocator returns a new nexepa locator message that conforms to
+// NewMsgIBDChainBlockLocator returns a new Nexellia locator message that conforms to
 // the Message interface. See MsgBlockLocator for details.
 func NewMsgIBDChainBlockLocator(locatorHashes []*externalapi.DomainHash) *MsgIBDChainBlockLocator {
 	return &MsgIBDChainBlockLocator{

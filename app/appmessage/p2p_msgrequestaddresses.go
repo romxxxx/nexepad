@@ -8,7 +8,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgRequestAddresses implements the Message interface and represents a nexepa
+// MsgRequestAddresses implements the Message interface and represents a Nexellia
 // RequestAddresses message. It is used to request a list of known active peers on the
 // network from a peer to help identify potential nodes. The list is returned
 // via one or more addr messages (MsgAddresses).
@@ -26,7 +26,7 @@ func (msg *MsgRequestAddresses) Command() MessageCommand {
 	return CmdRequestAddresses
 }
 
-// NewMsgRequestAddresses returns a new nexepa RequestAddresses message that conforms to the
+// NewMsgRequestAddresses returns a new Nexellia RequestAddresses message that conforms to the
 // Message interface. See MsgRequestAddresses for details.
 func NewMsgRequestAddresses(includeAllSubnetworks bool, subnetworkID *externalapi.DomainSubnetworkID) *MsgRequestAddresses {
 	return &MsgRequestAddresses{

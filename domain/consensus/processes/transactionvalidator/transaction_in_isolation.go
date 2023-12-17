@@ -67,8 +67,8 @@ func (v *transactionValidator) checkTransactionAmountRanges(tx *externalapi.Doma
 	// output must not be negative or more than the max allowed per
 	// transaction. Also, the total of all outputs must abide by the same
 	// restrictions. All amounts in a transaction are in a unit value known
-	// as a sompi. One nexepa is a quantity of sompi as defined by the
-	// sompiPernexepa constant.
+	// as a sompi. One Nexellia is a quantity of sompi as defined by the
+	// sompiPerNexellia constant.
 	var totalSompi uint64
 	for _, txOut := range tx.Outputs {
 		sompi := txOut.Value
@@ -82,7 +82,7 @@ func (v *transactionValidator) checkTransactionAmountRanges(tx *externalapi.Doma
 		}
 
 		// Binary arithmetic guarantees that any overflow is detected and reported.
-		// This is impossible for nexepa, but perhaps possible if an alt increases
+		// This is impossible for Nexellia, but perhaps possible if an alt increases
 		// the total money supply.
 		newTotalSompi := totalSompi + sompi
 		if newTotalSompi < totalSompi {

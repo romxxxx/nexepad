@@ -48,9 +48,9 @@ See the package documentation for details on determining the message type.
 
 ## Writing Messages Example
 
-In order to marshal nexepa messages to the wire, use the `WriteMessage`
+In order to marshal Nexellia messages to the wire, use the `WriteMessage`
 function. It accepts any `io.Writer`, but typically this will be a `net.Conn`
-to a remote node running a nexepa peer. Example syntax to request addresses
+to a remote node running a Nexellia peer. Example syntax to request addresses
 from a remote peer is:
 
 ```Go

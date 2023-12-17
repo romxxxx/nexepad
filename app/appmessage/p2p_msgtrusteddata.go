@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgTrustedData represents a nexepa TrustedData message
+// MsgTrustedData represents a Nexellia TrustedData message
 type MsgTrustedData struct {
 	baseMessage
 

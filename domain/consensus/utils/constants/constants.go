@@ -12,11 +12,11 @@ const (
 	// MaxScriptPublicKeyVersion is the current latest supported public key script version.
 	MaxScriptPublicKeyVersion uint16 = 0
 
-	// SompiPernexepa is the number of sompi in one nexepa (1 nexe).
-	SompiPernexepa = 100_000_000
+	// SompiPerNexellia is the number of sompi in one Nexellia (1 nexe).
+	SompiPerNexellia = 100_000_000
 
 	// MaxSompi is the maximum transaction amount allowed in sompi.
-	MaxSompi = uint64(29_000_000_000 * SompiPernexepa)
+	MaxSompi = uint64(29_000_000_000 * SompiPerNexellia)
 
 	// MaxTxInSequenceNum is the maximum sequence number the sequence field
 	// of a transaction input can be.

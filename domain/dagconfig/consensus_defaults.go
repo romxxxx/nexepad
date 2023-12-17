@@ -48,9 +48,9 @@ const (
 	// (Higher values make pruning attacks easier by a constant, lower values make merging after a split or a spike
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
-	defaultSubsidyGenesisReward                    = 1 * constants.SompiPernexepa
-	defaultPreDeflationaryPhaseBaseSubsidy         = 500 * constants.SompiPernexepa
-	defaultDeflationaryPhaseBaseSubsidy            = 440 * constants.SompiPernexepa
+	defaultSubsidyGenesisReward                    = 1 * constants.SompiPerNexellia
+	defaultPreDeflationaryPhaseBaseSubsidy         = 50 * constants.SompiPerNexellia
+	defaultDeflationaryPhaseBaseSubsidy            = 44 * constants.SompiPerNexellia
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.
@@ -72,7 +72,7 @@ const (
 	// defaultTargetTimePerBlock represents how much time should pass on average between two consecutive block creations.
 	// Should be parametrized such that the average width of the DAG is about defaultMaxBlockParents and such that most of the
 	// time the width of the DAG is at most defaultGHOSTDAGK.
-	defaultTargetTimePerBlock = 60 * time.Second
+	defaultTargetTimePerBlock = 10 * time.Second
 
 	defaultPruningProofM = 1000
 

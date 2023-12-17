@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgRequestPruningPointAndItsAnticone represents a nexepa RequestPruningPointAndItsAnticone message
+// MsgRequestPruningPointAndItsAnticone represents a Nexellia RequestPruningPointAndItsAnticone message
 type MsgRequestPruningPointAndItsAnticone struct {
 	baseMessage
 }

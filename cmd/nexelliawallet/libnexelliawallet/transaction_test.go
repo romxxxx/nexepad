@@ -318,7 +318,7 @@ func TestMaxSompi(t *testing.T) {
 		params := &consensusConfig.Params
 		cfg := *consensusConfig
 		cfg.BlockCoinbaseMaturity = 0
-		cfg.PreDeflationaryPhaseBaseSubsidy = 20e6 * constants.SompiPernexepa
+		cfg.PreDeflationaryPhaseBaseSubsidy = 20e6 * constants.SompiPerNexellia
 		tc, teardown, err := consensus.NewFactory().NewTestConsensus(&cfg, "TestMaxSompi")
 		if err != nil {
 			t.Fatalf("Error setting up tc: %+v", err)
@@ -480,7 +480,7 @@ func TestMaxSompi(t *testing.T) {
 		unsignedTxWithLargeInputAndOutputAmount, err := libnexelliawallet.CreateUnsignedTransaction(publicKeys, minimumSignatures,
 			[]*libnexelliawallet.Payment{{
 				Address: address,
-				Amount:  22e6 * constants.SompiPernexepa,
+				Amount:  22e6 * constants.SompiPerNexellia,
 			}}, selectedUTXOsForTxWithLargeInputAndOutputAmount)
 		if err != nil {
 			t.Fatalf("CreateUnsignedTransactions: %+v", err)

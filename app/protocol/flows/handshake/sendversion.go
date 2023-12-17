@@ -12,11 +12,11 @@ import (
 
 var (
 	// userAgentName is the user agent name and is used to help identify
-	// ourselves to other nexepa peers.
+	// ourselves to other Nexellia peers.
 	userAgentName = "nexepad"
 
 	// userAgentVersion is the user agent version and is used to help
-	// identify ourselves to other nexepa peers.
+	// identify ourselves to other Nexellia peers.
 	userAgentVersion = version.Version()
 
 	// defaultServices describes the default services that are supported by

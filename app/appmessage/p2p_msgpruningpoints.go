@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgPruningPoints represents a nexepa PruningPoints message
+// MsgPruningPoints represents a Nexellia PruningPoints message
 type MsgPruningPoints struct {
 	baseMessage
 

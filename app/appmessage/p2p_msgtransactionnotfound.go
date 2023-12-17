@@ -8,7 +8,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgTransactionNotFound defines a nexepa TransactionNotFound message which is sent in response to
+// MsgTransactionNotFound defines a Nexellia TransactionNotFound message which is sent in response to
 // a RequestTransactions message if any of the requested data in not available on the peer.
 type MsgTransactionNotFound struct {
 	baseMessage
@@ -21,7 +21,7 @@ func (msg *MsgTransactionNotFound) Command() MessageCommand {
 	return CmdTransactionNotFound
 }
 
-// NewMsgTransactionNotFound returns a new nexepa transactionsnotfound message that conforms to the
+// NewMsgTransactionNotFound returns a new Nexellia transactionsnotfound message that conforms to the
 // Message interface. See MsgTransactionNotFound for details.
 func NewMsgTransactionNotFound(id *externalapi.DomainTransactionID) *MsgTransactionNotFound {
 	return &MsgTransactionNotFound{

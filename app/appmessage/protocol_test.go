@@ -33,7 +33,7 @@ func TestServiceFlagStringer(t *testing.T) {
 	}
 }
 
-// TestNexelliaNetStringer tests the stringized output for nexepa net types.
+// TestNexelliaNetStringer tests the stringized output for Nexellia net types.
 func TestNexelliaNetStringer(t *testing.T) {
 	tests := []struct {
 		in   NexelliaNet

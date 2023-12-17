@@ -1,6 +1,6 @@
 package appmessage
 
-// MsgRequestPruningPointProof represents a nexepa RequestPruningPointProof message
+// MsgRequestPruningPointProof represents a Nexellia RequestPruningPointProof message
 type MsgRequestPruningPointProof struct {
 	baseMessage
 }

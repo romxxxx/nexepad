@@ -4,7 +4,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgRequestIBDChainBlockLocator implements the Message interface and represents a nexepa
+// MsgRequestIBDChainBlockLocator implements the Message interface and represents a Nexellia
 // IBDRequestChainBlockLocator message. It is used to request a block locator between low
 // and high hash.
 // The locator is returned via a locator message (MsgIBDChainBlockLocator).

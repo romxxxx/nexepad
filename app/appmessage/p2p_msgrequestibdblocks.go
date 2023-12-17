@@ -4,7 +4,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgRequestIBDBlocks implements the Message interface and represents a nexepa
+// MsgRequestIBDBlocks implements the Message interface and represents a Nexellia
 // RequestIBDBlocks message. It is used to request blocks as part of the IBD
 // protocol.
 type MsgRequestIBDBlocks struct {

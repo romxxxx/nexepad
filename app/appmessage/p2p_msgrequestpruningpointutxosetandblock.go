@@ -4,7 +4,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgRequestPruningPointUTXOSet represents a nexepa RequestPruningPointUTXOSet message
+// MsgRequestPruningPointUTXOSet represents a Nexellia RequestPruningPointUTXOSet message
 type MsgRequestPruningPointUTXOSet struct {
 	baseMessage
 	PruningPointHash *externalapi.DomainHash

@@ -4,7 +4,7 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/model/externalapi"
 )
 
-// MsgIBDBlockLocatorHighestHash represents a nexepa BlockLocatorHighestHash message
+// MsgIBDBlockLocatorHighestHash represents a Nexellia BlockLocatorHighestHash message
 type MsgIBDBlockLocatorHighestHash struct {
 	baseMessage
 	HighestHash *externalapi.DomainHash

@@ -27,7 +27,7 @@ func (cmd MessageCommand) String() string {
 	return fmt.Sprintf("%s [code %d]", cmdString, uint8(cmd))
 }
 
-// Commands used in nexepa message headers which describe the type of message.
+// Commands used in Nexellia message headers which describe the type of message.
 const (
 	// protocol
 	CmdVersion MessageCommand = iota
