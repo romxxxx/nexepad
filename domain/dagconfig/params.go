@@ -215,7 +215,6 @@ var MainnetParams = Params{
 	DefaultPort: "16111",
 	DNSSeeds: []string{
 		"seeder1-mainnet.nexell-ia.net",
-		cha
 	},
 
 	// DAG parameters
