@@ -46,7 +46,7 @@ func (s *server) selectExternalSpendableUTXOs(externalUTXOs *appmessage.GetUTXOs
 		if !isExternalUTXOSpendable(entry, daaScore, maturity) {
 			continue
 		}
-		selectedExternalUtxos = append(selectedExternalUtxos, libnexelliawallet.AppMessageUTXOTonexepawalletdUTXO(entry))
+		selectedExternalUtxos = append(selectedExternalUtxos, libnexelliawallet.AppMessageUTXOToNexelliawalletdUTXO(entry))
 	}
 
 	return selectedExternalUtxos, nil
