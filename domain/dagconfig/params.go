@@ -213,8 +213,8 @@ var MainnetParams = Params{
 	Net:         appmessage.Mainnet,
 	RPCPort:     "16110",
 	DefaultPort: "16111",
-	DNSSeeds: []string{
-		"seeder1-mainnet.nexell-ia.net",
+	DNSSeeds:    []string{
+		//		"seeder1-mainnet.nexell-ia.net",
 	},
 
 	// DAG parameters
