@@ -55,7 +55,7 @@ const (
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.
 	// The DAA should take the median of 2640 blocks, so in order to do that we need 2641 window size.
-	defaultDifficultyAdjustmentWindowSize = 2641
+	defaultDifficultyAdjustmentWindowSize = 5
 	// defaultTimestampDeviationTolerance is the allowed deviance of an inconming block's timestamp, measured in block delays.
 	// A new block can't hold a timestamp lower than the median timestamp of the (defaultTimestampDeviationTolerance*2-1) blocks
 	// with highest accumulated blue work in its past, such blocks are considered invalid.
@@ -72,7 +72,7 @@ const (
 	// defaultTargetTimePerBlock represents how much time should pass on average between two consecutive block creations.
 	// Should be parametrized such that the average width of the DAG is about defaultMaxBlockParents and such that most of the
 	// time the width of the DAG is at most defaultGHOSTDAGK.
-	defaultTargetTimePerBlock = 1 * time.Second
+	defaultTargetTimePerBlock = 60 * time.Second
 
 	defaultPruningProofM = 1000
 
