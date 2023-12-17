@@ -10,10 +10,10 @@ import (
 	"github.com/romxxxx/nexepad/domain/consensus/utils/utxo"
 )
 
-// nexepawalletdUTXOsTolibnexepawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libnexelliawallet.UTXO
-func nexepawalletdUTXOsTolibnexepawalletUTXOs(nexepawalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
-	UTXOs := make([]*UTXO, len(nexepawalletdUtxoEntires))
-	for i, entry := range nexepawalletdUtxoEntires {
+// NexelliawalletdUTXOsTolibnexelliawalletUTXOs converts a  []*pb.UtxosByAddressesEntry to a []*libnexelliawallet.UTXO
+func NexelliawalletdUTXOsTolibnexelliawalletUTXOs(nexelliawalletdUtxoEntires []*pb.UtxosByAddressesEntry) ([]*UTXO, error) {
+	UTXOs := make([]*UTXO, len(nexelliawalletdUtxoEntires))
+	for i, entry := range nexelliawalletdUtxoEntires {
 		script, err := hex.DecodeString(entry.UtxoEntry.ScriptPublicKey.ScriptPublicKey)
 		if err != nil {
 			return nil, err
@@ -41,8 +41,8 @@ func nexepawalletdUTXOsTolibnexepawalletUTXOs(nexepawalletdUtxoEntires []*pb.Utx
 	return UTXOs, nil
 }
 
-// AppMessageUTXOTonexepawalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
-func AppMessageUTXOTonexepawalletdUTXO(appUTXOsByAddressesEntry *appmessage.UTXOsByAddressesEntry) *pb.UtxosByAddressesEntry {
+// AppMessageUTXOToNexelliawalletdUTXO converts an appmessage.UTXOsByAddressesEntry to a  pb.UtxosByAddressesEntry
+func AppMessageUTXOToNexelliawalletdUTXO(appUTXOsByAddressesEntry *appmessage.UTXOsByAddressesEntry) *pb.UtxosByAddressesEntry {
 	return &pb.UtxosByAddressesEntry{
 		Outpoint: &pb.Outpoint{
 			TransactionId: appUTXOsByAddressesEntry.Outpoint.TransactionID,
