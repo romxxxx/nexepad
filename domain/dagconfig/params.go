@@ -27,7 +27,7 @@ var (
 
 	// mainPowMax is the highest proof of work value a Nexellia block can
 	// have for the main network. It is the value 2^255 - 1.
-	mainPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 2), bigOne)
+	mainPowMax = new(big.Int).Sub(new(big.Int).Lsh(bigOne, 255), bigOne)
 
 	// testnetPowMax is the highest proof of work value a Nexellia block
 	// can have for the test network. It is the value 2^255 - 1.

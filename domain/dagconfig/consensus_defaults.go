@@ -35,13 +35,13 @@ const (
 	defaultMassPerSigOp            = 1000
 	// defaultMaxBlockParents is the number of blocks any block can point to.
 	// Should be about d/defaultTargetTimePerBlock where d is a bound on the round trip time of a block.
-	defaultMaxBlockParents = 1
+	defaultMaxBlockParents = 10
 	// defaultGHOSTDAGK is a bound on the number of blue blocks in the anticone of a blue block. Approximates the maximal
 	// width of the network.
 	// Formula (1) in section 4.2 of the PHANTOM paper shows how to calculate defaultGHOSTDAGK. The delta term represents a bound
 	// on the expected fraction of the network life in which the width was higher than defaultGHOSTDAGK. The current value of K
 	// was calculated for d = 5 seconds and delta = 0.05.
-	defaultGHOSTDAGK = 2
+	defaultGHOSTDAGK = 18
 	// defaultMergeSetSizeLimit is a bound on the size of the past of a block and the size of the past
 	// of its selected parent. Any block which violates this bound is invalid.
 	// Should be at least an order of magnitude smaller than defaultFinalityDuration/defaultTargetTimePerBlock.
@@ -55,7 +55,7 @@ const (
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.
 	// The DAA should take the median of 2640 blocks, so in order to do that we need 2641 window size.
-	defaultDifficultyAdjustmentWindowSize = 2
+	defaultDifficultyAdjustmentWindowSize = 2641
 	// defaultTimestampDeviationTolerance is the allowed deviance of an inconming block's timestamp, measured in block delays.
 	// A new block can't hold a timestamp lower than the median timestamp of the (defaultTimestampDeviationTolerance*2-1) blocks
 	// with highest accumulated blue work in its past, such blocks are considered invalid.
@@ -72,7 +72,7 @@ const (
 	// defaultTargetTimePerBlock represents how much time should pass on average between two consecutive block creations.
 	// Should be parametrized such that the average width of the DAG is about defaultMaxBlockParents and such that most of the
 	// time the width of the DAG is at most defaultGHOSTDAGK.
-	defaultTargetTimePerBlock = 3600 * time.Second
+	defaultTargetTimePerBlock = 1 * time.Second
 
 	defaultPruningProofM = 1000
 
